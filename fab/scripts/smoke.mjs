@@ -16,7 +16,17 @@ const vite = await setupVite()
  * Extended as each phase lands.
  */
 const EXPECTATIONS = {
-  '/': ['ApparelFlow', 'enquiry'],
+  '/': ['ApparelFlow', 'enquiry', 'buying house', 'On-time delivery'],
+  '/about': ['A sourcing office', 'Tell you early', '2009'],
+  '/services': ['Design & product development', 'Export logistics', 'AQL 2.5'],
+  '/capabilities': ['Product groups', 'Knitwear', 'MOQ', 'SEDEX'],
+  '/clients': ['Northwind Apparel', 'Maison Rue', 'What they say'],
+  '/sustainability': ['Materials', 'SMETA', 'In progress'],
+  '/contact': ['Tell us what', 'Sourcing office', 'Send enquiry'],
+  '/portal/orders': ['orders', 'Live orders', 'Units in progress'],
+  '/portal/orders/ORD-017': ['PO-1017', 'Production progress', 'Updates from us', 'Shipment'],
+  '/portal/approvals': ['Sample approvals', 'Waiting on you'],
+  '/portal/shipments': ['Shipments', 'On the water'],
   '/login': ['Sign in', 'Quick login', 'Merchandiser'],
   '/forgot-password': ['Reset your password'],
   '/403': ['403'],
@@ -198,7 +208,9 @@ function expandParams(paths) {
     if (path === '/app/masters/demo-entity') {
       out.push(...MASTERS.map((entity) => `/app/masters/${entity}`))
     } else if (path.includes('demo-id')) {
-      out.push(path.replace('demo-id', 'ORD-019'))
+      // Portal routes are scoped to the signed-in brand, so they need one of
+      // that client's own orders (CLI-001 / Northwind Apparel).
+      out.push(path.replace('demo-id', path.startsWith('/portal') ? 'ORD-017' : 'ORD-019'))
     } else {
       out.push(path)
     }

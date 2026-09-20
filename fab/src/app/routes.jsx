@@ -4,9 +4,18 @@ import { AuthLayout } from '@/layouts/AuthLayout'
 import { ClientPortalLayout } from '@/layouts/ClientPortalLayout'
 import { PublicLayout } from '@/layouts/PublicLayout'
 import { HomePage } from '@/pages/website/HomePage'
+import { AboutPage } from '@/pages/website/AboutPage'
+import { ServicesPage } from '@/pages/website/ServicesPage'
+import { CapabilitiesPage } from '@/pages/website/CapabilitiesPage'
+import { ClientsPage as WebsiteClientsPage } from '@/pages/website/ClientsPage'
+import { SustainabilityPage } from '@/pages/website/SustainabilityPage'
+import { ContactPage } from '@/pages/website/ContactPage'
+import { PortalOrdersPage } from '@/features/portal/pages/PortalOrdersPage'
+import { PortalOrderPage } from '@/features/portal/pages/PortalOrderPage'
+import { PortalApprovalsPage } from '@/features/portal/pages/PortalApprovalsPage'
+import { PortalShipmentsPage } from '@/features/portal/pages/PortalShipmentsPage'
 import { ForbiddenPage } from '@/pages/ForbiddenPage'
 import { NotFoundPage } from '@/pages/NotFoundPage'
-import { Placeholder } from '@/pages/Placeholder'
 import { DashboardPage } from '@/features/dashboard/pages/DashboardPage'
 import { LoginPage } from '@/features/auth/pages/LoginPage'
 import { ForgotPasswordPage } from '@/features/auth/pages/ForgotPasswordPage'
@@ -56,11 +65,6 @@ import { SettingsPage } from '@/features/admin/pages/SettingsPage'
 import { ProtectedRoute } from './ProtectedRoute'
 import { RouteError } from './RouteError'
 
-/** Route whose module arrives in a later phase. */
-const soon = (title, description, phase) => ({
-  element: <Placeholder title={title} description={description} phase={phase} />,
-})
-
 /**
  * A permission-guarded subtree of the app area.
  * @param {string} module
@@ -79,12 +83,12 @@ export const routes = [
     errorElement: <RouteError />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: 'about', ...soon('About', 'Who we are and how we work.', 'phase 10') },
-      { path: 'services', ...soon('Services', 'What we take on for a brand.', 'phase 10') },
-      { path: 'capabilities', ...soon('Capabilities', 'Product and volume capability.', 'phase 10') },
-      { path: 'clients', ...soon('Clients', 'Brands we produce for.', 'phase 10') },
-      { path: 'sustainability', ...soon('Sustainability', 'Compliance and materials.', 'phase 10') },
-      { path: 'contact', ...soon('Contact', 'Start an enquiry.', 'phase 10') },
+      { path: 'about', element: <AboutPage /> },
+      { path: 'services', element: <ServicesPage /> },
+      { path: 'capabilities', element: <CapabilitiesPage /> },
+      { path: 'clients', element: <WebsiteClientsPage /> },
+      { path: 'sustainability', element: <SustainabilityPage /> },
+      { path: 'contact', element: <ContactPage /> },
     ],
   },
   {
@@ -201,10 +205,10 @@ export const routes = [
         element: <ClientPortalLayout />,
         children: [
           { index: true, element: <Navigate to="/portal/orders" replace /> },
-          { path: 'orders', ...soon('My orders', 'Your live and closed orders.', 'phase 10') },
-          { path: 'orders/:id', ...soon('Order tracking', 'Milestones for one order.', 'phase 10') },
-          { path: 'approvals', ...soon('Approvals', 'Samples awaiting your decision.', 'phase 10') },
-          { path: 'shipments', ...soon('Shipments', 'Booking and tracking.', 'phase 10') },
+          { path: 'orders', element: <PortalOrdersPage /> },
+          { path: 'orders/:id', element: <PortalOrderPage /> },
+          { path: 'approvals', element: <PortalApprovalsPage /> },
+          { path: 'shipments', element: <PortalShipmentsPage /> },
         ],
       },
     ],

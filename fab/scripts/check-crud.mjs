@@ -5,6 +5,8 @@
  *   1. Masters CRUD — open the drawer, hit a zod error, save, edit.
  *   2. Sample approval — reject without a comment, then with one.
  *   3. Order 360 — walk all eleven tabs and assert each one renders its data.
+ *   4. Portal approval — a client approves a sample, and the internal Design
+ *      module shows that same decision.
  * RecordDrawer + FormFields + DataTable back most screens in the app, so these
  * paths cover a lot of shared surface. Run with `npm run crud`.
  */
@@ -281,6 +283,82 @@ try {
   check('created order opens its 360 page', textOf().includes('Smoke test tee'))
 
   await act(async () => wizardRoot.unmount())
+  resetDemoData()
+
+  // ------------------------------------ portal approval reaches the internal app
+  console.log('')
+  const clientUser = users.find((user) => user.role === 'CLIENT')
+  useAuthStore.setState({
+    user: clientUser,
+    role: clientUser.role,
+    token: 'tok',
+    impersonatedRole: null,
+  })
+
+  const portalRouter = createMemoryRouter(routes, { initialEntries: ['/portal/approvals'] })
+  let portalRoot
+  await act(async () => {
+    portalRoot = createRoot(container)
+    portalRoot.render(
+      React.createElement(Providers, null, React.createElement(RouterProvider, { router: portalRouter })),
+    )
+  })
+  await settle(1400)
+
+  check('portal approvals page renders', textOf().includes('Sample approvals'))
+  check('portal is scoped to the signed-in brand', !textOf().includes('Maison Rue'))
+
+  const approveButton = findByText('button', 'Approve')
+  check('a pending sample offers approval', Boolean(approveButton))
+
+  // Capture which sample we are approving so we can find it internally after.
+  const sampleCard = approveButton?.closest('div[class*="rounded-lg"]')
+  const portalSampleRef = (sampleCard?.textContent ?? '').match(/SM-\d+/)?.[0] ?? null
+  check('the sample has a reference', Boolean(portalSampleRef), String(portalSampleRef))
+
+  await click(approveButton)
+  await settle(250)
+  check('approval modal opens', textOf().includes('Approve this sample'))
+
+  await click(findByText('button', 'Approve sample'))
+  await settle(2200)
+  check('approval confirms to the client', textOf().includes('Sample approved'))
+
+  await act(async () => portalRoot.unmount())
+
+  // Now look at the same record from the inside.
+  const admin2 = users.find((user) => user.role === 'SUPER_ADMIN')
+  useAuthStore.setState({ user: admin2, role: admin2.role, token: 'tok', impersonatedRole: null })
+
+  const internalRouter = createMemoryRouter(routes, { initialEntries: ['/app/design/samples'] })
+  let internalRoot
+  await act(async () => {
+    internalRoot = createRoot(container)
+    internalRoot.render(
+      React.createElement(Providers, null, React.createElement(RouterProvider, { router: internalRouter })),
+    )
+  })
+  await settle(1400)
+
+  // 60 samples paginate, so search for the one we just decided on.
+  const searchBox = [...body().querySelectorAll('input')].find(
+    (node) => (node.getAttribute('aria-label') ?? '').startsWith('Search samples'),
+  )
+  check('the samples list has a search box', Boolean(searchBox))
+  await setInput(searchBox, portalSampleRef)
+  await settle(400)
+
+  const internalRow = [...body().querySelectorAll('tbody tr')].find((row) =>
+    (row.textContent ?? '').includes(portalSampleRef),
+  )
+  check('the internal samples list shows that sample', Boolean(internalRow), portalSampleRef)
+  check(
+    'the client decision is visible internally',
+    (internalRow?.textContent ?? '').includes('Approved'),
+    internalRow?.textContent?.slice(0, 120),
+  )
+
+  await act(async () => internalRoot.unmount())
   resetDemoData()
 } finally {
   await vite.close()

@@ -206,10 +206,27 @@ Legend: ✅ done · 🔄 in progress · ⬜ not started · ⚠️ issue
   121/121 routes render with content assertions, 9/9 RBAC redirects, 10/10 role
   dashboards, 30/30 service checks, 47/47 interaction checks
 
-## Phase 10: Website + Client portal ⬜
-- ⬜ Public site: home, about, services, capabilities, clients, sustainability, contact
-- ⬜ Client portal: my orders, tracking, pending approvals, shipments
-- ⬜ Quality gate
+## Phase 10: Website + Client portal ✅
+- ✅ Public marketing site, seven pages, all with domain-real copy:
+  home (hero, six services, the seven-stage lifecycle, portal pitch) · about (values,
+  history timeline) · services (six services with detailed inclusions) · capabilities
+  (six product groups with MOQ and lead time, fabric base, compliance) · clients (six
+  brands, testimonials, clearly marked fictional) · sustainability (six pillars plus an
+  honest in-place / in-progress / planned commitment table) · contact
+- ✅ **The contact form creates a real lead** in the mock CRM, assigned to a
+  merchandiser, and tells the visitor where to find it
+- ✅ Client portal: my orders (live/development/shipped filter with a production
+  progress bar per order) · order tracking (lifecycle stepper, per-stage progress,
+  shipment milestones, samples, updates from us) · approvals · shipments
+- ✅ **Portal approvals write to the same sample record the internal Design module
+  reads** — verified end to end by the interaction check: a client approves in the
+  portal, and the internal samples list shows that decision
+- ✅ Portal data is scoped to the signed-in brand; opening another brand's order shows
+  a not-found state rather than the record
+- ✅ **All placeholder scaffolding removed** — every route in the app is now a real page
+- ✅ Quality gate: lint 0 errors, audit clean (185 files), seed clean, build clean,
+  85/85 routes render with content assertions, 9/9 RBAC, 10/10 role dashboards,
+  30/30 service checks, 56/56 interaction checks
 
 ## Phase 11: Polish ⬜
 - ⬜ ⌘K global search, notifications panel

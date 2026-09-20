@@ -290,3 +290,25 @@ against the records it points at.
 `react-refresh/only-export-components` rejects a component file that also exports
 constants. The Recharts colour, tooltip, axis and legend styles now live in their own
 module, which is also where any future chart picks them up from.
+
+## Phase 10 — Website + Client portal
+
+### D53. The contact form writes a real record
+Rather than faking a success screen, the form calls `leadService.create` and shows the
+new lead id, then points the visitor at CRM → Leads. It is the clearest demonstration
+that the website and the ERP are one application.
+
+### D54. The portal reuses the internal sample decision path
+`PortalApprovalsPage` calls the same `decideSample()` the internal Design module uses
+and renders the same `SampleDecisionModal`, only with `decidedBy: 'CLIENT'`. There is no
+second code path that could drift, and `npm run crud` proves the round trip.
+
+### D55. Portal scoping is enforced at the query and at the record
+Every portal query filters by the signed-in user's `clientId`, and the single-order page
+additionally checks `order.clientId` before rendering. A guessed URL gets a not-found
+state, not another brand's order.
+
+### D56. The public site is copy, not lorem
+Every page carries real domain writing — MOQs, lead times, AQL levels, certifications,
+and a sustainability table that admits what is still in progress. The one place the
+demo is called out is the clients page, where the brands are fictional.
