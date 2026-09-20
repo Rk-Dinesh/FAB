@@ -24,7 +24,7 @@ npm run dev      # http://localhost:5173
 | `npm run dev`         | Vite dev server with HMR                                                    |
 | `npm run build`       | Production build into `dist/`                                               |
 | `npm run preview`     | Serve the production build                                                  |
-| `npm run lint`        | ESLint (flat config, React Compiler rules)                                  |
+| `npm run lint`        | ESLint (flat config, react-hooks rules)                                     |
 | `npm run seed`        | Regenerate every file in `src/mocks/data` from `scripts/seed/*`             |
 | `npm run gate`        | The full quality gate — everything below, in order                          |
 | `npm run audit`       | Design-token discipline (no raw hex, no stock Tailwind palette classes)     |
@@ -116,6 +116,7 @@ fab/
 │   ├── check-crud.mjs        real-UI interaction paths
 │   ├── check-seed.mjs        referential integrity
 │   ├── check-a11y.mjs        accessibility + theme audit
+│   ├── check-browser.mjs     real Chromium pass, desktop and mobile
 │   └── audit-tokens.mjs      design-token discipline
 └── src/
     ├── app/                  router, lazy page map, providers, ProtectedRoute
