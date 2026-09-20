@@ -12,6 +12,15 @@ import { LoginPage } from '@/features/auth/pages/LoginPage'
 import { ForgotPasswordPage } from '@/features/auth/pages/ForgotPasswordPage'
 import { UiKitPage } from '@/features/ui-kit/pages/UiKitPage'
 import { MastersPage } from '@/features/masters/pages/MastersPage'
+import { ShipmentsPage } from '@/features/logistics/pages/ShipmentsPage'
+import { DocumentsPage } from '@/features/logistics/pages/DocumentsPage'
+import { TrackingPage } from '@/features/logistics/pages/TrackingPage'
+import { InvoicesPage } from '@/features/finance/pages/InvoicesPage'
+import { BillsPage } from '@/features/finance/pages/BillsPage'
+import { PaymentsPage } from '@/features/finance/pages/PaymentsPage'
+import { ExpensesPage } from '@/features/finance/pages/ExpensesPage'
+import { OrderPnlPage } from '@/features/finance/pages/OrderPnlPage'
+import { ClientUpdatesPage } from '@/features/clientUpdates/pages/ClientUpdatesPage'
 import { VendorsPage } from '@/features/sourcing/pages/VendorsPage'
 import { RfqPage } from '@/features/sourcing/pages/RfqPage'
 import { QuoteComparisonPage } from '@/features/sourcing/pages/QuoteComparisonPage'
@@ -135,19 +144,21 @@ export const routes = [
             { path: 'quality/defects', element: <DefectsPage /> },
           ]),
           guarded('logistics', [
-            { path: 'logistics/shipments', ...soon('Shipments', 'Planning and booking.', 'phase 8') },
-            { path: 'logistics/documents', ...soon('Documents', 'CI, PL and BL.', 'phase 8') },
-            { path: 'logistics/tracking', ...soon('Tracking', 'In-transit milestones.', 'phase 8') },
+            { path: 'logistics', element: <Navigate to="/app/logistics/shipments" replace /> },
+            { path: 'logistics/shipments', element: <ShipmentsPage /> },
+            { path: 'logistics/documents', element: <DocumentsPage /> },
+            { path: 'logistics/tracking', element: <TrackingPage /> },
           ]),
           guarded('clientUpdates', [
-            { path: 'client-updates', ...soon('Client updates', 'What the brand has been told.', 'phase 8') },
+            { path: 'client-updates', element: <ClientUpdatesPage /> },
           ]),
           guarded('finance', [
-            { path: 'finance/invoices', ...soon('Invoices (AR)', 'Receivables.', 'phase 8') },
-            { path: 'finance/bills', ...soon('Bills (AP)', 'Vendor payables.', 'phase 8') },
-            { path: 'finance/payments', ...soon('Payments', 'Received and paid.', 'phase 8') },
-            { path: 'finance/expenses', ...soon('Expenses', 'Overheads and claims.', 'phase 8') },
-            { path: 'finance/order-pnl', ...soon('Order P&L', 'Margin per order.', 'phase 8') },
+            { path: 'finance', element: <Navigate to="/app/finance/invoices" replace /> },
+            { path: 'finance/invoices', element: <InvoicesPage /> },
+            { path: 'finance/bills', element: <BillsPage /> },
+            { path: 'finance/payments', element: <PaymentsPage /> },
+            { path: 'finance/expenses', element: <ExpensesPage /> },
+            { path: 'finance/order-pnl', element: <OrderPnlPage /> },
           ]),
           guarded('hr', [
             { path: 'hr/employees', ...soon('Employees', 'Own staff records.', 'phase 9') },

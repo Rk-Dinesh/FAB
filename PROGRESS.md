@@ -162,11 +162,26 @@ Legend: ✅ done · 🔄 in progress · ⬜ not started · ⚠️ issue
   105/105 routes render with content assertions, 9/9 RBAC, 30/30 service checks,
   47/47 interaction checks
 
-## Phase 8: Logistics + Finance ⬜
-- ⬜ Shipments, documents (CI/PL/BL), tracking timeline
-- ⬜ AR invoices, AP bills, payments, expenses
-- ⬜ Order P&L, receivables aging
-- ⬜ Quality gate
+## Phase 8: Logistics + Finance ✅
+- ✅ Shipments: sea/air bookings with carrier, B/L or AWB, container, cartons, weight,
+  CBM, ETD/ETA and freight cost, plus a detail drawer carrying the tracking timeline
+  and the attached document set
+- ✅ Documents: CI, PL, B/L, certificate of origin and inspection certificate across
+  every shipment, filterable by type and status
+- ✅ Tracking: voyage progress from ETD to ETA per shipment, days-to-arrival, and the
+  seven tracking milestones laid out inline
+- ✅ Invoices (AR): advance and commercial invoices, balances, and a **receivables aging
+  band** (not due / 1–30 / 31–60 / 61–90 / 90+) reconciled against the open balance
+- ✅ Bills (AP): vendor payables against material POs with overdue highlighting
+- ✅ Payments: receipts and payments in one ledger with a net-position KPI
+- ✅ Expenses: INR and USD amounts, order attribution, billable flag, approval state
+- ✅ Order P&L: revenue vs material / CMT / freight / overhead → margin and margin %,
+  with a colour-coded margin-by-order chart and loss-making / thin-margin filters
+- ✅ Client updates: every progress note sent to a brand, by order and area, with a
+  compose drawer that posts by email or into the client portal
+- ✅ Quality gate: lint 0 errors, audit clean (161 files), seed clean, build clean,
+  114/114 routes render with content assertions, 9/9 RBAC, 30/30 service checks,
+  47/47 interaction checks
 
 ## Phase 9: HR, Reports, Dashboards ⬜
 - ⬜ Employees, departments, attendance, leave, payroll

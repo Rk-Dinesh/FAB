@@ -244,3 +244,21 @@ size.
 The scripts had forced every non-React dependency to be inlined. That broke the moment
 Recharts pulled in a CommonJS dependency (`use-sync-external-store`). Only React and the
 router now need pinning; everything else is externalised as Vite intends.
+
+## Phase 8 — Logistics + Finance
+
+### D45. Aging buckets are computed in the service, not the page
+`getReceivablesAging()` owns the bucket boundaries and returns amounts, invoice counts
+and distinct client counts. The page only renders them, and `npm run services` asserts
+that the buckets reconcile to the total open balance.
+
+### D46. Order P&L falls back to the cost sheet when actuals are missing
+Freight uses the actual shipment cost when a shipment exists and the cost sheet's
+per-piece freight otherwise; overhead adds booked expenses to the cost sheet's
+allowance. An order that has not shipped still shows a meaningful margin instead of a
+misleading 100%.
+
+### D47. Tracking progress is derived from ETD/ETA, not stored
+A shipment's percentage complete is `(today − ETD) / (ETA − ETD)`, clamped, and forced
+to 100% once it has arrived. Nothing to keep in sync, and it stays correct as the
+seed's dates shift forward.
