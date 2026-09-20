@@ -11,6 +11,11 @@ import { DashboardPage } from '@/features/dashboard/pages/DashboardPage'
 import { LoginPage } from '@/features/auth/pages/LoginPage'
 import { ForgotPasswordPage } from '@/features/auth/pages/ForgotPasswordPage'
 import { UiKitPage } from '@/features/ui-kit/pages/UiKitPage'
+import { MastersPage } from '@/features/masters/pages/MastersPage'
+import { UsersPage } from '@/features/admin/pages/UsersPage'
+import { RolesPage } from '@/features/admin/pages/RolesPage'
+import { AuditLogPage } from '@/features/admin/pages/AuditLogPage'
+import { SettingsPage } from '@/features/admin/pages/SettingsPage'
 import { ProtectedRoute } from './ProtectedRoute'
 import { RouteError } from './RouteError'
 
@@ -128,13 +133,14 @@ export const routes = [
           ]),
           guarded('masters', [
             { path: 'masters', element: <Navigate to="/app/masters/company" replace /> },
-            { path: 'masters/:entity', ...soon('Masters', 'Reference data.', 'phase 4') },
+            { path: 'masters/:entity', element: <MastersPage /> },
           ]),
           guarded('admin', [
-            { path: 'admin/users', ...soon('Users', 'Accounts and roles.', 'phase 4') },
-            { path: 'admin/roles', ...soon('Roles', 'Permission matrix.', 'phase 4') },
-            { path: 'admin/audit-log', ...soon('Audit log', 'Who changed what.', 'phase 4') },
-            { path: 'admin/settings', ...soon('Settings', 'Company-wide preferences.', 'phase 4') },
+            { path: 'admin', element: <Navigate to="/app/admin/users" replace /> },
+            { path: 'admin/users', element: <UsersPage /> },
+            { path: 'admin/roles', element: <RolesPage /> },
+            { path: 'admin/audit-log', element: <AuditLogPage /> },
+            { path: 'admin/settings', element: <SettingsPage /> },
           ]),
         ],
       },

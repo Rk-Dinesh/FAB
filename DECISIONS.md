@@ -113,3 +113,41 @@ data on screen during a refetch instead of flashing a skeleton.
 
 ### D21. `npm run check-seed` and `npm run services` joined the gate
 Referential integrity plus a 30-assertion service contract run on every phase.
+
+## Phase 4 — Masters + Admin
+
+### D22. One `MastersCRUD` component, 15 configs
+`features/masters/config.jsx` holds columns, a zod schema, a field list and defaults
+per entity; the page component is generic. Adding a master is a config entry, not a
+new screen. Shared column builders (`name`, `money`, `tags`, `boolean`, `count`,
+`swatch`) keep each config readable.
+
+### D23. The permission matrix is editable but stored separately
+The admin Roles screen edits a copy held in `localStorage` under
+`apparelflow-permissions`, leaving `config/permissions.js` as the shipped default that
+"Reset to defaults" restores. Toggling any action on a `'*'` module expands the
+wildcard into its five explicit actions first, so the grid never lies about what is
+granted.
+
+### D24. Audit entries are fire-and-forget
+Every mock service call sleeps 300-600 ms. Awaiting the audit write after a save made
+the drawer sit open for ~1.3 s. `void recordAudit(...)` keeps the log complete without
+putting a second round trip in front of the user.
+
+### D25. The smoke test asserts content, not just "it rendered"
+A page stuck on a skeleton, or loading zero rows, still produces non-empty text.
+`EXPECTATIONS` in `scripts/smoke.mjs` pins real seeded strings per route (e.g.
+`/app/masters/fabrics` must show "Single jersey 180 GSM"), so a broken data path fails
+the gate.
+
+### D26. `npm run crud` drives the real UI
+`scripts/check-crud.mjs` opens the masters drawer in jsdom, submits an invalid hex,
+asserts the zod message, saves a valid one and confirms the row reaches the table,
+then edits it. RecordDrawer + FormFields + DataTable back most screens, so this single
+path guards a lot of shared surface.
+
+### D27. The one accepted lint warning
+`react-hooks/incompatible-library` fires on `useReactTable`. CLAUDE.md mandates
+TanStack Table v8; the only ways to clear it are dropping the library or disabling the
+rule, and the instruction is not to disable rules. It is a compiler optimisation
+notice, not a correctness problem, so it stands alongside 0 errors.

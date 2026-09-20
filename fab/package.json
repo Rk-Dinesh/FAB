@@ -10,11 +10,12 @@
     "preview": "vite preview",
     "smoke": "node scripts/smoke.mjs",
     "audit": "node scripts/audit-tokens.mjs",
-    "gate": "npm run lint && npm run audit && npm run check-seed && npm run build && npm run smoke && npm run rbac && npm run services",
+    "gate": "npm run lint && npm run audit && npm run check-seed && npm run build && npm run smoke && npm run rbac && npm run services && npm run crud",
     "rbac": "node scripts/check-rbac.mjs",
     "seed": "node scripts/generate-seed.mjs",
     "check-seed": "node scripts/check-seed.mjs",
-    "services": "node scripts/check-services.mjs"
+    "services": "node scripts/check-services.mjs",
+    "crud": "node scripts/check-crud.mjs"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",

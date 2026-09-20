@@ -68,6 +68,38 @@ const vite = await createServer({
   ssr: { external: EXTERNAL, noExternal: [/^(?!react)/] },
 })
 
+/**
+ * Substrings that must appear once a route has finished loading. Without these
+ * a page that renders a permanent skeleton, or loads zero rows, still "passes".
+ * Extended as each phase lands.
+ */
+const EXPECTATIONS = {
+  '/': ['ApparelFlow', 'enquiry'],
+  '/login': ['Sign in', 'Quick login', 'Merchandiser'],
+  '/forgot-password': ['Reset your password'],
+  '/403': ['403'],
+  '/app/ui-kit': ['UI kit', 'Design tokens'],
+  '/app/masters/company': ['ApparelFlow Sourcing', 'Tiruppur'],
+  '/app/masters/clients': ['Northwind Apparel', 'Maison Rue'],
+  '/app/masters/vendors': ['Coimbatore Spinning Mills', 'Fabric mill'],
+  '/app/masters/fabrics': ['Single jersey 180 GSM', 'combed cotton'],
+  '/app/masters/trims': ['Main label'],
+  '/app/masters/colors': ['Navy Blazer', 'TCX'],
+  '/app/masters/size-sets': ['Adult standard'],
+  '/app/masters/uom': ['Kilogram'],
+  '/app/masters/currencies': ['Indian Rupee'],
+  '/app/masters/ports': ['Chennai'],
+  '/app/masters/incoterms': ['Free on Board'],
+  '/app/masters/payment-terms': ['Telegraphic transfer'],
+  '/app/masters/stages': ['Final inspection'],
+  '/app/masters/qc-checklists': ['final inspection', 'points'],
+  '/app/masters/categories': ['Knit tops'],
+  '/app/admin/users': ['admin@apparelflow.com', 'SUPER_ADMIN'],
+  '/app/admin/roles': ['Roles & permissions', 'Merchandiser'],
+  '/app/admin/audit-log': ['Audit log'],
+  '/app/admin/settings': ['Commercial defaults', 'Demo data'],
+}
+
 const failures = []
 let consoleErrors = []
 const realError = console.error
@@ -116,7 +148,7 @@ try {
   await checkConfig(vite)
 
   const explicit = process.argv.slice(2)
-  const paths = explicit.length > 0 ? explicit : collectPaths(routesModule.routes)
+  const paths = explicit.length > 0 ? explicit : expandParams(collectPaths(routesModule.routes))
 
   console.log(`\nSmoke-testing ${paths.length} routes…\n`)
 
@@ -139,7 +171,15 @@ try {
         await new Promise((resolve) => setTimeout(resolve, 900))
       })
       const text = container.textContent ?? ''
-      if (text.trim().length === 0) consoleErrors.push('rendered nothing')
+      if (text.trim().length === 0) {
+        consoleErrors.push('rendered nothing')
+      } else {
+        for (const expected of EXPECTATIONS[path] ?? []) {
+          if (!text.toLowerCase().includes(expected.toLowerCase())) {
+            consoleErrors.push(`expected content missing: "${expected}"`)
+          }
+        }
+      }
     } catch (error) {
       consoleErrors.push(`threw: ${error?.stack ?? error}`)
     } finally {
@@ -172,6 +212,27 @@ if (failures.length > 0) {
 
 console.log('\nAll routes rendered cleanly.\n')
 process.exit(0)
+
+/**
+ * Replace the generic `demo-<param>` placeholders with real ids from the seed,
+ * and fan the masters route out across every configured entity.
+ * @param {string[]} paths
+ */
+function expandParams(paths) {
+  const MASTERS = ['company', 'clients', 'vendors', 'categories', 'fabrics', 'trims', 'colors',
+    'size-sets', 'uom', 'currencies', 'ports', 'incoterms', 'payment-terms', 'stages', 'qc-checklists']
+  const out = []
+  for (const path of paths) {
+    if (path === '/app/masters/demo-entity') {
+      out.push(...MASTERS.map((entity) => `/app/masters/${entity}`))
+    } else if (path.includes('demo-id')) {
+      out.push(path.replace('demo-id', 'ORD-019'))
+    } else {
+      out.push(path)
+    }
+  }
+  return [...new Set(out)]
+}
 
 /**
  * Assert that navigation, roles and the permission matrix agree with each other.

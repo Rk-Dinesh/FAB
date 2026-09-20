@@ -65,13 +65,27 @@ Legend: ✅ done · 🔄 in progress · ⬜ not started · ⚠️ issue
 - ✅ Quality gate: lint 0, audit clean (90 files), seed check clean, build 0 errors,
   61/61 routes render, 9/9 RBAC redirects, 30/30 service contract checks
 
-## Phase 4: Masters + Admin ⬜
-- ⬜ DataTable (sort, search, filters, pagination, column visibility, row select, CSV)
-- ⬜ FilterBar, PageHeader, StatusBadge
-- ⬜ Generic config-driven MastersCRUD + drawer forms (react-hook-form + zod)
-- ⬜ All master pages
-- ⬜ Admin: users, roles (permission matrix UI), audit log, settings
-- ⬜ Quality gate
+## Phase 4: Masters + Admin ✅
+- ✅ `DataTable` on TanStack Table v8: column sorting, global search, pagination
+  (10/25/50/100), row selection with a bulk-action banner, column visibility menu,
+  CSV export (selection-aware), row click, dense mode, and built-in
+  loading / empty / error states
+- ✅ `FilterBar` (select / text / date / date-range filters with a clear-all),
+  `PageHeader` with breadcrumbs, `StatusBadge` reading from config/statuses.js
+- ✅ `FormFields` + `RecordDrawer`: config-driven react-hook-form + zod forms in a
+  right-side drawer, supporting text/number/email/date/select/textarea/switch/
+  checkbox/tags fields
+- ✅ `MastersCRUD`: one component driving all 15 master screens from
+  `features/masters/config.jsx` (columns + zod schema + field list per entity)
+- ✅ Masters: company, clients, vendors, categories, fabrics, trims, colours,
+  size sets, UOM, currencies, ports, incoterms, payment terms, stages, QC checklists
+- ✅ Admin: users (with activate/deactivate), roles with a live editable 16×5
+  permission matrix, filterable audit log, settings (commercial defaults,
+  operations thresholds, notification toggles, reset demo data)
+- ✅ Every mutation writes to the audit log, fire-and-forget so it adds no latency
+- ✅ Quality gate: lint 0 errors, audit clean (107 files), seed clean, build clean,
+  96/96 routes render *with their seeded content asserted*, 9/9 RBAC redirects,
+  30/30 service checks, 11/11 CRUD interaction checks
 
 ## Phase 5: CRM, Design, Costing ⬜
 - ⬜ Leads: kanban (dnd-kit) + list, convert to enquiry
@@ -118,6 +132,10 @@ Legend: ✅ done · 🔄 in progress · ⬜ not started · ⚠️ issue
 ---
 
 ## Known issues
+- ⚠️ `npm run lint` reports one **warning** (0 errors): `react-hooks/incompatible-library`
+  on `useReactTable` in DataTable.jsx. React Compiler declines to memoize a component
+  that uses TanStack Table's API. TanStack Table v8 is mandated by CLAUDE.md and
+  silencing the rule would mean disabling it, so the warning is accepted and documented.
 - ⚠️ The production bundle is a single ~1.47 MB chunk (263 kB gzipped) because every
   mock JSON file is statically imported. Route-level `React.lazy` splitting and
   dynamic data imports are scheduled for phase 11 (polish).
