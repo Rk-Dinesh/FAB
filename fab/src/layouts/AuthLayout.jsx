@@ -1,4 +1,6 @@
+import { Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
+import { PageSpinner } from '@/components/ui'
 import { Logo } from '@/components/shared/Logo'
 import { ThemeToggle } from '@/components/shared/ThemeToggle'
 
@@ -42,7 +44,9 @@ export function AuthLayout() {
         </div>
         <div className="flex flex-1 items-center justify-center px-4 pb-10">
           <div className="w-full max-w-sm">
-            <Outlet />
+            <Suspense fallback={<PageSpinner />}>
+              <Outlet />
+            </Suspense>
           </div>
         </div>
       </div>

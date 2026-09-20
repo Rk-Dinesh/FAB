@@ -3,7 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom'
 import { Award, Check, Clock, GitCompare, Trophy } from 'lucide-react'
 import { cn } from '@/utils/cn'
 import { Badge, Button, Card, CardBody, EmptyState, Select, Spinner } from '@/components/ui'
-import { PageHeader } from '@/components/shared'
+import { ErrorState, PageHeader } from '@/components/shared'
 import { useAsync } from '@/hooks'
 import { useCan } from '@/store/authStore'
 import { toast } from '@/store/toastStore'
@@ -25,7 +25,7 @@ export function QuoteComparisonPage() {
     () => (rfqId ? getQuoteComparison(rfqId) : Promise.resolve(null)),
     [rfqId],
   )
-  const { data, loading, reload } = useAsync(load, [rfqId], { enabled: Boolean(rfqId) })
+  const { data, loading, error, reload } = useAsync(load, [rfqId], { enabled: Boolean(rfqId) })
 
   const award = async (quote) => {
     setAwarding(quote.id)
@@ -72,6 +72,10 @@ export function QuoteComparisonPage() {
             title="Pick an RFQ to compare"
             description="Choose a request above to see every vendor quote side by side."
           />
+        </Card>
+      ) : error ? (
+        <Card>
+          <ErrorState error={error} onRetry={reload} title="Couldn’t load the quotes" />
         </Card>
       ) : loading || !data ? (
         <Card>

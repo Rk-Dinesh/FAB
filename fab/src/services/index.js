@@ -1,5 +1,5 @@
 export { createService } from './createService'
-export { mastersServices, mastersServiceFor } from './mastersService'
+export { mastersServices } from './mastersService'
 export {
   leadService,
   clientService,

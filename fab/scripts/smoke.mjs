@@ -148,15 +148,25 @@ try {
         root = createRoot(container)
         root.render(React.createElement(Providers, null, React.createElement(RouterProvider, { router })))
       })
-      // let mock service delays (300–600ms) resolve
-      await act(async () => {
-        await new Promise((resolve) => setTimeout(resolve, 900))
-      })
-      const text = container.textContent ?? ''
+      // Poll rather than sleep a fixed time: a page has to resolve its lazy
+      // chunk and then its 300–600 ms service call before its content lands.
+      const expectations = EXPECTATIONS[path] ?? []
+      const deadline = Date.now() + 6000
+      let text = ''
+      for (;;) {
+        await act(async () => {
+          await new Promise((resolve) => setTimeout(resolve, 120))
+        })
+        text = container.textContent ?? ''
+        const settled =
+          text.trim().length > 0 &&
+          expectations.every((expected) => text.toLowerCase().includes(expected.toLowerCase()))
+        if (settled || Date.now() > deadline) break
+      }
       if (text.trim().length === 0) {
         consoleErrors.push('rendered nothing')
       } else {
-        for (const expected of EXPECTATIONS[path] ?? []) {
+        for (const expected of expectations) {
           if (!text.toLowerCase().includes(expected.toLowerCase())) {
             consoleErrors.push(`expected content missing: "${expected}"`)
           }

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, CheckCircle2, ListChecks } from 'lucide-react'
 import { cn } from '@/utils/cn'
 import { Card, CardBody, CardHeader, CardTitle, Skeleton } from '@/components/ui'
-import { KpiCard, KpiGrid, PageHeader } from '@/components/shared'
+import { ErrorState, KpiCard, KpiGrid, PageHeader } from '@/components/shared'
 import { useAsync } from '@/hooks'
 import { useAuthStore } from '@/store/authStore'
 import { roleById } from '@/config/roles'
@@ -24,7 +24,7 @@ export function RoleDashboard() {
   const role = useAuthStore((state) => state.impersonatedRole ?? state.role)
 
   const load = useCallback(() => getRoleDashboard(role), [role])
-  const { data, loading } = useAsync(load, [role])
+  const { data, loading, error, reload } = useAsync(load, [role])
 
   const roleMeta = roleById[role]
   const firstName = user?.name?.split(' ')[0] ?? 'there'
@@ -58,7 +58,9 @@ export function RoleDashboard() {
             <CardTitle>Needs attention</CardTitle>
           </CardHeader>
           <CardBody className="p-0">
-            {loading ? (
+            {error ? (
+              <ErrorState error={error} onRetry={reload} compact />
+            ) : loading ? (
               <div className="flex flex-col gap-2 p-4">
                 {Array.from({ length: 5 }).map((_, index) => (
                   <Skeleton key={index} className="h-12 w-full" />

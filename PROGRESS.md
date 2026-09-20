@@ -228,19 +228,48 @@ Legend: ✅ done · 🔄 in progress · ⬜ not started · ⚠️ issue
   85/85 routes render with content assertions, 9/9 RBAC, 10/10 role dashboards,
   30/30 service checks, 56/56 interaction checks
 
-## Phase 11: Polish ⬜
-- ⬜ ⌘K global search, notifications panel
-- ⬜ Loading/empty/error states everywhere, mobile responsiveness
-- ⬜ Keyboard + focus accessibility, spacing consistency, dark-mode audit
-- ⬜ Dead code removal, README, final summary
-
----
+## Phase 11: Polish ✅
+- ✅ **⌘K global search**: a command palette over orders, clients, vendors, people and
+  every page the current role can reach, with prefix-first ranking, grouped results,
+  arrow-key navigation and Enter to open. Its index is permission-filtered and built
+  only while the palette is open
+- ✅ Notifications panel (store + slide-over with unread badge) reachable from the topbar
+- ✅ **Loading / empty / error on every screen**: added a shared `ErrorState` and wired
+  the five screens that were still swallowing load failures (both dashboards, the
+  Order 360 finance tab, the portal order page and quote comparison)
+- ✅ **Accessibility audit** (`npm run a11y`): renders all 59 representative routes and
+  checks accessible names, form labels, alt text, duplicate ids, heading order and
+  table headers. Two real issues found and fixed — `CardTitle`/`Panel` were `h3` under
+  an `h1` (now `h2`), and completed stepper buttons had no accessible name
+- ✅ **Dark-mode audit**: the same pass runs with `.dark` on the document and rejects
+  any inline literal colour, on top of the static token audit
+- ✅ **Mobile**: every wide surface (tables, Gantt, kanban) sits in an overflow
+  container; the only `min-w` in the codebase is the Gantt's, inside its scroller;
+  no unprefixed `grid-cols-3+` that isn't a calendar or a short stat row
+- ✅ **Dead code removed**: 0 unreferenced files, 0 unused exports (dropped
+  `orderStatusIndex`, `productionStagesFor`, `masterKeys`, `VENDOR_TYPE_LABELS`,
+  `mastersServiceFor`; `CardFooter` now demonstrated in the UI kit)
+- ✅ **Code splitting**: 59 pages lazy-loaded per module, overlays loaded on open, and
+  the mock database split into its own chunk. The entry bundle went from
+  **2,550 kB → 354 kB** (573 kB → 110 kB gzipped); the marketing site no longer
+  downloads the ERP or the seed data at all
+- ✅ README rewritten: setup, scripts, the full demo credentials table, module list,
+  folder structure, and a step-by-step guide to swapping the mock services for a real API
+- ✅ Quality gate (9 stages): lint 0 errors, token audit clean (190 files), seed clean,
+  build clean, 85/85 routes render with content assertions, 9/9 RBAC redirects,
+  10/10 role dashboards, 30/30 service checks, 61/61 interaction checks,
+  59/59 routes accessibility + theme clean
 
 ## Known issues
 - ⚠️ `npm run lint` reports one **warning** (0 errors): `react-hooks/incompatible-library`
   on `useReactTable` in DataTable.jsx. React Compiler declines to memoize a component
   that uses TanStack Table's API. TanStack Table v8 is mandated by CLAUDE.md and
   silencing the rule would mean disabling it, so the warning is accepted and documented.
-- ⚠️ The production bundle is a single ~1.47 MB chunk (263 kB gzipped) because every
-  mock JSON file is statically imported. Route-level `React.lazy` splitting and
-  dynamic data imports are scheduled for phase 11 (polish).
+- ✅ ~~The production bundle is a single large chunk~~ — resolved in phase 11. The entry
+  chunk is now 354 kB (110 kB gzipped); pages are code-split per module and the seeded
+  database is its own chunk that the marketing site never loads.
+- ⚠️ The seed-data chunk is 922 kB raw (95 kB gzipped). That is the nature of shipping
+  3,182 realistic records to the browser with no backend; `vite.config.js` raises
+  `chunkSizeWarningLimit` with a comment explaining why. A real API removes it entirely.
+- ⚠️ Charts are not virtualised and tables paginate at 100 rows maximum. Neither is a
+  problem at demo volumes but both would need attention against a real data set.

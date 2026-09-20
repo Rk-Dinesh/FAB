@@ -57,6 +57,7 @@ export function Stepper({
             <button
               type="button"
               disabled={!interactive}
+              aria-label={`${step.label}${done ? ' — completed' : active ? ' — current step' : ''}`}
               onClick={interactive ? () => onStepClick(index) : undefined}
               className={cn(
                 'relative z-10 flex size-6 shrink-0 items-center justify-center rounded-full border-2 transition-colors',

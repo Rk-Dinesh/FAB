@@ -190,15 +190,6 @@ export function statusMeta(kind, value) {
 }
 
 /**
- * How far through the lifecycle an order is.
- * @param {string} status
- * @returns {number} index in ORDER_STATUS_FLOW, or -1
- */
-export function orderStatusIndex(status) {
-  return ORDER_STATUS_FLOW.indexOf(status)
-}
-
-/**
  * Lifecycle steps for the Stepper, dropping optional stages the order skipped.
  * @param {{status: string, hasDesign?: boolean}} order
  */
@@ -206,15 +197,4 @@ export function orderLifecycleSteps(order) {
   return ORDER_STATUS_FLOW.filter(
     (status) => !OPTIONAL_ORDER_STATUSES.includes(status) || order?.hasDesign,
   ).map((status) => ({ value: status, label: ORDER_STATUSES[status].label }))
-}
-
-/**
- * Production stages that apply to an order.
- * @param {{hasWash?: boolean}} order
- * @returns {string[]}
- */
-export function productionStagesFor(order) {
-  return PRODUCTION_STAGE_FLOW.filter(
-    (stage) => !PRODUCTION_STAGES[stage].optional || order?.hasWash,
-  )
 }

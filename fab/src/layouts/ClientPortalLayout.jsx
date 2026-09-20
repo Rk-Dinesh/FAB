@@ -1,4 +1,6 @@
+import { Suspense } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
+import { PageSpinner } from '@/components/ui'
 import { cn } from '@/utils/cn'
 import { portalNavigation } from '@/config/navigation'
 import { Logo } from '@/components/shared/Logo'
@@ -48,7 +50,9 @@ export function ClientPortalLayout() {
       </header>
 
       <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6 sm:px-6">
-        <Outlet />
+        <Suspense fallback={<PageSpinner />}>
+          <Outlet />
+        </Suspense>
       </main>
     </div>
   )

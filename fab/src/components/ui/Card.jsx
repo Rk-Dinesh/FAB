@@ -35,11 +35,15 @@ export function CardHeader({ className, children, actions, ...props }) {
   )
 }
 
-export function CardTitle({ className, children, ...props }) {
+/**
+ * A card heading. Cards sit directly beneath the page's `<h1>`, so this is an
+ * `<h2>` by default; pass `as` when a card is nested under another heading.
+ */
+export function CardTitle({ as: Component = 'h2', className, children, ...props }) {
   return (
-    <h3 className={cn('text-sm font-semibold text-text', className)} {...props}>
+    <Component className={cn('text-sm font-semibold text-text', className)} {...props}>
       {children}
-    </h3>
+    </Component>
   )
 }
 

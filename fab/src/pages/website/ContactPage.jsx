@@ -5,7 +5,6 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { CheckCircle2, Clock, Mail, MapPin, Phone } from 'lucide-react'
 import { Button, Input, Select, Textarea } from '@/components/ui'
-import { leadService } from '@/services/crmService'
 import { Section, SectionHeading } from './components/Section'
 
 const SEGMENTS = [
@@ -66,6 +65,8 @@ export function ContactPage() {
   })
 
   const onSubmit = async (values) => {
+    // Loaded on submit so the marketing bundle never carries the mock database.
+    const { leadService } = await import('@/services/crmService')
     const quantity = Number(values.estimatedQuantity)
     const lead = await leadService.create({
       company: values.company,

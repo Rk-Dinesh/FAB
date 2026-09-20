@@ -312,3 +312,37 @@ state, not another brand's order.
 Every page carries real domain writing — MOQs, lead times, AQL levels, certifications,
 and a sustainability table that admits what is still in progress. The one place the
 demo is called out is the clients page, where the brands are fictional.
+
+## Phase 11 — Polish
+
+### D57. The command palette builds its index only while open
+`useCommandItems(enabled)` returns `[]` unless the palette is open, so the thousands
+of searchable rows are never assembled during normal navigation. The index is also
+permission-filtered, so a role cannot find a record through search that it could not
+reach through the sidebar.
+
+### D58. Code splitting is per module, and the overlays too
+`src/app/pages.js` holds 59 `React.lazy` imports; each layout wraps its `Outlet` in
+Suspense. The notifications panel and the command palette load on first open, and
+`UserMenu` imports the mock db inside its reset handler. The result: the marketing site
+never downloads the ERP, and the entry bundle fell from 2,550 kB to 354 kB.
+
+### D59. The gate scripts poll instead of sleeping
+Lazy chunks made every fixed `setTimeout` wait flaky. `smoke.mjs` and `check-crud.mjs`
+now poll until the expected content is on screen, with a deadline. Faster in the common
+case and correct in the slow one.
+
+### D60. `CardTitle` is an `<h2>`
+The accessibility audit caught cards rendering `<h3>` directly beneath a page's `<h1>`.
+Cards are sections of the page, so `h2` is correct; `CardTitle` takes an `as` prop for
+the rare nested case.
+
+### D61. The dark-mode audit runs on the rendered DOM
+The static token audit catches hardcoded colours in source. The rendered pass catches
+what it cannot see: an inline `style` that resolves to a literal colour. Colour swatches
+— which render master data — are the one documented exception.
+
+### D62. `chunkSizeWarningLimit` is raised, with the reason in the config
+The only chunk over 500 kB is the seeded database. It is code-split away from the
+public site and gzips to 95 kB, so the default warning is noise here. The limit is
+raised to 1000 with a comment stating exactly that, rather than silently.

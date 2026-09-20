@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { CheckCircle2, CircleDashed, Package, Ship } from 'lucide-react'
 import { cn } from '@/utils/cn'
 import { Badge, Card, CardBody, CardHeader, CardTitle, EmptyState, PageSpinner, Progress, Stepper } from '@/components/ui'
-import { Breadcrumbs, StatusBadge, Timeline } from '@/components/shared'
+import { Breadcrumbs, ErrorState, StatusBadge, Timeline } from '@/components/shared'
 import { useAsync } from '@/hooks'
 import { getOrder360 } from '@/services/orderService'
 import { PRODUCTION_STAGES, orderLifecycleSteps } from '@/config/statuses'
@@ -16,9 +16,17 @@ export function PortalOrderPage() {
   const { clientId } = usePortalClient()
 
   const load = useCallback(() => getOrder360(id), [id])
-  const { data: order, loading } = useAsync(load, [id])
+  const { data: order, loading, error, reload } = useAsync(load, [id])
 
   if (loading && !order) return <PageSpinner label="Loading order" />
+
+  if (error) {
+    return (
+      <Card>
+        <ErrorState error={error} onRetry={reload} title="Couldn’t load this order" />
+      </Card>
+    )
+  }
 
   // A client may only open their own orders.
   if (!order || order.clientId !== clientId) {

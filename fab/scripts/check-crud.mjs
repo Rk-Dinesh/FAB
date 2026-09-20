@@ -7,6 +7,7 @@
  *   3. Order 360 — walk all eleven tabs and assert each one renders its data.
  *   4. Portal approval — a client approves a sample, and the internal Design
  *      module shows that same decision.
+ *   5. Command palette — ⌘K opens it, typing filters, Enter navigates.
  * RecordDrawer + FormFields + DataTable back most screens in the app, so these
  * paths cover a lot of shared surface. Run with `npm run crud`.
  */
@@ -48,7 +49,19 @@ try {
       await new Promise((resolve) => setTimeout(resolve, ms))
     })
   }
-  await settle()
+
+  /**
+   * Poll until `predicate` holds. Pages now resolve a lazy chunk before their
+   * 300–600 ms service call, so a fixed sleep is the wrong tool.
+   */
+  const waitFor = async (predicate, timeout = 8000) => {
+    const deadline = Date.now() + timeout
+    for (;;) {
+      await settle(120)
+      if (predicate()) return true
+      if (Date.now() > deadline) return false
+    }
+  }
 
   const body = () => window.document.body
   const textOf = () => body().textContent ?? ''
@@ -76,6 +89,7 @@ try {
     return node ? window.document.getElementById(node.getAttribute('for')) : null
   }
 
+  await waitFor(() => textOf().includes('Navy Blazer'))
   check('masters list renders seeded rows', textOf().includes('Navy Blazer'))
 
   const newButton = findByText('button', 'New colour')
@@ -98,7 +112,7 @@ try {
 
   await setInput(hexInput, '#0E7490')
   await click(findByText('button', 'Create colour'))
-  await settle(2600)
+  await waitFor(() => !body().querySelector('[role="dialog"]') && textOf().includes('Signal Teal'))
   check('drawer closes after a valid save', !body().querySelector('[role="dialog"]'))
   check('new row appears in the table', textOf().includes('Signal Teal'))
   check('a toast confirms the save', textOf().includes('Colour created'))
@@ -114,7 +128,7 @@ try {
   check('row click opens the edit drawer prefilled', editName?.value === 'Signal Teal', editName?.value)
   await setInput(editName, 'Signal Teal Deep')
   await click(findByText('button', 'Save changes'))
-  await settle(2600)
+  await waitFor(() => textOf().includes('Signal Teal Deep'))
   check('edit persists to the list', textOf().includes('Signal Teal Deep'))
 
   // ---------------------------------------------------------------- samples
@@ -130,8 +144,7 @@ try {
       React.createElement(Providers, null, React.createElement(RouterProvider, { router: sampleRouter })),
     )
   })
-  await settle(1200)
-
+  await waitFor(() => textOf().includes('Awaiting decision') && Boolean(body().querySelector('tbody tr')))
   check('samples list renders', textOf().includes('Awaiting decision'))
 
   const rejectButton = [...body().querySelectorAll('button')].find((node) =>
@@ -159,7 +172,10 @@ try {
     commentBox.dispatchEvent(new window.Event('input', { bubbles: true }))
   })
   await click(findByText('button', 'Reject sample'))
-  await settle(2200)
+  // The toast fires before the list refetches, so wait for the row itself.
+  await waitFor(
+    () => !body().querySelector('[role="dialog"]') && textOf().includes('over tolerance'),
+  )
   check('rejection closes the modal', !body().querySelector('[role="dialog"]'))
   check('rejection is recorded on the row', textOf().includes('over tolerance'))
   check('a toast confirms the rejection', textOf().includes('Sample rejected'))
@@ -178,8 +194,7 @@ try {
       React.createElement(Providers, null, React.createElement(RouterProvider, { router: orderRouter })),
     )
   })
-  await settle(1400)
-
+  await waitFor(() => textOf().includes('PO-1019'))
   check('order 360 header renders', textOf().includes('PO-1019') && textOf().includes('Ex-factory'))
   check('lifecycle stepper renders', textOf().includes('Production') && textOf().includes('Payment received'))
 
@@ -207,7 +222,10 @@ try {
       continue
     }
     await click(tabButton)
-    await settle(700)
+    await waitFor(() =>
+      expectations.every((expected) => textOf().toLowerCase().includes(expected.toLowerCase())),
+      4000,
+    )
     const text = textOf()
     const missing = expectations.filter(
       (expected) => !text.toLowerCase().includes(expected.toLowerCase()),
@@ -227,8 +245,7 @@ try {
       React.createElement(Providers, null, React.createElement(RouterProvider, { router: wizardRouter })),
     )
   })
-  await settle(1200)
-
+  await waitFor(() => textOf().includes('Client & style'))
   check('wizard starts on step 1', textOf().includes('Client & style'))
 
   // Continuing with nothing filled in must surface validation, not advance.
@@ -279,7 +296,7 @@ try {
   check('review warns about the unallocated factory', textOf().includes('No factory allocated'))
 
   await click(findByText('button', 'Create order'))
-  await settle(2600)
+  await waitFor(() => textOf().includes('Smoke test tee'))
   check('created order opens its 360 page', textOf().includes('Smoke test tee'))
 
   await act(async () => wizardRoot.unmount())
@@ -303,8 +320,7 @@ try {
       React.createElement(Providers, null, React.createElement(RouterProvider, { router: portalRouter })),
     )
   })
-  await settle(1400)
-
+  await waitFor(() => textOf().includes('Sample approvals') && Boolean(findByText('button', 'Approve')))
   check('portal approvals page renders', textOf().includes('Sample approvals'))
   check('portal is scoped to the signed-in brand', !textOf().includes('Maison Rue'))
 
@@ -321,7 +337,7 @@ try {
   check('approval modal opens', textOf().includes('Approve this sample'))
 
   await click(findByText('button', 'Approve sample'))
-  await settle(2200)
+  await waitFor(() => textOf().includes('Sample approved'))
   check('approval confirms to the client', textOf().includes('Sample approved'))
 
   await act(async () => portalRoot.unmount())
@@ -338,7 +354,7 @@ try {
       React.createElement(Providers, null, React.createElement(RouterProvider, { router: internalRouter })),
     )
   })
-  await settle(1400)
+  await waitFor(() => Boolean(body().querySelector('tbody tr')))
 
   // 60 samples paginate, so search for the one we just decided on.
   const searchBox = [...body().querySelectorAll('input')].find(
@@ -359,6 +375,54 @@ try {
   )
 
   await act(async () => internalRoot.unmount())
+
+  // ------------------------------------------------------------- ⌘K palette
+  console.log('')
+  const paletteRouter = createMemoryRouter(routes, { initialEntries: ['/app/dashboard'] })
+  let paletteRoot
+  await act(async () => {
+    paletteRoot = createRoot(container)
+    paletteRoot.render(
+      React.createElement(Providers, null, React.createElement(RouterProvider, { router: paletteRouter })),
+    )
+  })
+  await waitFor(() => textOf().includes('Executive dashboard'))
+
+  // The shortcut is bound on document, so dispatch there.
+  await act(async () => {
+    window.document.dispatchEvent(
+      new window.KeyboardEvent('keydown', { key: 'k', metaKey: true, bubbles: true }),
+    )
+  })
+  await waitFor(() => textOf().includes('Search orders, clients, vendors'))
+  check('⌘K opens the command palette', textOf().includes('Search orders, clients, vendors'))
+
+  const paletteInput = [...body().querySelectorAll('input')].find(
+    (node) => node.getAttribute('aria-label') === 'Search',
+  )
+  check('the palette focuses its input', Boolean(paletteInput))
+
+  await setInput(paletteInput, 'northwind')
+  await settle(200)
+  check('the palette searches across records', textOf().includes('Northwind Apparel'))
+
+  await setInput(paletteInput, 'PO-1019')
+  await settle(200)
+  check('the palette finds an order by PO', textOf().includes('PO-1019'))
+
+  await act(async () => {
+    paletteInput.dispatchEvent(
+      new window.KeyboardEvent('keydown', { key: 'Enter', bubbles: true }),
+    )
+  })
+  await waitFor(() => paletteRouter.state.location.pathname === '/app/orders/ORD-019')
+  check(
+    'Enter navigates to the selected record',
+    paletteRouter.state.location.pathname === '/app/orders/ORD-019',
+    paletteRouter.state.location.pathname,
+  )
+
+  await act(async () => paletteRoot.unmount())
   resetDemoData()
 } finally {
   await vite.close()

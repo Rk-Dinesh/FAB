@@ -8,6 +8,7 @@ import {
   Card,
   CardBody,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
   Checkbox,
@@ -256,6 +257,12 @@ export function UiKitPage() {
               <Skeleton className="h-3 w-60" />
               <Skeleton className="h-3 w-24" />
             </CardBody>
+            <CardFooter>
+              <Button variant="secondary" size="sm">
+                Cancel
+              </Button>
+              <Button size="sm">Save</Button>
+            </CardFooter>
           </Card>
           <Card>
             <EmptyState

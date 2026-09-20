@@ -4,6 +4,7 @@ import { cn } from '@/utils/cn'
 import { Progress } from '@/components/ui'
 import { StatusBadge } from '@/components/shared/StatusBadge'
 import { useAsync } from '@/hooks'
+import { ErrorState } from '@/components/shared/ErrorState'
 import { getOrderPnl } from '@/services/financeService'
 import { formatCurrency, formatDate, formatPercent } from '@/utils/format'
 import { Field, MiniTable, Panel, TabEmpty } from './TabShell'
@@ -11,7 +12,7 @@ import { Field, MiniTable, Panel, TabEmpty } from './TabShell'
 /** Order 360 → Finance: invoiced, received, vendor cost and the resulting margin. */
 export function FinanceTab({ order, vendorsById }) {
   const load = useCallback(() => getOrderPnl(order.id), [order.id])
-  const { data: pnl, loading } = useAsync(load, [order.id])
+  const { data: pnl, loading, error, reload } = useAsync(load, [order.id])
 
   const invoices = order.invoices ?? []
   const bills = order.bills ?? []
@@ -30,7 +31,9 @@ export function FinanceTab({ order, vendorsById }) {
   return (
     <div className="flex flex-col gap-4">
       <Panel title="Order P&L" description="Revenue against everything it cost to deliver.">
-        {loading || !pnl ? (
+        {error ? (
+          <ErrorState error={error} onRetry={reload} title="Couldn’t calculate the P&L" compact />
+        ) : loading || !pnl ? (
           <p className="text-sm text-muted">Calculating…</p>
         ) : (
           <>

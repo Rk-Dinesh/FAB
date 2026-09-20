@@ -429,18 +429,3 @@ export const mastersConfig = {
     defaults: { name: '', type: 'MILL', city: '', state: '', country: 'India', contactName: '', email: '', phone: '', rating: 4, leadTimeDays: 21, paymentTermCode: 'TT 30', specialities: [], certifications: [], active: true, notes: '', onTimePercent: 90, defectRatePercent: 2 },
   },
 }
-
-/** Route segments in sidebar order. */
-export const masterKeys = [
-  'company', 'clients', 'vendors', 'categories', 'fabrics', 'trims', 'colors',
-  'size-sets', 'uom', 'currencies', 'ports', 'incoterms', 'payment-terms',
-  'stages', 'qc-checklists',
-]
-
-/** Vendor type labels, derived so the form and the table agree. */
-export const VENDOR_TYPE_LABELS = {
-  MILL: 'Fabric mill',
-  TRIMS: 'Trims & packaging',
-  FACTORY: 'Garment factory',
-  WASHING: 'Washing & embellishment',
-}

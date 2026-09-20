@@ -3,67 +3,71 @@ import { AppLayout } from '@/layouts/AppLayout'
 import { AuthLayout } from '@/layouts/AuthLayout'
 import { ClientPortalLayout } from '@/layouts/ClientPortalLayout'
 import { PublicLayout } from '@/layouts/PublicLayout'
-import { HomePage } from '@/pages/website/HomePage'
-import { AboutPage } from '@/pages/website/AboutPage'
-import { ServicesPage } from '@/pages/website/ServicesPage'
-import { CapabilitiesPage } from '@/pages/website/CapabilitiesPage'
-import { ClientsPage as WebsiteClientsPage } from '@/pages/website/ClientsPage'
-import { SustainabilityPage } from '@/pages/website/SustainabilityPage'
-import { ContactPage } from '@/pages/website/ContactPage'
-import { PortalOrdersPage } from '@/features/portal/pages/PortalOrdersPage'
-import { PortalOrderPage } from '@/features/portal/pages/PortalOrderPage'
-import { PortalApprovalsPage } from '@/features/portal/pages/PortalApprovalsPage'
-import { PortalShipmentsPage } from '@/features/portal/pages/PortalShipmentsPage'
-import { ForbiddenPage } from '@/pages/ForbiddenPage'
-import { NotFoundPage } from '@/pages/NotFoundPage'
-import { DashboardPage } from '@/features/dashboard/pages/DashboardPage'
-import { LoginPage } from '@/features/auth/pages/LoginPage'
-import { ForgotPasswordPage } from '@/features/auth/pages/ForgotPasswordPage'
-import { UiKitPage } from '@/features/ui-kit/pages/UiKitPage'
-import { MastersPage } from '@/features/masters/pages/MastersPage'
-import { EmployeesPage } from '@/features/hr/pages/EmployeesPage'
-import { DepartmentsPage } from '@/features/hr/pages/DepartmentsPage'
-import { AttendancePage } from '@/features/hr/pages/AttendancePage'
-import { LeavePage } from '@/features/hr/pages/LeavePage'
-import { PayrollPage } from '@/features/hr/pages/PayrollPage'
-import { ReportsPage } from '@/features/reports/pages/ReportsPage'
-import { ShipmentsPage } from '@/features/logistics/pages/ShipmentsPage'
-import { DocumentsPage } from '@/features/logistics/pages/DocumentsPage'
-import { TrackingPage } from '@/features/logistics/pages/TrackingPage'
-import { InvoicesPage } from '@/features/finance/pages/InvoicesPage'
-import { BillsPage } from '@/features/finance/pages/BillsPage'
-import { PaymentsPage } from '@/features/finance/pages/PaymentsPage'
-import { ExpensesPage } from '@/features/finance/pages/ExpensesPage'
-import { OrderPnlPage } from '@/features/finance/pages/OrderPnlPage'
-import { ClientUpdatesPage } from '@/features/clientUpdates/pages/ClientUpdatesPage'
-import { VendorsPage } from '@/features/sourcing/pages/VendorsPage'
-import { RfqPage } from '@/features/sourcing/pages/RfqPage'
-import { QuoteComparisonPage } from '@/features/sourcing/pages/QuoteComparisonPage'
-import { MaterialPoPage } from '@/features/sourcing/pages/MaterialPoPage'
-import { GrnPage } from '@/features/sourcing/pages/GrnPage'
-import { AllocationPage } from '@/features/production/pages/AllocationPage'
-import { StageTrackerPage } from '@/features/production/pages/StageTrackerPage'
-import { DailyOutputPage } from '@/features/production/pages/DailyOutputPage'
-import { GanttPage } from '@/features/production/pages/GanttPage'
-import { InspectionsPage } from '@/features/quality/pages/InspectionsPage'
-import { DefectsPage } from '@/features/quality/pages/DefectsPage'
-import { OrdersPage } from '@/features/orders/pages/OrdersPage'
-import { OrderNewPage } from '@/features/orders/pages/OrderNewPage'
-import { Order360Page } from '@/features/orders/pages/Order360Page'
-import { LeadsPage } from '@/features/crm/pages/LeadsPage'
-import { ClientsPage } from '@/features/crm/pages/ClientsPage'
-import { EnquiriesPage } from '@/features/crm/pages/EnquiriesPage'
-import { DesignRequestsPage } from '@/features/design/pages/DesignRequestsPage'
-import { TechPacksPage } from '@/features/design/pages/TechPacksPage'
-import { SamplesPage } from '@/features/design/pages/SamplesPage'
-import { CostSheetsPage } from '@/features/costing/pages/CostSheetsPage'
-import { QuotationsPage } from '@/features/costing/pages/QuotationsPage'
-import { UsersPage } from '@/features/admin/pages/UsersPage'
-import { RolesPage } from '@/features/admin/pages/RolesPage'
-import { AuditLogPage } from '@/features/admin/pages/AuditLogPage'
-import { SettingsPage } from '@/features/admin/pages/SettingsPage'
 import { ProtectedRoute } from './ProtectedRoute'
 import { RouteError } from './RouteError'
+// Every page is code-split — see ./pages.js
+import {
+  AboutPage,
+  AllocationPage,
+  AttendancePage,
+  AuditLogPage,
+  BillsPage,
+  CapabilitiesPage,
+  ClientUpdatesPage,
+  ClientsPage,
+  ContactPage,
+  CostSheetsPage,
+  DailyOutputPage,
+  DashboardPage,
+  DefectsPage,
+  DepartmentsPage,
+  DesignRequestsPage,
+  DocumentsPage,
+  EmployeesPage,
+  EnquiriesPage,
+  ExpensesPage,
+  ForbiddenPage,
+  ForgotPasswordPage,
+  GanttPage,
+  GrnPage,
+  HomePage,
+  InspectionsPage,
+  InvoicesPage,
+  LeadsPage,
+  LeavePage,
+  LoginPage,
+  MastersPage,
+  MaterialPoPage,
+  NotFoundPage,
+  Order360Page,
+  OrderNewPage,
+  OrderPnlPage,
+  OrdersPage,
+  PaymentsPage,
+  PayrollPage,
+  PortalApprovalsPage,
+  PortalOrderPage,
+  PortalOrdersPage,
+  PortalShipmentsPage,
+  QuotationsPage,
+  QuoteComparisonPage,
+  ReportsPage,
+  RfqPage,
+  RolesPage,
+  SamplesPage,
+  ServicesPage,
+  SettingsPage,
+  ShipmentsPage,
+  StageTrackerPage,
+  SustainabilityPage,
+  TechPacksPage,
+  TrackingPage,
+  UiKitPage,
+  UsersPage,
+  VendorsPage,
+  WebsiteClientsPage,
+} from './pages'
+
 
 /**
  * A permission-guarded subtree of the app area.

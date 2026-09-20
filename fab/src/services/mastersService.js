@@ -21,11 +21,3 @@ export const mastersServices = {
   stages: createService('stages', { idPrefix: 'STG', searchFields: ['name', 'code'], defaultSort: { by: 'sequence', dir: 'asc' } }),
   'qc-checklists': createService('qcChecklists', { idPrefix: 'QCL', searchFields: ['name', 'stage'] }),
 }
-
-/**
- * @param {string} key masters route segment, e.g. "fabrics"
- * @returns {ReturnType<typeof createService>|null}
- */
-export function mastersServiceFor(key) {
-  return mastersServices[key] ?? null
-}

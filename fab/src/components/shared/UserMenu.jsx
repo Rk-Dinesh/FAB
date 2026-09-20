@@ -5,7 +5,6 @@ import { Dropdown } from '@/components/ui/Dropdown'
 import { useAuthStore } from '@/store/authStore'
 import { roleLabel } from '@/config/roles'
 import { toast } from '@/store/toastStore'
-import { resetDemoData } from '@/mocks/db'
 import { useNotificationStore } from '@/store/notificationStore'
 
 /** Topbar profile menu: identity, role, and sign out. */
@@ -25,7 +24,9 @@ export function UserMenu() {
   }
 
   // Session edits live in localStorage; this drops them and reloads the seed.
-  const resetData = () => {
+  const resetData = async () => {
+    // Imported here so the app shell doesn't carry the mock database.
+    const { resetDemoData } = await import('@/mocks/db')
     resetDemoData()
     resetNotifications()
     toast.success('Demo data reset', 'Every record is back to its seeded state.')

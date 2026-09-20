@@ -16,7 +16,7 @@ import {
 import { AlertTriangle, Banknote, Package, Percent, Truck } from 'lucide-react'
 import { cn } from '@/utils/cn'
 import { Badge, Card, CardBody, CardHeader, CardTitle, Progress } from '@/components/ui'
-import { KpiCard, KpiGrid, PageHeader, StatusBadge } from '@/components/shared'
+import { ErrorState, KpiCard, KpiGrid, PageHeader, StatusBadge } from '@/components/shared'
 import { useAsync } from '@/hooks'
 import { getExecutiveSummary } from '../dashboardData'
 import { ChartCard } from '../components/ChartCard'
@@ -26,7 +26,7 @@ import { formatCurrency, formatDate, formatNumber, formatPercent } from '@/utils
 /** The CXO home: order book, revenue, margin, on-time and what is going wrong. */
 export function ExecutiveDashboard() {
   const load = useCallback(() => getExecutiveSummary(), [])
-  const { data, loading } = useAsync(load)
+  const { data, loading, error, reload } = useAsync(load)
 
   const funnel = useMemo(
     () => (data?.byStatus ?? []).filter((entry) => entry.count > 0),
@@ -39,6 +39,12 @@ export function ExecutiveDashboard() {
         title="Executive dashboard"
         description="The order book, revenue against target, margin and where delivery is slipping."
       />
+
+      {error && (
+        <Card className="mb-5">
+          <ErrorState error={error} onRetry={reload} title="Couldn’t load the dashboard" />
+        </Card>
+      )}
 
       <KpiGrid className="mb-5">
         <KpiCard
