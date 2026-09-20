@@ -57,3 +57,29 @@ palettes, seed data) opt out with an `audit-ignore` comment.
 
 ### D10. `npm run gate` runs lint → audit → build → smoke
 One command for the phase quality gate.
+
+## Phase 2 — Auth + RBAC
+
+### D11. Permissions live in a plain object, not in the user record
+`config/permissions.js` maps role → module → actions. Users carry only a role, so
+the admin "roles" screen in phase 4 can edit one matrix and have it apply everywhere.
+SUPER_ADMIN is generated from `MODULES` with `'*'` rather than hand-listed.
+
+### D12. `area` on ProtectedRoute keeps the two audiences apart
+CLIENT users hitting an internal route are redirected to `/portal/orders`, and staff
+hitting `/portal` go to their role home. Without this, a client with a stale URL
+would land on a 403 instead of somewhere useful.
+
+### D13. The dev role switcher impersonates rather than re-logs-in
+`impersonatedRole` overrides the role used by every permission check while keeping
+the signed-in identity. This makes the whole RBAC surface reviewable in one session,
+and the topbar chip turns amber whenever impersonation is active.
+
+### D14. `npm run rbac` pins the redirect behaviour
+`scripts/check-rbac.mjs` mounts the real route tree for nine (role, path) pairs and
+asserts the landing path. A careless edit to the matrix now fails the gate instead of
+silently opening or closing a module.
+
+### D15. Notifications are a real store from phase 2
+The topbar badge needed something to count, so the notification store and slide-over
+panel were built here with domain-realistic seeds rather than stubbed and revisited.

@@ -95,8 +95,25 @@ try {
   const act = reactModule.act ?? React.act
   const { createRoot } = clientModule
   const routesModule = await vite.ssrLoadModule('/src/app/routes.jsx')
+  const { useAuthStore } = await vite.ssrLoadModule('/src/store/authStore.js')
+  const usersModule = await vite.ssrLoadModule('/src/mocks/data/users.json')
+  const users = usersModule.default ?? usersModule
+
+  /** Sign in as the role that can actually reach `path`. */
+  const signInFor = (path) => {
+    const wanted = path.startsWith('/portal') ? 'CLIENT' : 'SUPER_ADMIN'
+    const user = users.find((candidate) => candidate.role === wanted)
+    useAuthStore.setState({
+      user,
+      role: user.role,
+      token: 'mock.smoke.token',
+      impersonatedRole: null,
+    })
+  }
   const { Providers } = await vite.ssrLoadModule('/src/app/Providers.jsx')
   const { createMemoryRouter, RouterProvider } = ReactRouter
+
+  await checkConfig(vite)
 
   const explicit = process.argv.slice(2)
   const paths = explicit.length > 0 ? explicit : collectPaths(routesModule.routes)
@@ -107,6 +124,7 @@ try {
     consoleErrors = []
     console.error = record('error')
     console.warn = record('warn')
+    signInFor(path)
     const container = window.document.createElement('div')
     window.document.body.appendChild(container)
     let root
@@ -154,6 +172,57 @@ if (failures.length > 0) {
 
 console.log('\nAll routes rendered cleanly.\n')
 process.exit(0)
+
+/**
+ * Assert that navigation, roles and the permission matrix agree with each other.
+ * A typo in a module key would otherwise silently hide a whole section of the app.
+ * @param {import('vite').ViteDevServer} vite
+ */
+async function checkConfig(vite) {
+  const { navigation, portalNavigation } = await vite.ssrLoadModule('/src/config/navigation.js')
+  const { roles } = await vite.ssrLoadModule('/src/config/roles.js')
+  const { MODULES, MODULE_LABELS, permissions, filterNavigation, can } =
+    await vite.ssrLoadModule('/src/config/permissions.js')
+
+  const problems = []
+  const known = new Set(MODULES)
+
+  for (const group of [...navigation, ...portalNavigation]) {
+    if (!known.has(group.module)) problems.push(`navigation group "${group.label}" uses unknown module "${group.module}"`)
+    for (const child of group.children ?? []) {
+      if (!known.has(child.module)) problems.push(`nav item "${child.label}" uses unknown module "${child.module}"`)
+    }
+  }
+  for (const module of MODULES) {
+    if (!MODULE_LABELS[module]) problems.push(`module "${module}" has no label`)
+  }
+  for (const role of roles) {
+    const grants = permissions[role.id]
+    if (!grants) {
+      problems.push(`role "${role.id}" has no permissions entry`)
+      continue
+    }
+    for (const module of Object.keys(grants)) {
+      if (!known.has(module)) problems.push(`role "${role.id}" grants unknown module "${module}"`)
+    }
+    const visible = filterNavigation(navigation, role.id)
+    if (role.id === 'CLIENT') {
+      if (visible.length > 0) problems.push('CLIENT should see no internal navigation')
+      if (!can(role.id, 'portal')) problems.push('CLIENT cannot view the portal')
+    } else if (visible.length === 0) {
+      problems.push(`role "${role.id}" sees an empty sidebar`)
+    }
+  }
+
+  if (problems.length > 0) {
+    console.log('\nConfig problems:\n')
+    for (const problem of problems) console.log(`  ✗ ${problem}`)
+    console.log('')
+    process.exitCode = 1
+    throw new Error('config check failed')
+  }
+  console.log(`Config check: ${roles.length} roles × ${MODULES.length} modules consistent.`)
+}
 
 /**
  * Flatten the route tree into concrete paths, substituting demo ids for params.

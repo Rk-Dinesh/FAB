@@ -2,13 +2,14 @@ import { NavLink, Outlet } from 'react-router-dom'
 import { cn } from '@/utils/cn'
 import { portalNavigation } from '@/config/navigation'
 import { Logo } from '@/components/shared/Logo'
+import { UserMenu } from '@/components/shared/UserMenu'
 import { ThemeToggle } from '@/components/shared/ThemeToggle'
 
 /**
  * Shell for the CLIENT role: a slim horizontal nav instead of the internal
  * sidebar, so brands only ever see their own workspace.
  */
-export function ClientPortalLayout({ right }) {
+export function ClientPortalLayout() {
   return (
     <div className="flex min-h-screen flex-col bg-bg">
       <header className="sticky top-0 z-30 border-b border-border bg-surface/85 backdrop-blur">
@@ -19,7 +20,7 @@ export function ClientPortalLayout({ right }) {
           </span>
           <div className="ml-auto flex items-center gap-2">
             <ThemeToggle />
-            {right}
+            <UserMenu />
           </div>
         </div>
         <nav className="mx-auto flex max-w-6xl gap-1 overflow-x-auto px-2 scrollbar-none sm:px-4">

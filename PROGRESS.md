@@ -27,15 +27,23 @@ Legend: ✅ done · 🔄 in progress · ⬜ not started · ⚠️ issue
 - ✅ Quality gate: lint 0, audit clean (60 files), build 0 errors, 17/17 routes
   render cleanly, dev server serves both token sets
 
-## Phase 2: Auth + RBAC ⬜
-- ⬜ Mock login (email/password + quick-login role cards)
-- ⬜ Zustand persisted auth store
-- ⬜ config/roles.js, config/permissions.js, `can()` helper, `<Can>` component
-- ⬜ ProtectedRoute (auth + permission → /403)
-- ⬜ Sidebar from config/navigation.js filtered by permission
-- ⬜ Topbar: search trigger, notifications, theme toggle, dev role switcher, profile menu
-- ⬜ Breadcrumbs, 403, 404, forgot-password
-- ⬜ Quality gate
+## Phase 2: Auth + RBAC ✅
+- ✅ Mock login: email/password (react-hook-form + zod) plus 11 "quick login as"
+  role cards; 12 seeded users in `mocks/data/users.json`, password `demo123`
+- ✅ Zustand auth store persisted in localStorage as `{user, role, token}`; the
+  password never reaches app state
+- ✅ `config/roles.js` (11 roles with labels, descriptions and per-role home) and
+  `config/permissions.js` (role → module → actions, 16 modules × 5 actions)
+- ✅ `can()` helper, `useCan()` hook and the `<Can>` component
+- ✅ `ProtectedRoute`: requires a session, checks the module permission, keeps
+  CLIENT inside `/portal` and staff out of it
+- ✅ Sidebar generated from `config/navigation.js`, filtered by permission
+- ✅ Topbar: ⌘K search trigger, notifications (store + slide-over panel with unread
+  badge), theme toggle, dev role switcher, profile menu with sign out
+- ✅ Breadcrumbs (in PageHeader), 403, 404 and forgot-password pages
+- ✅ Full route tree behind guards (61 routes)
+- ✅ Quality gate: lint 0, audit clean (72 files), build 0 errors, config check
+  (11 roles × 16 modules consistent), 61/61 routes render, 9/9 RBAC redirects correct
 
 ## Phase 3: Mock data layer ⬜
 - ⬜ Seed JSON in src/mocks/data (relational IDs, CLAUDE.md volumes)
@@ -99,4 +107,5 @@ Legend: ✅ done · 🔄 in progress · ⬜ not started · ⚠️ issue
 ---
 
 ## Known issues
-_none yet_
+- ⚠️ The production bundle is a single ~543 kB chunk and Vite warns about it.
+  Route-level `React.lazy` splitting is scheduled for phase 11 (polish).
