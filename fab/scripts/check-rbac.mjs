@@ -48,6 +48,52 @@ for (const testCase of cases) {
   await act(async () => root.unmount())
   routeContainer.remove()
 }
+// --- every role's dashboard renders its own content ---------------------------
+console.log('')
+const { Providers } = await vite.ssrLoadModule('/src/app/Providers.jsx')
+const DASHBOARD_EXPECTATIONS = {
+  SUPER_ADMIN: ['Executive dashboard', 'Order book'],
+  CXO: ['Executive dashboard', 'Revenue vs target', 'Vendor performance'],
+  MERCHANDISER: ['Needs attention', 'Live orders', 'Jump back in'],
+  DESIGNER: ['Samples pending', 'Needs attention'],
+  SOURCING: ['Open material POs', 'Needs attention'],
+  PRODUCTION: ['Delayed stages', 'Needs attention'],
+  QC: ['Failed inspections', 'Pass rate'],
+  LOGISTICS: ['Ready to ship', 'In transit'],
+  FINANCE: ['Overdue invoices', 'Receivables'],
+  HR: ['Leave to approve', 'Headcount'],
+}
+
+for (const [roleId, expectations] of Object.entries(DASHBOARD_EXPECTATIONS)) {
+  const user = users.find((candidate) => candidate.role === roleId)
+  useAuthStore.setState({ user, role: user.role, token: 'tok', impersonatedRole: null })
+
+  const dashRouter = createMemoryRouter(routes, { initialEntries: ['/app/dashboard'] })
+  const dashContainer = window.document.createElement('div')
+  window.document.body.appendChild(dashContainer)
+  let dashRoot
+  await act(async () => {
+    dashRoot = createRoot(dashContainer)
+    dashRoot.render(
+      React.createElement(Providers, null, React.createElement(RouterProvider, { router: dashRouter })),
+    )
+  })
+  await act(async () => {
+    await new Promise((resolve) => setTimeout(resolve, 1000))
+  })
+
+  const text = dashContainer.textContent ?? ''
+  const missing = expectations.filter(
+    (expected) => !text.toLowerCase().includes(expected.toLowerCase()),
+  )
+  const ok = missing.length === 0
+  if (!ok) failed++
+  console.log(`${ok ? '✓' : '✗'} ${roleId.padEnd(14)} dashboard${ok ? '' : ` — missing: ${missing.join(', ')}`}`)
+
+  await act(async () => dashRoot.unmount())
+  dashContainer.remove()
+}
+
 await vite.close()
-console.log(failed === 0 ? '\nAll RBAC redirects correct.' : `\n${failed} failed`)
+console.log(failed === 0 ? '\nAll RBAC redirects and role dashboards correct.' : `\n${failed} failed`)
 process.exit(failed === 0 ? 0 : 1)

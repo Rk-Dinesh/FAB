@@ -12,6 +12,12 @@ import { LoginPage } from '@/features/auth/pages/LoginPage'
 import { ForgotPasswordPage } from '@/features/auth/pages/ForgotPasswordPage'
 import { UiKitPage } from '@/features/ui-kit/pages/UiKitPage'
 import { MastersPage } from '@/features/masters/pages/MastersPage'
+import { EmployeesPage } from '@/features/hr/pages/EmployeesPage'
+import { DepartmentsPage } from '@/features/hr/pages/DepartmentsPage'
+import { AttendancePage } from '@/features/hr/pages/AttendancePage'
+import { LeavePage } from '@/features/hr/pages/LeavePage'
+import { PayrollPage } from '@/features/hr/pages/PayrollPage'
+import { ReportsPage } from '@/features/reports/pages/ReportsPage'
 import { ShipmentsPage } from '@/features/logistics/pages/ShipmentsPage'
 import { DocumentsPage } from '@/features/logistics/pages/DocumentsPage'
 import { TrackingPage } from '@/features/logistics/pages/TrackingPage'
@@ -161,14 +167,15 @@ export const routes = [
             { path: 'finance/order-pnl', element: <OrderPnlPage /> },
           ]),
           guarded('hr', [
-            { path: 'hr/employees', ...soon('Employees', 'Own staff records.', 'phase 9') },
-            { path: 'hr/departments', ...soon('Departments', 'Org structure.', 'phase 9') },
-            { path: 'hr/attendance', ...soon('Attendance', 'Monthly calendar.', 'phase 9') },
-            { path: 'hr/leave', ...soon('Leave', 'Apply and approve.', 'phase 9') },
-            { path: 'hr/payroll', ...soon('Payroll', 'Monthly run and payslips.', 'phase 9') },
+            { path: 'hr', element: <Navigate to="/app/hr/employees" replace /> },
+            { path: 'hr/employees', element: <EmployeesPage /> },
+            { path: 'hr/departments', element: <DepartmentsPage /> },
+            { path: 'hr/attendance', element: <AttendancePage /> },
+            { path: 'hr/leave', element: <LeavePage /> },
+            { path: 'hr/payroll', element: <PayrollPage /> },
           ]),
           guarded('reports', [
-            { path: 'reports', ...soon('Reports', 'Filtered, exportable reports.', 'phase 9') },
+            { path: 'reports', element: <ReportsPage /> },
           ]),
           guarded('masters', [
             { path: 'masters', element: <Navigate to="/app/masters/company" replace /> },

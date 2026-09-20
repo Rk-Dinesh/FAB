@@ -183,11 +183,28 @@ Legend: ✅ done · 🔄 in progress · ⬜ not started · ⚠️ issue
   114/114 routes render with content assertions, 9/9 RBAC, 30/30 service checks,
   47/47 interaction checks
 
-## Phase 9: HR, Reports, Dashboards ⬜
-- ⬜ Employees, departments, attendance, leave, payroll
-- ⬜ Reports with filters + export
-- ⬜ CXO executive dashboard + per-role home dashboards
-- ⬜ Quality gate
+## Phase 9: HR, Reports, Dashboards ✅
+- ✅ Employees: 45 staff with grade, reporting line and leave balance, plus a profile
+  drawer listing direct reports
+- ✅ Departments: org cards with department head, share-of-headcount bar and cost
+- ✅ Attendance: a Monday-first month calendar, per employee or across the team, with
+  a present/late/leave/absent legend and per-day tooltips
+- ✅ Leave: apply on behalf of an employee (date-range validated) and approve or reject
+- ✅ Payroll: the monthly run with a full payslip drawer (earnings, deductions, LOP,
+  net pay) on the company letterhead
+- ✅ Reports: seven config-driven reports (order book, order margin, vendor performance,
+  inspection results, sample approvals, production output, receivables) — each with its
+  own filters, summary band and CSV export. **The report list is permission-filtered**,
+  so a role only sees the reports it can run
+- ✅ CXO executive dashboard: order book, revenue MTD/YTD, gross margin %, on-time
+  delivery %, a 12-month revenue-vs-target chart, the lifecycle funnel, top clients,
+  vendor performance bars, the delayed-orders list, receivables and headcount
+- ✅ A role home for each of the other roles: four KPIs tuned to that role plus a
+  "needs attention" queue that links straight to the record, and quick links
+- ✅ `npm run rbac` now also asserts that all 10 role dashboards render their own content
+- ✅ Quality gate: lint 0 errors, audit clean (174 files), seed clean, build clean,
+  121/121 routes render with content assertions, 9/9 RBAC redirects, 10/10 role
+  dashboards, 30/30 service checks, 47/47 interaction checks
 
 ## Phase 10: Website + Client portal ⬜
 - ⬜ Public site: home, about, services, capabilities, clients, sustainability, contact

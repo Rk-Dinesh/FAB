@@ -262,3 +262,31 @@ misleading 100%.
 A shipment's percentage complete is `(today − ETD) / (ETA − ETD)`, clamped, and forced
 to 100% once it has arrived. Nothing to keep in sync, and it stays correct as the
 seed's dates shift forward.
+
+## Phase 9 — HR, Reports, Dashboards
+
+### D48. Reports are config, and the list is permission-filtered
+`reportDefinitions.jsx` holds a loader, columns, filters and a summary function per
+report; `ReportsPage` is generic. Each definition also names the module it belongs to,
+so the sidebar of available reports is filtered by `can()` — a QC lead does not see the
+receivables report at all, rather than seeing it and being refused.
+
+### D49. Dashboard data lives in `dashboardData.js`, not in the components
+`getExecutiveSummary()` and `getRoleDashboard(role)` assemble everything from the mock
+db in one pass. That keeps the components presentational and makes the numbers
+assertable from the gate scripts.
+
+### D50. One dashboard route, two dashboards
+`/app/dashboard` renders the executive view for CXO and SUPER_ADMIN and the role view
+for everyone else. The route stays single so every navigation, breadcrumb and redirect
+can point at one path.
+
+### D51. The needs-attention queue is derived, never stored
+Each role's queue is computed from live data — delayed orders, pending samples, open
+POs, failed inspections, overdue invoices, pending leave — so it can never go stale
+against the records it points at.
+
+### D52. `chartTheme.js` is separate from `ChartCard.jsx`
+`react-refresh/only-export-components` rejects a component file that also exports
+constants. The Recharts colour, tooltip, axis and legend styles now live in their own
+module, which is also where any future chart picks them up from.
