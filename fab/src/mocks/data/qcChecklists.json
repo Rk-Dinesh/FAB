@@ -1,0 +1,76 @@
+[
+  {
+    "id": "QCL-001",
+    "name": "Knit tops — final inspection",
+    "aql": "2.5",
+    "stage": "FINAL_INSPECTION",
+    "points": [
+      "Measurement against the approved spec (±0.5 cm tolerance)",
+      "Shade band matches the approved lab dip",
+      "Print and embroidery placement within tolerance",
+      "Stitch density 11–13 SPI on all seams",
+      "Labels: main, care and size present and legible",
+      "Trims and hangtags per the approved PP sample",
+      "Metal detection pass on every carton",
+      "Carton marking and packing ratio correct"
+    ],
+    "active": true
+  },
+  {
+    "id": "QCL-002",
+    "name": "Wovens — inline inspection",
+    "aql": "2.5",
+    "stage": "STITCHING",
+    "points": [
+      "Cut panel shading verified per lay",
+      "Button and buttonhole alignment",
+      "Collar and cuff symmetry",
+      "Side seam puckering check",
+      "Broken stitch and skipped stitch audit",
+      "Pocket placement per the tech pack"
+    ],
+    "active": true
+  },
+  {
+    "id": "QCL-003",
+    "name": "Denim — post-wash audit",
+    "aql": "2.5",
+    "stage": "WASHING_EMB",
+    "points": [
+      "Wash shade against the approved standard",
+      "Shrinkage within ±3% after wash",
+      "Hand feel and abrasion consistency",
+      "Rivet and hardware integrity after wash",
+      "Colour fastness to rubbing, dry and wet"
+    ],
+    "active": true
+  },
+  {
+    "id": "QCL-004",
+    "name": "Kidswear — safety audit",
+    "aql": "1.5",
+    "stage": "FINAL_INSPECTION",
+    "points": [
+      "No functional drawcords at the neck",
+      "Small parts pull test 90 N for 10 seconds",
+      "Flammability per EN 14878",
+      "Needle and metal detection on every unit",
+      "Azo-free dye certificate on file"
+    ],
+    "active": true
+  },
+  {
+    "id": "QCL-005",
+    "name": "Fabric inhouse inspection",
+    "aql": "4-point",
+    "stage": "FABRIC_INHOUSE",
+    "points": [
+      "4-point system defect score under 20 per 100 sq yd",
+      "GSM within ±5% of the approved standard",
+      "Width consistent across the roll",
+      "Shade continuity roll to roll",
+      "Skew and bow within 3%"
+    ],
+    "active": true
+  }
+]

@@ -45,14 +45,25 @@ Legend: ✅ done · 🔄 in progress · ⬜ not started · ⚠️ issue
 - ✅ Quality gate: lint 0, audit clean (72 files), build 0 errors, config check
   (11 roles × 16 modules consistent), 61/61 routes render, 9/9 RBAC redirects correct
 
-## Phase 3: Mock data layer ⬜
-- ⬜ Seed JSON in src/mocks/data (relational IDs, CLAUDE.md volumes)
-- ⬜ `createService()` factory: getAll(filter/sort/paginate), getById, create, update,
-  remove, 300–600ms delay, in-memory + localStorage persistence
-- ⬜ "Reset demo data" action
-- ⬜ One service file per module
-- ⬜ config/statuses.js (single source of truth: lifecycle + production stages)
-- ⬜ Quality gate
+## Phase 3: Mock data layer ✅
+- ✅ 46 seed collections / 3,182 records in `src/mocks/data`, generated deterministically
+  by `npm run seed` from `scripts/seed/*` — 6 clients, 25 vendors, 30 orders across all
+  15 statuses (8 delayed), 60 samples, 42 invoices + 28 bills, 45 employees, 12 users
+- ✅ All foreign keys resolve — enforced by `npm run check-seed`, which also pins the
+  CLAUDE.md volume contract
+- ✅ `config/statuses.js`: lifecycle flow, production stages, stage/sample/approval/
+  risk/lead/invoice/PO/shipment/inspection registries, `statusMeta()` lookup
+- ✅ `src/mocks/db.js`: loads the seed, shifts every ISO date forward in whole weeks so
+  the demo never goes stale, persists session edits to localStorage, `resetDemoData()`
+- ✅ `createService()` factory: getAll (search + filters + sort + pagination), getById,
+  list, create, update, remove, peek — each with a 300–600 ms delay
+- ✅ 13 module services with domain helpers: `getOrder360`, `buildSizeMatrix`,
+  `calculateFob`, `aqlPlan` (real AQL 2.5 table), `getStageTracker`, `getDelayAlerts`,
+  `getQuoteComparison`, `getReceivablesAging`, `getOrderPnl`, `getAttendanceMonth`, …
+- ✅ `useAsync` hook — the single loading/error contract every screen will use
+- ✅ "Reset demo data" in the profile menu
+- ✅ Quality gate: lint 0, audit clean (90 files), seed check clean, build 0 errors,
+  61/61 routes render, 9/9 RBAC redirects, 30/30 service contract checks
 
 ## Phase 4: Masters + Admin ⬜
 - ⬜ DataTable (sort, search, filters, pagination, column visibility, row select, CSV)
@@ -107,5 +118,6 @@ Legend: ✅ done · 🔄 in progress · ⬜ not started · ⚠️ issue
 ---
 
 ## Known issues
-- ⚠️ The production bundle is a single ~543 kB chunk and Vite warns about it.
-  Route-level `React.lazy` splitting is scheduled for phase 11 (polish).
+- ⚠️ The production bundle is a single ~1.47 MB chunk (263 kB gzipped) because every
+  mock JSON file is statically imported. Route-level `React.lazy` splitting and
+  dynamic data imports are scheduled for phase 11 (polish).

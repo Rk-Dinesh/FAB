@@ -83,3 +83,33 @@ silently opening or closing a module.
 ### D15. Notifications are a real store from phase 2
 The topbar badge needed something to count, so the notification store and slide-over
 panel were built here with domain-realistic seeds rather than stubbed and revisited.
+
+## Phase 3 — Mock data layer
+
+### D16. The seed is generated, not hand-written
+`scripts/seed/*` plus `npm run seed` produce every file in `src/mocks/data` from a
+seeded PRNG (mulberry32), so the data is realistic, internally consistent and
+reproducible. The generated JSON is committed, so the app never generates at runtime.
+
+### D17. Dates shift forward in whole weeks at load
+The seed is anchored to a fixed `generatedAt`. `src/mocks/db.js` shifts every ISO date
+it finds by `floor(elapsed / 7) * 7` days. Whole weeks keep attendance, shift calendars
+and weekday-sensitive data on the right day of the week, and the demo never looks stale.
+
+### D18. Session edits persist per collection under a versioned key
+`apparelflow-db:<collection>` holds `{version, rows}`; the version embeds the seed's
+`generatedAt`, so regenerating the seed automatically invalidates stale local edits
+instead of mixing two data sets.
+
+### D19. Domain maths lives in the services, not the components
+`calculateFob`, `marginFromPrice`, `aqlPlan`, `getReceivablesAging`, `getOrderPnl` and
+`buildSizeMatrix` sit in the service layer so the cost sheet form, the quotation, the
+order P&L and the dashboards all agree — and so `npm run services` can assert them.
+
+### D20. `useAsync` derives `loading` instead of setting it in an effect
+The lint config forbids synchronous setState inside an effect. The hook stores the key
+of the request that landed and derives `loading` from it, which also keeps the previous
+data on screen during a refetch instead of flashing a skeleton.
+
+### D21. `npm run check-seed` and `npm run services` joined the gate
+Referential integrity plus a 30-assertion service contract run on every phase.

@@ -1,0 +1,90 @@
+[
+  {
+    "id": "PRT-001",
+    "code": "INMAA",
+    "name": "Chennai",
+    "country": "India",
+    "mode": "Sea",
+    "active": true
+  },
+  {
+    "id": "PRT-002",
+    "code": "INCOK",
+    "name": "Cochin",
+    "country": "India",
+    "mode": "Sea",
+    "active": true
+  },
+  {
+    "id": "PRT-003",
+    "code": "INTUT",
+    "name": "Tuticorin",
+    "country": "India",
+    "mode": "Sea",
+    "active": true
+  },
+  {
+    "id": "PRT-004",
+    "code": "INMAA4",
+    "name": "Chennai Air Cargo",
+    "country": "India",
+    "mode": "Air",
+    "active": true
+  },
+  {
+    "id": "PRT-005",
+    "code": "USLAX",
+    "name": "Los Angeles",
+    "country": "United States",
+    "mode": "Sea",
+    "active": true
+  },
+  {
+    "id": "PRT-006",
+    "code": "USNYC",
+    "name": "New York",
+    "country": "United States",
+    "mode": "Sea",
+    "active": true
+  },
+  {
+    "id": "PRT-007",
+    "code": "NLRTM",
+    "name": "Rotterdam",
+    "country": "Netherlands",
+    "mode": "Sea",
+    "active": true
+  },
+  {
+    "id": "PRT-008",
+    "code": "DEHAM",
+    "name": "Hamburg",
+    "country": "Germany",
+    "mode": "Sea",
+    "active": true
+  },
+  {
+    "id": "PRT-009",
+    "code": "GBFXT",
+    "name": "Felixstowe",
+    "country": "United Kingdom",
+    "mode": "Sea",
+    "active": true
+  },
+  {
+    "id": "PRT-010",
+    "code": "ESBCN",
+    "name": "Barcelona",
+    "country": "Spain",
+    "mode": "Sea",
+    "active": true
+  },
+  {
+    "id": "PRT-011",
+    "code": "FRLEH",
+    "name": "Le Havre",
+    "country": "France",
+    "mode": "Sea",
+    "active": true
+  }
+]

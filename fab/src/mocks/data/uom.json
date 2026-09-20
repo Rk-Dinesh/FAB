@@ -1,0 +1,58 @@
+[
+  {
+    "id": "UOM-001",
+    "code": "PCS",
+    "name": "Pieces",
+    "decimals": 0,
+    "active": true
+  },
+  {
+    "id": "UOM-002",
+    "code": "KG",
+    "name": "Kilogram",
+    "decimals": 3,
+    "active": true
+  },
+  {
+    "id": "UOM-003",
+    "code": "MTR",
+    "name": "Metre",
+    "decimals": 2,
+    "active": true
+  },
+  {
+    "id": "UOM-004",
+    "code": "YRD",
+    "name": "Yard",
+    "decimals": 2,
+    "active": true
+  },
+  {
+    "id": "UOM-005",
+    "code": "DOZ",
+    "name": "Dozen",
+    "decimals": 0,
+    "active": true
+  },
+  {
+    "id": "UOM-006",
+    "code": "GROSS",
+    "name": "Gross (144)",
+    "decimals": 0,
+    "active": true
+  },
+  {
+    "id": "UOM-007",
+    "code": "CONE",
+    "name": "Cone",
+    "decimals": 0,
+    "active": true
+  },
+  {
+    "id": "UOM-008",
+    "code": "SET",
+    "name": "Set",
+    "decimals": 0,
+    "active": true
+  }
+]

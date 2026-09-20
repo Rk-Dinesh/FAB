@@ -1,0 +1,85 @@
+[
+  {
+    "id": "SZS-001",
+    "name": "Adult standard",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "region": "US/EU",
+    "active": true
+  },
+  {
+    "id": "SZS-002",
+    "name": "Adult extended",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL",
+      "3XL"
+    ],
+    "region": "US",
+    "active": true
+  },
+  {
+    "id": "SZS-003",
+    "name": "Womens numeric",
+    "sizes": [
+      "2",
+      "4",
+      "6",
+      "8",
+      "10",
+      "12",
+      "14"
+    ],
+    "region": "US",
+    "active": true
+  },
+  {
+    "id": "SZS-004",
+    "name": "Kids 2-8",
+    "sizes": [
+      "2Y",
+      "3Y",
+      "4Y",
+      "5Y",
+      "6Y",
+      "8Y"
+    ],
+    "region": "EU",
+    "active": true
+  },
+  {
+    "id": "SZS-005",
+    "name": "Kids 8-14",
+    "sizes": [
+      "8Y",
+      "10Y",
+      "12Y",
+      "14Y"
+    ],
+    "region": "EU",
+    "active": true
+  },
+  {
+    "id": "SZS-006",
+    "name": "Waist sizing",
+    "sizes": [
+      "28",
+      "30",
+      "32",
+      "34",
+      "36",
+      "38"
+    ],
+    "region": "US",
+    "active": true
+  }
+]

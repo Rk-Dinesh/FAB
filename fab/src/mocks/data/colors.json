@@ -1,0 +1,100 @@
+[
+  {
+    "id": "COL-001",
+    "name": "Optic White",
+    "hex": "#FFFFFF",
+    "pantone": "11-0601 TCX",
+    "active": true
+  },
+  {
+    "id": "COL-002",
+    "name": "Jet Black",
+    "hex": "#101114",
+    "pantone": "19-4005 TCX",
+    "active": true
+  },
+  {
+    "id": "COL-003",
+    "name": "Heather Grey",
+    "hex": "#B2B6BC",
+    "pantone": "14-4102 TCX",
+    "active": true
+  },
+  {
+    "id": "COL-004",
+    "name": "Navy Blazer",
+    "hex": "#1F2A44",
+    "pantone": "19-4028 TCX",
+    "active": true
+  },
+  {
+    "id": "COL-005",
+    "name": "Harbor Blue",
+    "hex": "#3A6EA5",
+    "pantone": "18-4041 TCX",
+    "active": true
+  },
+  {
+    "id": "COL-006",
+    "name": "Sage",
+    "hex": "#9CAE8E",
+    "pantone": "15-6317 TCX",
+    "active": true
+  },
+  {
+    "id": "COL-007",
+    "name": "Terracotta",
+    "hex": "#B5643C",
+    "pantone": "17-1345 TCX",
+    "active": true
+  },
+  {
+    "id": "COL-008",
+    "name": "Sand",
+    "hex": "#D8C7AD",
+    "pantone": "13-1010 TCX",
+    "active": true
+  },
+  {
+    "id": "COL-009",
+    "name": "Olive Drab",
+    "hex": "#5C6042",
+    "pantone": "18-0430 TCX",
+    "active": true
+  },
+  {
+    "id": "COL-010",
+    "name": "Burgundy",
+    "hex": "#5E2233",
+    "pantone": "19-1528 TCX",
+    "active": true
+  },
+  {
+    "id": "COL-011",
+    "name": "Mustard",
+    "hex": "#C99A2E",
+    "pantone": "15-0960 TCX",
+    "active": true
+  },
+  {
+    "id": "COL-012",
+    "name": "Dusty Rose",
+    "hex": "#C9908E",
+    "pantone": "15-1614 TCX",
+    "active": true
+  },
+  {
+    "id": "COL-013",
+    "name": "Forest",
+    "hex": "#23433A",
+    "pantone": "19-5513 TCX",
+    "active": true
+  },
+  {
+    "id": "COL-014",
+    "name": "Ecru",
+    "hex": "#EDE5D6",
+    "pantone": "11-0605 TCX",
+    "active": true
+  }
+]

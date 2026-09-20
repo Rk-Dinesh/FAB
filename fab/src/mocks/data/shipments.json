@@ -1,0 +1,514 @@
+[
+  {
+    "id": "SHP-001",
+    "reference": "SHP-9600",
+    "orderId": "ORD-023",
+    "poNumber": "PO-1023",
+    "clientId": "CLI-002",
+    "clientName": "Blue Harbor Co.",
+    "mode": "SEA",
+    "carrier": "MSC",
+    "blNumber": "BL239469IN",
+    "containerNumber": "MSKU7742287",
+    "containerType": "20GP",
+    "originPortId": "PRT-001",
+    "destinationPortId": "PRT-006",
+    "incoterm": "FOB",
+    "cartons": 63,
+    "grossWeightKg": 1556.4,
+    "cbm": 4.71,
+    "etd": "2026-09-24",
+    "eta": "2026-10-20",
+    "atd": null,
+    "ata": null,
+    "freightCostUsd": 216.09,
+    "status": "BOOKED",
+    "milestones": [
+      {
+        "label": "Booking confirmed",
+        "date": "2026-09-14",
+        "done": true
+      },
+      {
+        "label": "Cargo ready at factory",
+        "date": "2026-09-20",
+        "done": true
+      },
+      {
+        "label": "Customs cleared",
+        "date": "2026-09-22",
+        "done": false
+      },
+      {
+        "label": "Departed origin port",
+        "date": "2026-09-24",
+        "done": false
+      },
+      {
+        "label": "In transit",
+        "date": "2026-10-07",
+        "done": false
+      },
+      {
+        "label": "Arrived destination port",
+        "date": "2026-10-20",
+        "done": false
+      },
+      {
+        "label": "Delivered to consignee",
+        "date": "2026-10-24",
+        "done": false
+      }
+    ],
+    "bookedById": "EMP-036",
+    "notes": "Standard ocean booking on the direct service."
+  },
+  {
+    "id": "SHP-002",
+    "reference": "SHP-9601",
+    "orderId": "ORD-024",
+    "poNumber": "PO-1024",
+    "clientId": "CLI-006",
+    "clientName": "Maison Rue",
+    "mode": "SEA",
+    "carrier": "MSC",
+    "blNumber": "BL442978IN",
+    "containerNumber": "MSKU1297108",
+    "containerType": "20GP",
+    "originPortId": "PRT-001",
+    "destinationPortId": "PRT-011",
+    "incoterm": "FOB",
+    "cartons": 316,
+    "grossWeightKg": 7821.4,
+    "cbm": 26.54,
+    "etd": "2026-09-22",
+    "eta": "2026-10-18",
+    "atd": null,
+    "ata": null,
+    "freightCostUsd": 1368.28,
+    "status": "BOOKED",
+    "milestones": [
+      {
+        "label": "Booking confirmed",
+        "date": "2026-09-12",
+        "done": true
+      },
+      {
+        "label": "Cargo ready at factory",
+        "date": "2026-09-18",
+        "done": true
+      },
+      {
+        "label": "Customs cleared",
+        "date": "2026-09-20",
+        "done": false
+      },
+      {
+        "label": "Departed origin port",
+        "date": "2026-09-22",
+        "done": false
+      },
+      {
+        "label": "In transit",
+        "date": "2026-10-05",
+        "done": false
+      },
+      {
+        "label": "Arrived destination port",
+        "date": "2026-10-18",
+        "done": false
+      },
+      {
+        "label": "Delivered to consignee",
+        "date": "2026-10-22",
+        "done": false
+      }
+    ],
+    "bookedById": "EMP-037",
+    "notes": "Standard ocean booking on the direct service."
+  },
+  {
+    "id": "SHP-003",
+    "reference": "SHP-9602",
+    "orderId": "ORD-025",
+    "poNumber": "PO-1025",
+    "clientId": "CLI-001",
+    "clientName": "Northwind Apparel",
+    "mode": "SEA",
+    "carrier": "Maersk",
+    "blNumber": "BL958976IN",
+    "containerNumber": "MSKU8837420",
+    "containerType": "20GP",
+    "originPortId": "PRT-001",
+    "destinationPortId": "PRT-005",
+    "incoterm": "FOB",
+    "cartons": 481,
+    "grossWeightKg": 10968.6,
+    "cbm": 38.82,
+    "etd": "2026-09-15",
+    "eta": "2026-10-13",
+    "atd": "2026-09-15",
+    "ata": null,
+    "freightCostUsd": 1981.72,
+    "status": "IN_TRANSIT",
+    "milestones": [
+      {
+        "label": "Booking confirmed",
+        "date": "2026-09-05",
+        "done": true
+      },
+      {
+        "label": "Cargo ready at factory",
+        "date": "2026-09-11",
+        "done": true
+      },
+      {
+        "label": "Customs cleared",
+        "date": "2026-09-13",
+        "done": true
+      },
+      {
+        "label": "Departed origin port",
+        "date": "2026-09-15",
+        "done": true
+      },
+      {
+        "label": "In transit",
+        "date": "2026-09-29",
+        "done": false
+      },
+      {
+        "label": "Arrived destination port",
+        "date": "2026-10-13",
+        "done": false
+      },
+      {
+        "label": "Delivered to consignee",
+        "date": "2026-10-17",
+        "done": false
+      }
+    ],
+    "bookedById": "EMP-038",
+    "notes": "Standard ocean booking on the direct service."
+  },
+  {
+    "id": "SHP-004",
+    "reference": "SHP-9603",
+    "orderId": "ORD-026",
+    "poNumber": "PO-1026",
+    "clientId": "CLI-005",
+    "clientName": "Atlas Active",
+    "mode": "SEA",
+    "carrier": "ONE",
+    "blNumber": "BL477361IN",
+    "containerNumber": "MSKU5337918",
+    "containerType": "20GP",
+    "originPortId": "PRT-001",
+    "destinationPortId": "PRT-008",
+    "incoterm": "CIF",
+    "cartons": 145,
+    "grossWeightKg": 3661.7,
+    "cbm": 12.24,
+    "etd": "2026-09-15",
+    "eta": "2026-10-11",
+    "atd": "2026-09-15",
+    "ata": null,
+    "freightCostUsd": 587.25,
+    "status": "IN_TRANSIT",
+    "milestones": [
+      {
+        "label": "Booking confirmed",
+        "date": "2026-09-05",
+        "done": true
+      },
+      {
+        "label": "Cargo ready at factory",
+        "date": "2026-09-11",
+        "done": true
+      },
+      {
+        "label": "Customs cleared",
+        "date": "2026-09-13",
+        "done": true
+      },
+      {
+        "label": "Departed origin port",
+        "date": "2026-09-15",
+        "done": true
+      },
+      {
+        "label": "In transit",
+        "date": "2026-09-28",
+        "done": false
+      },
+      {
+        "label": "Arrived destination port",
+        "date": "2026-10-11",
+        "done": false
+      },
+      {
+        "label": "Delivered to consignee",
+        "date": "2026-10-15",
+        "done": false
+      }
+    ],
+    "bookedById": "EMP-036",
+    "notes": "Standard ocean booking on the direct service."
+  },
+  {
+    "id": "SHP-005",
+    "reference": "SHP-9604",
+    "orderId": "ORD-027",
+    "poNumber": "PO-1027",
+    "clientId": "CLI-004",
+    "clientName": "Verde Kids",
+    "mode": "SEA",
+    "carrier": "Maersk",
+    "blNumber": "BL666228IN",
+    "containerNumber": "MSKU7956497",
+    "containerType": "20GP",
+    "originPortId": "PRT-001",
+    "destinationPortId": "PRT-010",
+    "incoterm": "FOB",
+    "cartons": 214,
+    "grossWeightKg": 3240,
+    "cbm": 16.88,
+    "etd": "2026-08-20",
+    "eta": "2026-09-16",
+    "atd": "2026-08-20",
+    "ata": "2026-09-16",
+    "freightCostUsd": 579.94,
+    "status": "DELIVERED",
+    "milestones": [
+      {
+        "label": "Booking confirmed",
+        "date": "2026-08-10",
+        "done": true
+      },
+      {
+        "label": "Cargo ready at factory",
+        "date": "2026-08-16",
+        "done": true
+      },
+      {
+        "label": "Customs cleared",
+        "date": "2026-08-18",
+        "done": true
+      },
+      {
+        "label": "Departed origin port",
+        "date": "2026-08-20",
+        "done": true
+      },
+      {
+        "label": "In transit",
+        "date": "2026-09-03",
+        "done": true
+      },
+      {
+        "label": "Arrived destination port",
+        "date": "2026-09-16",
+        "done": true
+      },
+      {
+        "label": "Delivered to consignee",
+        "date": "2026-09-20",
+        "done": true
+      }
+    ],
+    "bookedById": "EMP-037",
+    "notes": "Standard ocean booking on the direct service."
+  },
+  {
+    "id": "SHP-006",
+    "reference": "SHP-9605",
+    "orderId": "ORD-028",
+    "poNumber": "PO-1028",
+    "clientId": "CLI-002",
+    "clientName": "Blue Harbor Co.",
+    "mode": "SEA",
+    "carrier": "MSC",
+    "blNumber": "BL942561IN",
+    "containerNumber": "MSKU2057302",
+    "containerType": "20GP",
+    "originPortId": "PRT-001",
+    "destinationPortId": "PRT-006",
+    "incoterm": "FOB",
+    "cartons": 88,
+    "grossWeightKg": 1907.1,
+    "cbm": 7.42,
+    "etd": "2026-08-08",
+    "eta": "2026-09-05",
+    "atd": "2026-08-08",
+    "ata": "2026-09-05",
+    "freightCostUsd": 355.52,
+    "status": "DELIVERED",
+    "milestones": [
+      {
+        "label": "Booking confirmed",
+        "date": "2026-07-29",
+        "done": true
+      },
+      {
+        "label": "Cargo ready at factory",
+        "date": "2026-08-04",
+        "done": true
+      },
+      {
+        "label": "Customs cleared",
+        "date": "2026-08-06",
+        "done": true
+      },
+      {
+        "label": "Departed origin port",
+        "date": "2026-08-08",
+        "done": true
+      },
+      {
+        "label": "In transit",
+        "date": "2026-08-22",
+        "done": true
+      },
+      {
+        "label": "Arrived destination port",
+        "date": "2026-09-05",
+        "done": true
+      },
+      {
+        "label": "Delivered to consignee",
+        "date": "2026-09-09",
+        "done": true
+      }
+    ],
+    "bookedById": "EMP-038",
+    "notes": "Standard ocean booking on the direct service."
+  },
+  {
+    "id": "SHP-007",
+    "reference": "SHP-9606",
+    "orderId": "ORD-029",
+    "poNumber": "PO-1029",
+    "clientId": "CLI-001",
+    "clientName": "Northwind Apparel",
+    "mode": "SEA",
+    "carrier": "CMA CGM",
+    "blNumber": "BL608959IN",
+    "containerNumber": "MSKU5534704",
+    "containerType": "20GP",
+    "originPortId": "PRT-001",
+    "destinationPortId": "PRT-005",
+    "incoterm": "FOB",
+    "cartons": 535,
+    "grossWeightKg": 9666.7,
+    "cbm": 37.02,
+    "etd": "2026-07-21",
+    "eta": "2026-08-19",
+    "atd": "2026-07-21",
+    "ata": "2026-08-19",
+    "freightCostUsd": 1498,
+    "status": "DELIVERED",
+    "milestones": [
+      {
+        "label": "Booking confirmed",
+        "date": "2026-07-11",
+        "done": true
+      },
+      {
+        "label": "Cargo ready at factory",
+        "date": "2026-07-17",
+        "done": true
+      },
+      {
+        "label": "Customs cleared",
+        "date": "2026-07-19",
+        "done": true
+      },
+      {
+        "label": "Departed origin port",
+        "date": "2026-07-21",
+        "done": true
+      },
+      {
+        "label": "In transit",
+        "date": "2026-08-05",
+        "done": true
+      },
+      {
+        "label": "Arrived destination port",
+        "date": "2026-08-19",
+        "done": true
+      },
+      {
+        "label": "Delivered to consignee",
+        "date": "2026-08-23",
+        "done": true
+      }
+    ],
+    "bookedById": "EMP-036",
+    "notes": "Standard ocean booking on the direct service."
+  },
+  {
+    "id": "SHP-008",
+    "reference": "SHP-9607",
+    "orderId": "ORD-030",
+    "poNumber": "PO-1030",
+    "clientId": "CLI-003",
+    "clientName": "Urban Loom",
+    "mode": "SEA",
+    "carrier": "CMA CGM",
+    "blNumber": "BL964898IN",
+    "containerNumber": "MSKU5973855",
+    "containerType": "20GP",
+    "originPortId": "PRT-001",
+    "destinationPortId": "PRT-009",
+    "incoterm": "CIF",
+    "cartons": 75,
+    "grossWeightKg": 1502.5,
+    "cbm": 6.11,
+    "etd": "2026-06-23",
+    "eta": "2026-07-16",
+    "atd": "2026-06-23",
+    "ata": "2026-07-16",
+    "freightCostUsd": 343.5,
+    "status": "DELIVERED",
+    "milestones": [
+      {
+        "label": "Booking confirmed",
+        "date": "2026-06-13",
+        "done": true
+      },
+      {
+        "label": "Cargo ready at factory",
+        "date": "2026-06-19",
+        "done": true
+      },
+      {
+        "label": "Customs cleared",
+        "date": "2026-06-21",
+        "done": true
+      },
+      {
+        "label": "Departed origin port",
+        "date": "2026-06-23",
+        "done": true
+      },
+      {
+        "label": "In transit",
+        "date": "2026-07-05",
+        "done": true
+      },
+      {
+        "label": "Arrived destination port",
+        "date": "2026-07-16",
+        "done": true
+      },
+      {
+        "label": "Delivered to consignee",
+        "date": "2026-07-20",
+        "done": true
+      }
+    ],
+    "bookedById": "EMP-037",
+    "notes": "Standard ocean booking on the direct service."
+  }
+]

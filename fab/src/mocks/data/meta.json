@@ -1,0 +1,5 @@
+{
+  "generatedAt": "2026-09-20T00:00:00.000Z",
+  "seed": 20260920,
+  "note": "Dates are anchored to generatedAt; src/mocks/db.js shifts them in whole weeks at load."
+}

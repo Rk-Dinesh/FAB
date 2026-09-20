@@ -1,0 +1,38 @@
+[
+  {
+    "id": "CUR-001",
+    "code": "USD",
+    "name": "US Dollar",
+    "symbol": "$",
+    "perUsd": 1,
+    "inrRate": 88.4,
+    "active": true
+  },
+  {
+    "id": "CUR-002",
+    "code": "INR",
+    "name": "Indian Rupee",
+    "symbol": "₹",
+    "perUsd": 88.4,
+    "inrRate": 1,
+    "active": true
+  },
+  {
+    "id": "CUR-003",
+    "code": "EUR",
+    "name": "Euro",
+    "symbol": "€",
+    "perUsd": 0.92,
+    "inrRate": 96.1,
+    "active": true
+  },
+  {
+    "id": "CUR-004",
+    "code": "GBP",
+    "name": "Pound Sterling",
+    "symbol": "£",
+    "perUsd": 0.79,
+    "inrRate": 111.9,
+    "active": true
+  }
+]

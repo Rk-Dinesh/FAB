@@ -1,0 +1,22 @@
+{
+  "id": "COM-001",
+  "name": "ApparelFlow Sourcing Pvt Ltd",
+  "legalName": "ApparelFlow Sourcing Private Limited",
+  "type": "Buying house & sourcing agency",
+  "gstin": "33AAFCA9021K1ZQ",
+  "iec": "AAFCA9021K",
+  "addressLine1": "14 Avinashi Road, Peelamedu",
+  "addressLine2": "Coimbatore district",
+  "city": "Tiruppur",
+  "state": "Tamil Nadu",
+  "country": "India",
+  "postcode": "641603",
+  "phone": "+91 421 4501 200",
+  "email": "hello@apparelflow.com",
+  "website": "www.apparelflow.com",
+  "baseCurrency": "INR",
+  "exportCurrency": "USD",
+  "financialYearStart": "04-01",
+  "foundedYear": 2009,
+  "employeeCount": 45
+}

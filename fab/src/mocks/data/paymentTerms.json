@@ -1,0 +1,51 @@
+[
+  {
+    "id": "PAY-001",
+    "code": "TT 30",
+    "description": "Telegraphic transfer, 30 days from B/L",
+    "days": 30,
+    "active": true
+  },
+  {
+    "id": "PAY-002",
+    "code": "TT 45",
+    "description": "Telegraphic transfer, 45 days from B/L",
+    "days": 45,
+    "active": true
+  },
+  {
+    "id": "PAY-003",
+    "code": "TT 60",
+    "description": "Telegraphic transfer, 60 days from B/L",
+    "days": 60,
+    "active": true
+  },
+  {
+    "id": "PAY-004",
+    "code": "LC 60",
+    "description": "Irrevocable LC at 60 days sight",
+    "days": 60,
+    "active": true
+  },
+  {
+    "id": "PAY-005",
+    "code": "LC 90",
+    "description": "Irrevocable LC at 90 days sight",
+    "days": 90,
+    "active": true
+  },
+  {
+    "id": "PAY-006",
+    "code": "30/70",
+    "description": "30% advance, 70% against documents",
+    "days": 15,
+    "active": true
+  },
+  {
+    "id": "PAY-007",
+    "code": "Advance",
+    "description": "100% advance before dispatch",
+    "days": 0,
+    "active": true
+  }
+]

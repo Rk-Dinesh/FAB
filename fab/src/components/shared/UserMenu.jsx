@@ -1,10 +1,12 @@
 import { useNavigate } from 'react-router-dom'
-import { LayoutGrid, LifeBuoy, LogOut, User } from 'lucide-react'
+import { DatabaseBackup, LayoutGrid, LifeBuoy, LogOut, User } from 'lucide-react'
 import { Avatar } from '@/components/ui/Avatar'
 import { Dropdown } from '@/components/ui/Dropdown'
 import { useAuthStore } from '@/store/authStore'
 import { roleLabel } from '@/config/roles'
 import { toast } from '@/store/toastStore'
+import { resetDemoData } from '@/mocks/db'
+import { useNotificationStore } from '@/store/notificationStore'
 
 /** Topbar profile menu: identity, role, and sign out. */
 export function UserMenu() {
@@ -12,6 +14,7 @@ export function UserMenu() {
   const user = useAuthStore((state) => state.user)
   const role = useAuthStore((state) => state.impersonatedRole ?? state.role)
   const logout = useAuthStore((state) => state.logout)
+  const resetNotifications = useNotificationStore((state) => state.reset)
 
   if (!user) return null
 
@@ -19,6 +22,14 @@ export function UserMenu() {
     logout()
     toast.show('Signed out')
     navigate('/login', { replace: true })
+  }
+
+  // Session edits live in localStorage; this drops them and reloads the seed.
+  const resetData = () => {
+    resetDemoData()
+    resetNotifications()
+    toast.success('Demo data reset', 'Every record is back to its seeded state.')
+    setTimeout(() => window.location.reload(), 600)
   }
 
   return (
@@ -49,6 +60,7 @@ export function UserMenu() {
           onSelect: () => toast.info('Press ⌘K to search', 'Global search covers orders, clients, vendors and people.'),
         },
         { separator: true },
+        { label: 'Reset demo data', icon: DatabaseBackup, onSelect: resetData },
         { label: 'Sign out', icon: LogOut, danger: true, onSelect: signOut },
       ]}
     />

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "CAT-001",
+    "name": "Knit tops",
+    "description": "Tees, polos, tanks and henleys",
+    "group": "Knitwear",
+    "active": true
+  },
+  {
+    "id": "CAT-002",
+    "name": "Knit bottoms",
+    "description": "Joggers, shorts and leggings",
+    "group": "Knitwear",
+    "active": true
+  },
+  {
+    "id": "CAT-003",
+    "name": "Sweatshirts & hoodies",
+    "description": "Fleece and french terry layers",
+    "group": "Knitwear",
+    "active": true
+  },
+  {
+    "id": "CAT-004",
+    "name": "Woven shirts",
+    "description": "Casual and formal button-downs",
+    "group": "Wovens",
+    "active": true
+  },
+  {
+    "id": "CAT-005",
+    "name": "Woven bottoms",
+    "description": "Chinos, denim and cargo",
+    "group": "Wovens",
+    "active": true
+  },
+  {
+    "id": "CAT-006",
+    "name": "Dresses & skirts",
+    "description": "Woven and knit dresses",
+    "group": "Wovens",
+    "active": true
+  },
+  {
+    "id": "CAT-007",
+    "name": "Outerwear",
+    "description": "Jackets, gilets and overshirts",
+    "group": "Outerwear",
+    "active": true
+  },
+  {
+    "id": "CAT-008",
+    "name": "Activewear",
+    "description": "Performance tops and bottoms",
+    "group": "Performance",
+    "active": true
+  },
+  {
+    "id": "CAT-009",
+    "name": "Kidswear",
+    "description": "Infant, toddler and youth",
+    "group": "Kids",
+    "active": true
+  },
+  {
+    "id": "CAT-010",
+    "name": "Accessories",
+    "description": "Caps, totes and socks",
+    "group": "Accessories",
+    "active": true
+  }
+]

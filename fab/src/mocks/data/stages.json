@@ -1,0 +1,65 @@
+[
+  {
+    "id": "STG-001",
+    "code": "FABRIC_INHOUSE",
+    "name": "Fabric in-house",
+    "sequence": 1,
+    "description": "Fabric received, inspected and relaxed",
+    "optional": false,
+    "active": true
+  },
+  {
+    "id": "STG-002",
+    "code": "CUTTING",
+    "name": "Cutting",
+    "sequence": 2,
+    "description": "Marker, lay and cut panels",
+    "optional": false,
+    "active": true
+  },
+  {
+    "id": "STG-003",
+    "code": "STITCHING",
+    "name": "Stitching",
+    "sequence": 3,
+    "description": "Assembly on the sewing line",
+    "optional": false,
+    "active": true
+  },
+  {
+    "id": "STG-004",
+    "code": "WASHING_EMB",
+    "name": "Washing / embellishment",
+    "sequence": 4,
+    "description": "Wash, print or embroidery",
+    "optional": true,
+    "active": true
+  },
+  {
+    "id": "STG-005",
+    "code": "FINISHING",
+    "name": "Finishing",
+    "sequence": 5,
+    "description": "Trimming, pressing and tagging",
+    "optional": false,
+    "active": true
+  },
+  {
+    "id": "STG-006",
+    "code": "PACKING",
+    "name": "Packing",
+    "sequence": 6,
+    "description": "Polybag, cartonise and mark",
+    "optional": false,
+    "active": true
+  },
+  {
+    "id": "STG-007",
+    "code": "FINAL_INSPECTION",
+    "name": "Final inspection",
+    "sequence": 7,
+    "description": "AQL 2.5 final audit before dispatch",
+    "optional": false,
+    "active": true
+  }
+]

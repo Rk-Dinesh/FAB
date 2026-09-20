@@ -1,0 +1,44 @@
+[
+  {
+    "id": "INC-001",
+    "code": "FOB",
+    "name": "Free on Board",
+    "description": "Seller clears export and loads; buyer carries freight.",
+    "active": true
+  },
+  {
+    "id": "INC-002",
+    "code": "CIF",
+    "name": "Cost, Insurance and Freight",
+    "description": "Seller pays freight and insurance to the named port.",
+    "active": true
+  },
+  {
+    "id": "INC-003",
+    "code": "CFR",
+    "name": "Cost and Freight",
+    "description": "Seller pays freight; buyer insures.",
+    "active": true
+  },
+  {
+    "id": "INC-004",
+    "code": "EXW",
+    "name": "Ex Works",
+    "description": "Buyer collects from the factory gate.",
+    "active": true
+  },
+  {
+    "id": "INC-005",
+    "code": "DDP",
+    "name": "Delivered Duty Paid",
+    "description": "Seller delivers cleared, duty paid.",
+    "active": true
+  },
+  {
+    "id": "INC-006",
+    "code": "DAP",
+    "name": "Delivered at Place",
+    "description": "Seller delivers, buyer clears.",
+    "active": true
+  }
+]

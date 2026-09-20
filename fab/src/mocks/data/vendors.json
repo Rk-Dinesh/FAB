@@ -1,0 +1,768 @@
+[
+  {
+    "id": "VEN-001",
+    "code": "V001",
+    "name": "Coimbatore Spinning Mills",
+    "type": "MILL",
+    "typeLabel": "Fabric mill",
+    "city": "Coimbatore",
+    "state": "Tamil Nadu",
+    "country": "India",
+    "specialities": [
+      "Single jersey",
+      "Interlock",
+      "Rib"
+    ],
+    "monthlyCapacity": "45 T/month",
+    "rating": 4.4,
+    "leadTimeDays": 22,
+    "onTimePercent": 91,
+    "defectRatePercent": 1.8,
+    "contactName": "Ramesh Nair",
+    "email": "ramesh@coimbatorespinningmills.in",
+    "phone": "+91 9222151252",
+    "paymentTermCode": "TT 30",
+    "gstin": "33AAFCV1000K1ZA",
+    "certifications": [
+      "GOTS",
+      "OEKO-TEX 100"
+    ],
+    "active": true,
+    "onboardedAt": "2024-08-25",
+    "notes": "Approved supplier in good standing."
+  },
+  {
+    "id": "VEN-002",
+    "code": "V002",
+    "name": "Kaveri Knit Fabrics",
+    "type": "MILL",
+    "typeLabel": "Fabric mill",
+    "city": "Tiruppur",
+    "state": "Tamil Nadu",
+    "country": "India",
+    "specialities": [
+      "French terry",
+      "Fleece",
+      "Pique"
+    ],
+    "monthlyCapacity": "38 T/month",
+    "rating": 4.1,
+    "leadTimeDays": 20,
+    "onTimePercent": 88,
+    "defectRatePercent": 2.4,
+    "contactName": "Anita Pillai",
+    "email": "anita@kaveriknitfabrics.in",
+    "phone": "+91 9365188583",
+    "paymentTermCode": "TT 45",
+    "gstin": "33BAFCV1001K1ZH",
+    "certifications": [
+      "OEKO-TEX 100"
+    ],
+    "active": true,
+    "onboardedAt": "2024-09-24",
+    "notes": "Approved supplier in good standing."
+  },
+  {
+    "id": "VEN-003",
+    "code": "V003",
+    "name": "Southern Weaves Ltd",
+    "type": "MILL",
+    "typeLabel": "Fabric mill",
+    "city": "Erode",
+    "state": "Tamil Nadu",
+    "country": "India",
+    "specialities": [
+      "Poplin",
+      "Oxford",
+      "Twill"
+    ],
+    "monthlyCapacity": "220k m/month",
+    "rating": 4.6,
+    "leadTimeDays": 26,
+    "onTimePercent": 94,
+    "defectRatePercent": 1.3,
+    "contactName": "Suresh Subramanian",
+    "email": "suresh@southernweavesltd.in",
+    "phone": "+91 9731592157",
+    "paymentTermCode": "TT 60",
+    "gstin": "33CAFCV1002K1ZO",
+    "certifications": [
+      "OEKO-TEX 100"
+    ],
+    "active": true,
+    "onboardedAt": "2025-04-04",
+    "notes": "Approved supplier in good standing."
+  },
+  {
+    "id": "VEN-004",
+    "code": "V004",
+    "name": "Nilgiri Organic Yarns",
+    "type": "MILL",
+    "typeLabel": "Fabric mill",
+    "city": "Coimbatore",
+    "state": "Tamil Nadu",
+    "country": "India",
+    "specialities": [
+      "GOTS organic jersey",
+      "Slub"
+    ],
+    "monthlyCapacity": "18 T/month",
+    "rating": 4.8,
+    "leadTimeDays": 30,
+    "onTimePercent": 96,
+    "defectRatePercent": 0.9,
+    "contactName": "Kavya Reddy",
+    "email": "kavya@nilgiriorganicyarns.in",
+    "phone": "+91 9978033939",
+    "paymentTermCode": "Advance",
+    "gstin": "33DAFCV1003K1ZV",
+    "certifications": [
+      "GOTS",
+      "OEKO-TEX 100"
+    ],
+    "active": true,
+    "onboardedAt": "2021-05-12",
+    "notes": "Approved supplier in good standing."
+  },
+  {
+    "id": "VEN-005",
+    "code": "V005",
+    "name": "Deccan Denim Mills",
+    "type": "MILL",
+    "typeLabel": "Fabric mill",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "country": "India",
+    "specialities": [
+      "Denim 9–13 oz",
+      "Canvas"
+    ],
+    "monthlyCapacity": "180k m/month",
+    "rating": 3.9,
+    "leadTimeDays": 34,
+    "onTimePercent": 82,
+    "defectRatePercent": 3.1,
+    "contactName": "Imran Khan",
+    "email": "imran@deccandenimmills.in",
+    "phone": "+91 9693731354",
+    "paymentTermCode": "30/70",
+    "gstin": "33EAFCV1004K1ZC",
+    "certifications": [
+      "OEKO-TEX 100"
+    ],
+    "active": true,
+    "onboardedAt": "2024-04-16",
+    "notes": "Approved supplier in good standing."
+  },
+  {
+    "id": "VEN-006",
+    "code": "V006",
+    "name": "Vellore Viscose House",
+    "type": "MILL",
+    "typeLabel": "Fabric mill",
+    "city": "Vellore",
+    "state": "Tamil Nadu",
+    "country": "India",
+    "specialities": [
+      "Viscose challis",
+      "Rayon blends"
+    ],
+    "monthlyCapacity": "120k m/month",
+    "rating": 3.7,
+    "leadTimeDays": 28,
+    "onTimePercent": 79,
+    "defectRatePercent": 3.6,
+    "contactName": "Deepa Menon",
+    "email": "deepa@velloreviscosehouse.in",
+    "phone": "+91 9340938848",
+    "paymentTermCode": "TT 30",
+    "gstin": "33FAFCV1005K1ZJ",
+    "certifications": [
+      "OEKO-TEX 100"
+    ],
+    "active": true,
+    "onboardedAt": "2024-09-26",
+    "notes": "Under review — repeated delivery slippage over the last two quarters."
+  },
+  {
+    "id": "VEN-007",
+    "code": "V007",
+    "name": "GreenSpin Recycled Fibres",
+    "type": "MILL",
+    "typeLabel": "Fabric mill",
+    "city": "Salem",
+    "state": "Tamil Nadu",
+    "country": "India",
+    "specialities": [
+      "rPET jersey",
+      "GRS poly spandex"
+    ],
+    "monthlyCapacity": "24 T/month",
+    "rating": 4.5,
+    "leadTimeDays": 25,
+    "onTimePercent": 92,
+    "defectRatePercent": 1.5,
+    "contactName": "Joseph Fernandes",
+    "email": "joseph@greenspinrecycledfibres.in",
+    "phone": "+91 9277662201",
+    "paymentTermCode": "TT 45",
+    "gstin": "33GAFCV1006K1ZQ",
+    "certifications": [
+      "GOTS",
+      "OEKO-TEX 100"
+    ],
+    "active": true,
+    "onboardedAt": "2023-03-28",
+    "notes": "Approved supplier in good standing."
+  },
+  {
+    "id": "VEN-008",
+    "code": "V008",
+    "name": "Precision Trims & Labels",
+    "type": "TRIMS",
+    "typeLabel": "Trims & packaging",
+    "city": "Tiruppur",
+    "state": "Tamil Nadu",
+    "country": "India",
+    "specialities": [
+      "Woven labels",
+      "Heat transfers",
+      "Hangtags"
+    ],
+    "monthlyCapacity": "2.5M pcs/month",
+    "rating": 4.5,
+    "leadTimeDays": 12,
+    "onTimePercent": 93,
+    "defectRatePercent": 1.1,
+    "contactName": "Meena Bhat",
+    "email": "meena@precisiontrimslabels.in",
+    "phone": "+91 9603457024",
+    "paymentTermCode": "TT 60",
+    "gstin": "33HAFCV1007K1ZX",
+    "certifications": [
+      "OEKO-TEX 100"
+    ],
+    "active": true,
+    "onboardedAt": "2024-10-11",
+    "notes": "Approved supplier in good standing."
+  },
+  {
+    "id": "VEN-009",
+    "code": "V009",
+    "name": "Anchor Thread Supplies",
+    "type": "TRIMS",
+    "typeLabel": "Trims & packaging",
+    "city": "Coimbatore",
+    "state": "Tamil Nadu",
+    "country": "India",
+    "specialities": [
+      "Spun thread",
+      "Core spun"
+    ],
+    "monthlyCapacity": "90k cones/month",
+    "rating": 4.3,
+    "leadTimeDays": 10,
+    "onTimePercent": 95,
+    "defectRatePercent": 0.8,
+    "contactName": "Ramesh Nair",
+    "email": "ramesh@anchorthreadsupplies.in",
+    "phone": "+91 9959030266",
+    "paymentTermCode": "Advance",
+    "gstin": "33IAFCV1008K1ZE",
+    "certifications": [
+      "OEKO-TEX 100"
+    ],
+    "active": true,
+    "onboardedAt": "2023-07-05",
+    "notes": "Approved supplier in good standing."
+  },
+  {
+    "id": "VEN-010",
+    "code": "V010",
+    "name": "Metro Button House",
+    "type": "TRIMS",
+    "typeLabel": "Trims & packaging",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "country": "India",
+    "specialities": [
+      "Corozo",
+      "Metal shank",
+      "Rivets"
+    ],
+    "monthlyCapacity": "1.2M pcs/month",
+    "rating": 4,
+    "leadTimeDays": 16,
+    "onTimePercent": 87,
+    "defectRatePercent": 2,
+    "contactName": "Anita Pillai",
+    "email": "anita@metrobuttonhouse.in",
+    "phone": "+91 9179370204",
+    "paymentTermCode": "30/70",
+    "gstin": "33JAFCV1009K1ZL",
+    "certifications": [
+      "OEKO-TEX 100"
+    ],
+    "active": true,
+    "onboardedAt": "2023-04-06",
+    "notes": "Approved supplier in good standing."
+  },
+  {
+    "id": "VEN-011",
+    "code": "V011",
+    "name": "ZipLine Fasteners",
+    "type": "TRIMS",
+    "typeLabel": "Trims & packaging",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "country": "India",
+    "specialities": [
+      "YKK distribution",
+      "Custom pullers"
+    ],
+    "monthlyCapacity": "800k pcs/month",
+    "rating": 4.2,
+    "leadTimeDays": 14,
+    "onTimePercent": 90,
+    "defectRatePercent": 1.6,
+    "contactName": "Suresh Subramanian",
+    "email": "suresh@ziplinefasteners.in",
+    "phone": "+91 9952786078",
+    "paymentTermCode": "TT 30",
+    "gstin": "33KAFCV1010K1ZS",
+    "certifications": [
+      "OEKO-TEX 100"
+    ],
+    "active": true,
+    "onboardedAt": "2024-09-22",
+    "notes": "Approved supplier in good standing."
+  },
+  {
+    "id": "VEN-012",
+    "code": "V012",
+    "name": "EcoPack Solutions",
+    "type": "TRIMS",
+    "typeLabel": "Trims & packaging",
+    "city": "Tiruppur",
+    "state": "Tamil Nadu",
+    "country": "India",
+    "specialities": [
+      "Recycled polybags",
+      "FSC cartons"
+    ],
+    "monthlyCapacity": "3M pcs/month",
+    "rating": 4.6,
+    "leadTimeDays": 9,
+    "onTimePercent": 96,
+    "defectRatePercent": 0.7,
+    "contactName": "Kavya Reddy",
+    "email": "kavya@ecopacksolutions.in",
+    "phone": "+91 9621120877",
+    "paymentTermCode": "TT 45",
+    "gstin": "33LAFCV1011K1ZZ",
+    "certifications": [
+      "OEKO-TEX 100"
+    ],
+    "active": true,
+    "onboardedAt": "2025-11-16",
+    "notes": "Approved supplier in good standing."
+  },
+  {
+    "id": "VEN-013",
+    "code": "V013",
+    "name": "Sunrise Elastics",
+    "type": "TRIMS",
+    "typeLabel": "Trims & packaging",
+    "city": "Ludhiana",
+    "state": "Punjab",
+    "country": "India",
+    "specialities": [
+      "Waistbands",
+      "Drawcords"
+    ],
+    "monthlyCapacity": "400k m/month",
+    "rating": 3.6,
+    "leadTimeDays": 18,
+    "onTimePercent": 77,
+    "defectRatePercent": 3.9,
+    "contactName": "Imran Khan",
+    "email": "imran@sunriseelastics.in",
+    "phone": "+91 9346702979",
+    "paymentTermCode": "TT 60",
+    "gstin": "33MAFCV1012K1ZG",
+    "certifications": [
+      "OEKO-TEX 100"
+    ],
+    "active": true,
+    "onboardedAt": "2025-09-22",
+    "notes": "Under review — repeated delivery slippage over the last two quarters."
+  },
+  {
+    "id": "VEN-014",
+    "code": "V014",
+    "name": "Velmurugan Garments",
+    "type": "FACTORY",
+    "typeLabel": "Garment factory",
+    "city": "Tiruppur",
+    "state": "Tamil Nadu",
+    "country": "India",
+    "specialities": [
+      "Knit tops",
+      "Kidswear"
+    ],
+    "monthlyCapacity": "420k pcs/month",
+    "rating": 4.5,
+    "leadTimeDays": 45,
+    "onTimePercent": 93,
+    "defectRatePercent": 1.4,
+    "contactName": "Deepa Menon",
+    "email": "deepa@velmurugangarments.in",
+    "phone": "+91 9444353114",
+    "paymentTermCode": "Advance",
+    "gstin": "33NAFCV1013K1ZN",
+    "certifications": [
+      "SEDEX",
+      "WRAP"
+    ],
+    "active": true,
+    "onboardedAt": "2022-01-28",
+    "notes": "Approved supplier in good standing."
+  },
+  {
+    "id": "VEN-015",
+    "code": "V015",
+    "name": "Cauvery Apparel Works",
+    "type": "FACTORY",
+    "typeLabel": "Garment factory",
+    "city": "Tiruppur",
+    "state": "Tamil Nadu",
+    "country": "India",
+    "specialities": [
+      "Sweatshirts",
+      "Joggers"
+    ],
+    "monthlyCapacity": "310k pcs/month",
+    "rating": 4.2,
+    "leadTimeDays": 48,
+    "onTimePercent": 89,
+    "defectRatePercent": 2.1,
+    "contactName": "Joseph Fernandes",
+    "email": "joseph@cauveryapparelworks.in",
+    "phone": "+91 9311611748",
+    "paymentTermCode": "30/70",
+    "gstin": "33OAFCV1014K1ZU",
+    "certifications": [
+      "SEDEX",
+      "WRAP"
+    ],
+    "active": true,
+    "onboardedAt": "2026-01-10",
+    "notes": "Approved supplier in good standing."
+  },
+  {
+    "id": "VEN-016",
+    "code": "V016",
+    "name": "Pioneer Stitchcraft",
+    "type": "FACTORY",
+    "typeLabel": "Garment factory",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "country": "India",
+    "specialities": [
+      "Woven shirts",
+      "Dresses"
+    ],
+    "monthlyCapacity": "180k pcs/month",
+    "rating": 4.4,
+    "leadTimeDays": 52,
+    "onTimePercent": 91,
+    "defectRatePercent": 1.7,
+    "contactName": "Meena Bhat",
+    "email": "meena@pioneerstitchcraft.in",
+    "phone": "+91 9101822206",
+    "paymentTermCode": "TT 30",
+    "gstin": "33PAFCV1015K1ZB",
+    "certifications": [
+      "SEDEX",
+      "WRAP"
+    ],
+    "active": true,
+    "onboardedAt": "2023-07-02",
+    "notes": "Approved supplier in good standing."
+  },
+  {
+    "id": "VEN-017",
+    "code": "V017",
+    "name": "Harbour Line Apparels",
+    "type": "FACTORY",
+    "typeLabel": "Garment factory",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "country": "India",
+    "specialities": [
+      "Outerwear",
+      "Woven bottoms"
+    ],
+    "monthlyCapacity": "150k pcs/month",
+    "rating": 3.8,
+    "leadTimeDays": 58,
+    "onTimePercent": 81,
+    "defectRatePercent": 3.2,
+    "contactName": "Ramesh Nair",
+    "email": "ramesh@harbourlineapparels.in",
+    "phone": "+91 9792119630",
+    "paymentTermCode": "TT 45",
+    "gstin": "33QAFCV1016K1ZI",
+    "certifications": [
+      "SEDEX",
+      "WRAP"
+    ],
+    "active": true,
+    "onboardedAt": "2024-09-03",
+    "notes": "Under review — repeated delivery slippage over the last two quarters."
+  },
+  {
+    "id": "VEN-018",
+    "code": "V018",
+    "name": "Sapphire Knitwear",
+    "type": "FACTORY",
+    "typeLabel": "Garment factory",
+    "city": "Tiruppur",
+    "state": "Tamil Nadu",
+    "country": "India",
+    "specialities": [
+      "Polos",
+      "Tees"
+    ],
+    "monthlyCapacity": "500k pcs/month",
+    "rating": 4.7,
+    "leadTimeDays": 42,
+    "onTimePercent": 96,
+    "defectRatePercent": 0.9,
+    "contactName": "Anita Pillai",
+    "email": "anita@sapphireknitwear.in",
+    "phone": "+91 9451568619",
+    "paymentTermCode": "TT 60",
+    "gstin": "33RAFCV1017K1ZP",
+    "certifications": [
+      "SEDEX",
+      "WRAP"
+    ],
+    "active": true,
+    "onboardedAt": "2023-06-16",
+    "notes": "Approved supplier in good standing."
+  },
+  {
+    "id": "VEN-019",
+    "code": "V019",
+    "name": "Neelkanth Garment Co.",
+    "type": "FACTORY",
+    "typeLabel": "Garment factory",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "country": "India",
+    "specialities": [
+      "Dresses",
+      "Skirts"
+    ],
+    "monthlyCapacity": "120k pcs/month",
+    "rating": 3.5,
+    "leadTimeDays": 60,
+    "onTimePercent": 74,
+    "defectRatePercent": 4.4,
+    "contactName": "Suresh Subramanian",
+    "email": "suresh@neelkanthgarmentco.in",
+    "phone": "+91 9513339763",
+    "paymentTermCode": "Advance",
+    "gstin": "33SAFCV1018K1ZW",
+    "certifications": [
+      "SEDEX",
+      "WRAP"
+    ],
+    "active": true,
+    "onboardedAt": "2025-07-28",
+    "notes": "Under review — repeated delivery slippage over the last two quarters."
+  },
+  {
+    "id": "VEN-020",
+    "code": "V020",
+    "name": "Everest Activewear Unit",
+    "type": "FACTORY",
+    "typeLabel": "Garment factory",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "country": "India",
+    "specialities": [
+      "Performance tops",
+      "Leggings"
+    ],
+    "monthlyCapacity": "200k pcs/month",
+    "rating": 4.3,
+    "leadTimeDays": 50,
+    "onTimePercent": 90,
+    "defectRatePercent": 1.9,
+    "contactName": "Kavya Reddy",
+    "email": "kavya@everestactivewearunit.in",
+    "phone": "+91 9421990784",
+    "paymentTermCode": "30/70",
+    "gstin": "33TAFCV1019K1ZD",
+    "certifications": [
+      "SEDEX",
+      "WRAP"
+    ],
+    "active": true,
+    "onboardedAt": "2022-09-15",
+    "notes": "Approved supplier in good standing."
+  },
+  {
+    "id": "VEN-021",
+    "code": "V021",
+    "name": "Little Sprout Kidswear",
+    "type": "FACTORY",
+    "typeLabel": "Garment factory",
+    "city": "Tiruppur",
+    "state": "Tamil Nadu",
+    "country": "India",
+    "specialities": [
+      "Infant",
+      "Toddler"
+    ],
+    "monthlyCapacity": "260k pcs/month",
+    "rating": 4.6,
+    "leadTimeDays": 44,
+    "onTimePercent": 94,
+    "defectRatePercent": 1.2,
+    "contactName": "Imran Khan",
+    "email": "imran@littlesproutkidswear.in",
+    "phone": "+91 9725398569",
+    "paymentTermCode": "TT 30",
+    "gstin": "33UAFCV1020K1ZK",
+    "certifications": [
+      "SEDEX",
+      "WRAP"
+    ],
+    "active": true,
+    "onboardedAt": "2024-04-05",
+    "notes": "Approved supplier in good standing."
+  },
+  {
+    "id": "VEN-022",
+    "code": "V022",
+    "name": "Crystal Wash Systems",
+    "type": "WASHING",
+    "typeLabel": "Washing & embellishment",
+    "city": "Tiruppur",
+    "state": "Tamil Nadu",
+    "country": "India",
+    "specialities": [
+      "Enzyme wash",
+      "Garment dye"
+    ],
+    "monthlyCapacity": "90k pcs/month",
+    "rating": 4.4,
+    "leadTimeDays": 8,
+    "onTimePercent": 92,
+    "defectRatePercent": 1.6,
+    "contactName": "Deepa Menon",
+    "email": "deepa@crystalwashsystems.in",
+    "phone": "+91 9255144303",
+    "paymentTermCode": "TT 45",
+    "gstin": "33VAFCV1021K1ZR",
+    "certifications": [
+      "OEKO-TEX 100"
+    ],
+    "active": true,
+    "onboardedAt": "2025-06-22",
+    "notes": "Approved supplier in good standing."
+  },
+  {
+    "id": "VEN-023",
+    "code": "V023",
+    "name": "Indigo Lane Laundry",
+    "type": "WASHING",
+    "typeLabel": "Washing & embellishment",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "country": "India",
+    "specialities": [
+      "Denim wash",
+      "Whiskering"
+    ],
+    "monthlyCapacity": "70k pcs/month",
+    "rating": 3.9,
+    "leadTimeDays": 11,
+    "onTimePercent": 84,
+    "defectRatePercent": 2.8,
+    "contactName": "Joseph Fernandes",
+    "email": "joseph@indigolanelaundry.in",
+    "phone": "+91 9537055626",
+    "paymentTermCode": "TT 60",
+    "gstin": "33WAFCV1022K1ZY",
+    "certifications": [
+      "OEKO-TEX 100"
+    ],
+    "active": true,
+    "onboardedAt": "2021-06-21",
+    "notes": "Approved supplier in good standing."
+  },
+  {
+    "id": "VEN-024",
+    "code": "V024",
+    "name": "Prism Print & Embroidery",
+    "type": "WASHING",
+    "typeLabel": "Washing & embellishment",
+    "city": "Tiruppur",
+    "state": "Tamil Nadu",
+    "country": "India",
+    "specialities": [
+      "Screen print",
+      "Embroidery"
+    ],
+    "monthlyCapacity": "150k pcs/month",
+    "rating": 4.5,
+    "leadTimeDays": 7,
+    "onTimePercent": 94,
+    "defectRatePercent": 1.3,
+    "contactName": "Meena Bhat",
+    "email": "meena@prismprintembroidery.in",
+    "phone": "+91 9707968666",
+    "paymentTermCode": "Advance",
+    "gstin": "33XAFCV1023K1ZF",
+    "certifications": [
+      "OEKO-TEX 100"
+    ],
+    "active": true,
+    "onboardedAt": "2024-12-15",
+    "notes": "Approved supplier in good standing."
+  },
+  {
+    "id": "VEN-025",
+    "code": "V025",
+    "name": "AquaSave Finishing",
+    "type": "WASHING",
+    "typeLabel": "Washing & embellishment",
+    "city": "Coimbatore",
+    "state": "Tamil Nadu",
+    "country": "India",
+    "specialities": [
+      "Ozone wash",
+      "Low-water finish"
+    ],
+    "monthlyCapacity": "60k pcs/month",
+    "rating": 4.7,
+    "leadTimeDays": 9,
+    "onTimePercent": 97,
+    "defectRatePercent": 0.8,
+    "contactName": "Ramesh Nair",
+    "email": "ramesh@aquasavefinishing.in",
+    "phone": "+91 9446324925",
+    "paymentTermCode": "30/70",
+    "gstin": "33YAFCV1024K1ZM",
+    "certifications": [
+      "OEKO-TEX 100"
+    ],
+    "active": true,
+    "onboardedAt": "2021-12-11",
+    "notes": "Approved supplier in good standing."
+  }
+]

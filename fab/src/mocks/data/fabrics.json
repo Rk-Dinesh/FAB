@@ -1,0 +1,178 @@
+[
+  {
+    "id": "FAB-001",
+    "name": "Single jersey 180 GSM",
+    "composition": "100% combed cotton",
+    "gsm": 180,
+    "uom": "KG",
+    "standardRate": 4.35,
+    "currency": "USD",
+    "group": "Knit",
+    "active": true
+  },
+  {
+    "id": "FAB-002",
+    "name": "Single jersey 160 GSM",
+    "composition": "100% organic cotton",
+    "gsm": 160,
+    "uom": "KG",
+    "standardRate": 5.1,
+    "currency": "USD",
+    "group": "Knit",
+    "active": true
+  },
+  {
+    "id": "FAB-003",
+    "name": "Pique 220 GSM",
+    "composition": "100% cotton pique",
+    "gsm": 220,
+    "uom": "KG",
+    "standardRate": 4.8,
+    "currency": "USD",
+    "group": "Knit",
+    "active": true
+  },
+  {
+    "id": "FAB-004",
+    "name": "French terry 280 GSM",
+    "composition": "80% cotton / 20% polyester",
+    "gsm": 280,
+    "uom": "KG",
+    "standardRate": 5.4,
+    "currency": "USD",
+    "group": "Knit",
+    "active": true
+  },
+  {
+    "id": "FAB-005",
+    "name": "Brushed fleece 320 GSM",
+    "composition": "70% cotton / 30% recycled poly",
+    "gsm": 320,
+    "uom": "KG",
+    "standardRate": 5.95,
+    "currency": "USD",
+    "group": "Knit",
+    "active": true
+  },
+  {
+    "id": "FAB-006",
+    "name": "Rib 1x1 240 GSM",
+    "composition": "95% cotton / 5% elastane",
+    "gsm": 240,
+    "uom": "KG",
+    "standardRate": 6.2,
+    "currency": "USD",
+    "group": "Knit",
+    "active": true
+  },
+  {
+    "id": "FAB-007",
+    "name": "Interlock 200 GSM",
+    "composition": "100% cotton interlock",
+    "gsm": 200,
+    "uom": "KG",
+    "standardRate": 4.9,
+    "currency": "USD",
+    "group": "Knit",
+    "active": true
+  },
+  {
+    "id": "FAB-008",
+    "name": "Poplin 120 GSM",
+    "composition": "100% cotton poplin",
+    "gsm": 120,
+    "uom": "MTR",
+    "standardRate": 1.85,
+    "currency": "USD",
+    "group": "Woven",
+    "active": true
+  },
+  {
+    "id": "FAB-009",
+    "name": "Oxford 140 GSM",
+    "composition": "100% cotton oxford",
+    "gsm": 140,
+    "uom": "MTR",
+    "standardRate": 2.1,
+    "currency": "USD",
+    "group": "Woven",
+    "active": true
+  },
+  {
+    "id": "FAB-010",
+    "name": "Twill 240 GSM",
+    "composition": "98% cotton / 2% elastane",
+    "gsm": 240,
+    "uom": "MTR",
+    "standardRate": 2.9,
+    "currency": "USD",
+    "group": "Woven",
+    "active": true
+  },
+  {
+    "id": "FAB-011",
+    "name": "Denim 11 oz",
+    "composition": "100% cotton denim",
+    "gsm": 372,
+    "uom": "MTR",
+    "standardRate": 3.65,
+    "currency": "USD",
+    "group": "Woven",
+    "active": true
+  },
+  {
+    "id": "FAB-012",
+    "name": "Canvas 260 GSM",
+    "composition": "100% cotton canvas",
+    "gsm": 260,
+    "uom": "MTR",
+    "standardRate": 3.1,
+    "currency": "USD",
+    "group": "Woven",
+    "active": true
+  },
+  {
+    "id": "FAB-013",
+    "name": "Viscose challis 110 GSM",
+    "composition": "100% LENZING viscose",
+    "gsm": 110,
+    "uom": "MTR",
+    "standardRate": 2.45,
+    "currency": "USD",
+    "group": "Woven",
+    "active": true
+  },
+  {
+    "id": "FAB-014",
+    "name": "Linen blend 165 GSM",
+    "composition": "55% linen / 45% cotton",
+    "gsm": 165,
+    "uom": "MTR",
+    "standardRate": 4.2,
+    "currency": "USD",
+    "group": "Woven",
+    "active": true
+  },
+  {
+    "id": "FAB-015",
+    "name": "Recycled poly jersey 150 GSM",
+    "composition": "100% recycled polyester",
+    "gsm": 150,
+    "uom": "KG",
+    "standardRate": 5.75,
+    "currency": "USD",
+    "group": "Performance",
+    "active": true
+  },
+  {
+    "id": "FAB-016",
+    "name": "Poly spandex 210 GSM",
+    "composition": "88% polyester / 12% spandex",
+    "gsm": 210,
+    "uom": "KG",
+    "standardRate": 6.4,
+    "currency": "USD",
+    "group": "Performance",
+    "active": true
+  }
+]

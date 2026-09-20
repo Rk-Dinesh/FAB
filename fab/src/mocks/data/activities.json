@@ -1,0 +1,830 @@
+[
+  {
+    "id": "ACT-0054",
+    "entity": "order",
+    "entityId": "ORD-011",
+    "type": "EMAIL",
+    "summary": "Sent the weekly progress update to Northwind Apparel.",
+    "actorId": "EMP-005",
+    "at": "2026-09-19T18:00:00.000Z"
+  },
+  {
+    "id": "ACT-0035",
+    "entity": "order",
+    "entityId": "ORD-003",
+    "type": "STATUS_CHANGE",
+    "summary": "Status moved to enquiry.",
+    "actorId": "EMP-005",
+    "at": "2026-09-19T09:00:00.000Z"
+  },
+  {
+    "id": "ACT-0069",
+    "entity": "order",
+    "entityId": "ORD-017",
+    "type": "EMAIL",
+    "summary": "Sent the weekly progress update to Northwind Apparel.",
+    "actorId": "EMP-005",
+    "at": "2026-09-18T14:00:00.000Z"
+  },
+  {
+    "id": "ACT-0075",
+    "entity": "order",
+    "entityId": "ORD-019",
+    "type": "NOTE",
+    "summary": "Flagged the delay to the client with a revised ex-factory date.",
+    "actorId": "EMP-008",
+    "at": "2026-09-18T12:00:00.000Z"
+  },
+  {
+    "id": "ACT-0073",
+    "entity": "order",
+    "entityId": "ORD-019",
+    "type": "STATUS_CHANGE",
+    "summary": "Status moved to production.",
+    "actorId": "EMP-008",
+    "at": "2026-09-17T15:00:00.000Z"
+  },
+  {
+    "id": "ACT-0064",
+    "entity": "order",
+    "entityId": "ORD-015",
+    "type": "NOTE",
+    "summary": "Flagged the delay to the client with a revised ex-factory date.",
+    "actorId": "EMP-005",
+    "at": "2026-09-17T14:00:00.000Z"
+  },
+  {
+    "id": "ACT-0029",
+    "entity": "lead",
+    "entityId": "LED-017",
+    "type": "STATUS_CHANGE",
+    "summary": "Lead converted to an enquiry.",
+    "actorId": "EMP-009",
+    "at": "2026-09-17T11:00:00.000Z"
+  },
+  {
+    "id": "ACT-0036",
+    "entity": "order",
+    "entityId": "ORD-003",
+    "type": "EMAIL",
+    "summary": "Sent the weekly progress update to Northwind Apparel.",
+    "actorId": "EMP-005",
+    "at": "2026-09-17T10:00:00.000Z"
+  },
+  {
+    "id": "ACT-0034",
+    "entity": "order",
+    "entityId": "ORD-002",
+    "type": "EMAIL",
+    "summary": "Sent the weekly progress update to Maison Rue.",
+    "actorId": "EMP-010",
+    "at": "2026-09-16T18:00:00.000Z"
+  },
+  {
+    "id": "ACT-0077",
+    "entity": "order",
+    "entityId": "ORD-020",
+    "type": "EMAIL",
+    "summary": "Sent the weekly progress update to Atlas Active.",
+    "actorId": "EMP-009",
+    "at": "2026-09-16T17:00:00.000Z"
+  },
+  {
+    "id": "ACT-0058",
+    "entity": "order",
+    "entityId": "ORD-013",
+    "type": "EMAIL",
+    "summary": "Sent the weekly progress update to Blue Harbor Co..",
+    "actorId": "EMP-006",
+    "at": "2026-09-16T16:00:00.000Z"
+  },
+  {
+    "id": "ACT-0043",
+    "entity": "order",
+    "entityId": "ORD-006",
+    "type": "NOTE",
+    "summary": "Flagged the delay to the client with a revised ex-factory date.",
+    "actorId": "EMP-010",
+    "at": "2026-09-16T16:00:00.000Z"
+  },
+  {
+    "id": "ACT-0078",
+    "entity": "order",
+    "entityId": "ORD-020",
+    "type": "NOTE",
+    "summary": "Flagged the delay to the client with a revised ex-factory date.",
+    "actorId": "EMP-009",
+    "at": "2026-09-16T11:00:00.000Z"
+  },
+  {
+    "id": "ACT-0031",
+    "entity": "order",
+    "entityId": "ORD-001",
+    "type": "STATUS_CHANGE",
+    "summary": "Status moved to lead.",
+    "actorId": "EMP-007",
+    "at": "2026-09-16T10:00:00.000Z"
+  },
+  {
+    "id": "ACT-0074",
+    "entity": "order",
+    "entityId": "ORD-019",
+    "type": "EMAIL",
+    "summary": "Sent the weekly progress update to Verde Kids.",
+    "actorId": "EMP-008",
+    "at": "2026-09-16T09:00:00.000Z"
+  },
+  {
+    "id": "ACT-0072",
+    "entity": "order",
+    "entityId": "ORD-018",
+    "type": "NOTE",
+    "summary": "Flagged the delay to the client with a revised ex-factory date.",
+    "actorId": "EMP-006",
+    "at": "2026-09-16T09:00:00.000Z"
+  },
+  {
+    "id": "ACT-0060",
+    "entity": "order",
+    "entityId": "ORD-014",
+    "type": "EMAIL",
+    "summary": "Sent the weekly progress update to Maison Rue.",
+    "actorId": "EMP-010",
+    "at": "2026-09-15T18:00:00.000Z"
+  },
+  {
+    "id": "ACT-0042",
+    "entity": "order",
+    "entityId": "ORD-006",
+    "type": "EMAIL",
+    "summary": "Sent the weekly progress update to Maison Rue.",
+    "actorId": "EMP-010",
+    "at": "2026-09-15T12:00:00.000Z"
+  },
+  {
+    "id": "ACT-0057",
+    "entity": "order",
+    "entityId": "ORD-013",
+    "type": "STATUS_CHANGE",
+    "summary": "Status moved to sampling.",
+    "actorId": "EMP-006",
+    "at": "2026-09-14T18:00:00.000Z"
+  },
+  {
+    "id": "ACT-0051",
+    "entity": "order",
+    "entityId": "ORD-010",
+    "type": "EMAIL",
+    "summary": "Sent the weekly progress update to Atlas Active.",
+    "actorId": "EMP-009",
+    "at": "2026-09-14T15:00:00.000Z"
+  },
+  {
+    "id": "ACT-0061",
+    "entity": "order",
+    "entityId": "ORD-014",
+    "type": "NOTE",
+    "summary": "Flagged the delay to the client with a revised ex-factory date.",
+    "actorId": "EMP-010",
+    "at": "2026-09-14T14:00:00.000Z"
+  },
+  {
+    "id": "ACT-0082",
+    "entity": "order",
+    "entityId": "ORD-022",
+    "type": "EMAIL",
+    "summary": "Sent the weekly progress update to Urban Loom.",
+    "actorId": "EMP-007",
+    "at": "2026-09-14T11:00:00.000Z"
+  },
+  {
+    "id": "ACT-0076",
+    "entity": "order",
+    "entityId": "ORD-020",
+    "type": "STATUS_CHANGE",
+    "summary": "Status moved to production.",
+    "actorId": "EMP-009",
+    "at": "2026-09-13T17:00:00.000Z"
+  },
+  {
+    "id": "ACT-0062",
+    "entity": "order",
+    "entityId": "ORD-015",
+    "type": "STATUS_CHANGE",
+    "summary": "Status moved to sourcing.",
+    "actorId": "EMP-005",
+    "at": "2026-09-13T15:00:00.000Z"
+  },
+  {
+    "id": "ACT-0009",
+    "entity": "lead",
+    "entityId": "LED-005",
+    "type": "STATUS_CHANGE",
+    "summary": "Lead converted to an enquiry.",
+    "actorId": "EMP-009",
+    "at": "2026-09-13T11:00:00.000Z"
+  },
+  {
+    "id": "ACT-0083",
+    "entity": "order",
+    "entityId": "ORD-022",
+    "type": "NOTE",
+    "summary": "Flagged the delay to the client with a revised ex-factory date.",
+    "actorId": "EMP-007",
+    "at": "2026-09-12T18:00:00.000Z"
+  },
+  {
+    "id": "ACT-0045",
+    "entity": "order",
+    "entityId": "ORD-007",
+    "type": "EMAIL",
+    "summary": "Sent the weekly progress update to Blue Harbor Co..",
+    "actorId": "EMP-006",
+    "at": "2026-09-12T17:00:00.000Z"
+  },
+  {
+    "id": "ACT-0065",
+    "entity": "order",
+    "entityId": "ORD-016",
+    "type": "STATUS_CHANGE",
+    "summary": "Status moved to sourcing.",
+    "actorId": "EMP-007",
+    "at": "2026-09-12T09:00:00.000Z"
+  },
+  {
+    "id": "ACT-0050",
+    "entity": "order",
+    "entityId": "ORD-010",
+    "type": "STATUS_CHANGE",
+    "summary": "Status moved to quoted.",
+    "actorId": "EMP-009",
+    "at": "2026-09-11T10:00:00.000Z"
+  },
+  {
+    "id": "ACT-0052",
+    "entity": "order",
+    "entityId": "ORD-010",
+    "type": "NOTE",
+    "summary": "Flagged the delay to the client with a revised ex-factory date.",
+    "actorId": "EMP-009",
+    "at": "2026-09-10T18:00:00.000Z"
+  },
+  {
+    "id": "ACT-0021",
+    "entity": "lead",
+    "entityId": "LED-013",
+    "type": "EMAIL",
+    "summary": "Sent the capability deck to Dan Okonkwo.",
+    "actorId": "EMP-005",
+    "at": "2026-09-10T17:00:00.000Z"
+  },
+  {
+    "id": "ACT-0038",
+    "entity": "order",
+    "entityId": "ORD-004",
+    "type": "EMAIL",
+    "summary": "Sent the weekly progress update to Atlas Active.",
+    "actorId": "EMP-009",
+    "at": "2026-09-10T13:00:00.000Z"
+  },
+  {
+    "id": "ACT-0067",
+    "entity": "order",
+    "entityId": "ORD-016",
+    "type": "NOTE",
+    "summary": "Flagged the delay to the client with a revised ex-factory date.",
+    "actorId": "EMP-007",
+    "at": "2026-09-10T10:00:00.000Z"
+  },
+  {
+    "id": "ACT-0066",
+    "entity": "order",
+    "entityId": "ORD-016",
+    "type": "EMAIL",
+    "summary": "Sent the weekly progress update to Urban Loom.",
+    "actorId": "EMP-007",
+    "at": "2026-09-09T15:00:00.000Z"
+  },
+  {
+    "id": "ACT-0047",
+    "entity": "order",
+    "entityId": "ORD-008",
+    "type": "EMAIL",
+    "summary": "Sent the weekly progress update to Urban Loom.",
+    "actorId": "EMP-007",
+    "at": "2026-09-09T12:00:00.000Z"
+  },
+  {
+    "id": "ACT-0071",
+    "entity": "order",
+    "entityId": "ORD-018",
+    "type": "EMAIL",
+    "summary": "Sent the weekly progress update to Blue Harbor Co..",
+    "actorId": "EMP-006",
+    "at": "2026-09-08T18:00:00.000Z"
+  },
+  {
+    "id": "ACT-0049",
+    "entity": "order",
+    "entityId": "ORD-009",
+    "type": "EMAIL",
+    "summary": "Sent the weekly progress update to Northwind Apparel.",
+    "actorId": "EMP-005",
+    "at": "2026-09-07T18:00:00.000Z"
+  },
+  {
+    "id": "ACT-0056",
+    "entity": "order",
+    "entityId": "ORD-012",
+    "type": "EMAIL",
+    "summary": "Sent the weekly progress update to Verde Kids.",
+    "actorId": "EMP-008",
+    "at": "2026-09-07T17:00:00.000Z"
+  },
+  {
+    "id": "ACT-0063",
+    "entity": "order",
+    "entityId": "ORD-015",
+    "type": "EMAIL",
+    "summary": "Sent the weekly progress update to Northwind Apparel.",
+    "actorId": "EMP-005",
+    "at": "2026-09-07T15:00:00.000Z"
+  },
+  {
+    "id": "ACT-0059",
+    "entity": "order",
+    "entityId": "ORD-014",
+    "type": "STATUS_CHANGE",
+    "summary": "Status moved to sampling.",
+    "actorId": "EMP-010",
+    "at": "2026-09-06T15:00:00.000Z"
+  },
+  {
+    "id": "ACT-0040",
+    "entity": "order",
+    "entityId": "ORD-005",
+    "type": "EMAIL",
+    "summary": "Sent the weekly progress update to Verde Kids.",
+    "actorId": "EMP-008",
+    "at": "2026-09-06T15:00:00.000Z"
+  },
+  {
+    "id": "ACT-0032",
+    "entity": "order",
+    "entityId": "ORD-001",
+    "type": "EMAIL",
+    "summary": "Sent the weekly progress update to Urban Loom.",
+    "actorId": "EMP-007",
+    "at": "2026-09-06T15:00:00.000Z"
+  },
+  {
+    "id": "ACT-0041",
+    "entity": "order",
+    "entityId": "ORD-006",
+    "type": "STATUS_CHANGE",
+    "summary": "Status moved to design.",
+    "actorId": "EMP-010",
+    "at": "2026-09-06T13:00:00.000Z"
+  },
+  {
+    "id": "ACT-0080",
+    "entity": "order",
+    "entityId": "ORD-021",
+    "type": "EMAIL",
+    "summary": "Sent the weekly progress update to Northwind Apparel.",
+    "actorId": "EMP-005",
+    "at": "2026-09-06T11:00:00.000Z"
+  },
+  {
+    "id": "ACT-0019",
+    "entity": "lead",
+    "entityId": "LED-011",
+    "type": "STATUS_CHANGE",
+    "summary": "Lead converted to an enquiry.",
+    "actorId": "EMP-009",
+    "at": "2026-09-05T17:00:00.000Z"
+  },
+  {
+    "id": "ACT-0012",
+    "entity": "lead",
+    "entityId": "LED-007",
+    "type": "CALL",
+    "summary": "Discovery call — raw denim programme, 22,100 pcs indicative.",
+    "actorId": "EMP-005",
+    "at": "2026-09-05T11:00:00.000Z"
+  },
+  {
+    "id": "ACT-0091",
+    "entity": "client",
+    "entityId": "CLI-005",
+    "type": "NOTE",
+    "summary": "Agreed the seasonal buy calendar for the next two drops.",
+    "actorId": "EMP-009",
+    "at": "2026-09-04T17:00:00.000Z"
+  },
+  {
+    "id": "ACT-0048",
+    "entity": "order",
+    "entityId": "ORD-009",
+    "type": "STATUS_CHANGE",
+    "summary": "Status moved to quoted.",
+    "actorId": "EMP-005",
+    "at": "2026-09-03T18:00:00.000Z"
+  },
+  {
+    "id": "ACT-0018",
+    "entity": "lead",
+    "entityId": "LED-011",
+    "type": "CALL",
+    "summary": "Discovery call — southwest casual programme, 8,900 pcs indicative.",
+    "actorId": "EMP-009",
+    "at": "2026-09-02T18:00:00.000Z"
+  },
+  {
+    "id": "ACT-0006",
+    "entity": "lead",
+    "entityId": "LED-004",
+    "type": "EMAIL",
+    "summary": "Sent the capability deck to Marc Tremblay.",
+    "actorId": "EMP-008",
+    "at": "2026-09-02T14:00:00.000Z"
+  },
+  {
+    "id": "ACT-0088",
+    "entity": "client",
+    "entityId": "CLI-003",
+    "type": "NOTE",
+    "summary": "Agreed the seasonal buy calendar for the next two drops.",
+    "actorId": "EMP-007",
+    "at": "2026-09-01T14:00:00.000Z"
+  },
+  {
+    "id": "ACT-0081",
+    "entity": "order",
+    "entityId": "ORD-022",
+    "type": "STATUS_CHANGE",
+    "summary": "Status moved to qc.",
+    "actorId": "EMP-007",
+    "at": "2026-08-31T09:00:00.000Z"
+  },
+  {
+    "id": "ACT-0039",
+    "entity": "order",
+    "entityId": "ORD-005",
+    "type": "STATUS_CHANGE",
+    "summary": "Status moved to design.",
+    "actorId": "EMP-008",
+    "at": "2026-08-30T11:00:00.000Z"
+  },
+  {
+    "id": "ACT-0002",
+    "entity": "lead",
+    "entityId": "LED-001",
+    "type": "CALL",
+    "summary": "Discovery call — workwear basics programme, 36,800 pcs indicative.",
+    "actorId": "EMP-005",
+    "at": "2026-08-29T11:00:00.000Z"
+  },
+  {
+    "id": "ACT-0005",
+    "entity": "lead",
+    "entityId": "LED-003",
+    "type": "CALL",
+    "summary": "Discovery call — swim and resort programme, 9,700 pcs indicative.",
+    "actorId": "EMP-007",
+    "at": "2026-08-29T09:00:00.000Z"
+  },
+  {
+    "id": "ACT-0044",
+    "entity": "order",
+    "entityId": "ORD-007",
+    "type": "STATUS_CHANGE",
+    "summary": "Status moved to costing.",
+    "actorId": "EMP-006",
+    "at": "2026-08-28T18:00:00.000Z"
+  },
+  {
+    "id": "ACT-0033",
+    "entity": "order",
+    "entityId": "ORD-002",
+    "type": "STATUS_CHANGE",
+    "summary": "Status moved to lead.",
+    "actorId": "EMP-010",
+    "at": "2026-08-28T16:00:00.000Z"
+  },
+  {
+    "id": "ACT-0053",
+    "entity": "order",
+    "entityId": "ORD-011",
+    "type": "STATUS_CHANGE",
+    "summary": "Status moved to confirmed.",
+    "actorId": "EMP-005",
+    "at": "2026-08-27T14:00:00.000Z"
+  },
+  {
+    "id": "ACT-0070",
+    "entity": "order",
+    "entityId": "ORD-018",
+    "type": "STATUS_CHANGE",
+    "summary": "Status moved to production.",
+    "actorId": "EMP-006",
+    "at": "2026-08-25T11:00:00.000Z"
+  },
+  {
+    "id": "ACT-0015",
+    "entity": "lead",
+    "entityId": "LED-009",
+    "type": "CALL",
+    "summary": "Discovery call — coastal casual programme, 63,600 pcs indicative.",
+    "actorId": "EMP-007",
+    "at": "2026-08-24T13:00:00.000Z"
+  },
+  {
+    "id": "ACT-0079",
+    "entity": "order",
+    "entityId": "ORD-021",
+    "type": "STATUS_CHANGE",
+    "summary": "Status moved to qc.",
+    "actorId": "EMP-005",
+    "at": "2026-08-24T09:00:00.000Z"
+  },
+  {
+    "id": "ACT-0037",
+    "entity": "order",
+    "entityId": "ORD-004",
+    "type": "STATUS_CHANGE",
+    "summary": "Status moved to enquiry.",
+    "actorId": "EMP-009",
+    "at": "2026-08-22T14:00:00.000Z"
+  },
+  {
+    "id": "ACT-0068",
+    "entity": "order",
+    "entityId": "ORD-017",
+    "type": "STATUS_CHANGE",
+    "summary": "Status moved to production.",
+    "actorId": "EMP-005",
+    "at": "2026-08-21T17:00:00.000Z"
+  },
+  {
+    "id": "ACT-0008",
+    "entity": "lead",
+    "entityId": "LED-005",
+    "type": "CALL",
+    "summary": "Discovery call — studio activewear programme, 7,200 pcs indicative.",
+    "actorId": "EMP-009",
+    "at": "2026-08-21T10:00:00.000Z"
+  },
+  {
+    "id": "ACT-0055",
+    "entity": "order",
+    "entityId": "ORD-012",
+    "type": "STATUS_CHANGE",
+    "summary": "Status moved to confirmed.",
+    "actorId": "EMP-008",
+    "at": "2026-08-18T18:00:00.000Z"
+  },
+  {
+    "id": "ACT-0022",
+    "entity": "lead",
+    "entityId": "LED-013",
+    "type": "CALL",
+    "summary": "Discovery call — kids streetwear programme, 34,500 pcs indicative.",
+    "actorId": "EMP-005",
+    "at": "2026-08-18T18:00:00.000Z"
+  },
+  {
+    "id": "ACT-0007",
+    "entity": "lead",
+    "entityId": "LED-005",
+    "type": "EMAIL",
+    "summary": "Sent the capability deck to Hana Nakamura.",
+    "actorId": "EMP-009",
+    "at": "2026-08-18T15:00:00.000Z"
+  },
+  {
+    "id": "ACT-0010",
+    "entity": "lead",
+    "entityId": "LED-006",
+    "type": "EMAIL",
+    "summary": "Sent the capability deck to Sanne de Vries.",
+    "actorId": "EMP-010",
+    "at": "2026-08-17T14:00:00.000Z"
+  },
+  {
+    "id": "ACT-0046",
+    "entity": "order",
+    "entityId": "ORD-008",
+    "type": "STATUS_CHANGE",
+    "summary": "Status moved to costing.",
+    "actorId": "EMP-007",
+    "at": "2026-08-16T09:00:00.000Z"
+  },
+  {
+    "id": "ACT-0017",
+    "entity": "lead",
+    "entityId": "LED-011",
+    "type": "EMAIL",
+    "summary": "Sent the capability deck to Rosa Delgado.",
+    "actorId": "EMP-009",
+    "at": "2026-08-14T11:00:00.000Z"
+  },
+  {
+    "id": "ACT-0011",
+    "entity": "lead",
+    "entityId": "LED-007",
+    "type": "EMAIL",
+    "summary": "Sent the capability deck to Cole Whitaker.",
+    "actorId": "EMP-005",
+    "at": "2026-08-10T17:00:00.000Z"
+  },
+  {
+    "id": "ACT-0085",
+    "entity": "client",
+    "entityId": "CLI-001",
+    "type": "NOTE",
+    "summary": "Agreed the seasonal buy calendar for the next two drops.",
+    "actorId": "EMP-005",
+    "at": "2026-08-09T13:00:00.000Z"
+  },
+  {
+    "id": "ACT-0028",
+    "entity": "lead",
+    "entityId": "LED-017",
+    "type": "CALL",
+    "summary": "Discovery call — merino base layers programme, 23,800 pcs indicative.",
+    "actorId": "EMP-009",
+    "at": "2026-08-09T11:00:00.000Z"
+  },
+  {
+    "id": "ACT-0024",
+    "entity": "lead",
+    "entityId": "LED-015",
+    "type": "EMAIL",
+    "summary": "Sent the capability deck to Brianna Moss.",
+    "actorId": "EMP-007",
+    "at": "2026-08-09T10:00:00.000Z"
+  },
+  {
+    "id": "ACT-0086",
+    "entity": "client",
+    "entityId": "CLI-002",
+    "type": "MEETING",
+    "summary": "Quarterly business review with Marcus Reed.",
+    "actorId": "EMP-006",
+    "at": "2026-08-05T14:00:00.000Z"
+  },
+  {
+    "id": "ACT-0030",
+    "entity": "lead",
+    "entityId": "LED-018",
+    "type": "EMAIL",
+    "summary": "Sent the capability deck to Ines Cardoso.",
+    "actorId": "EMP-010",
+    "at": "2026-08-03T18:00:00.000Z"
+  },
+  {
+    "id": "ACT-0023",
+    "entity": "lead",
+    "entityId": "LED-014",
+    "type": "EMAIL",
+    "summary": "Sent the capability deck to Pablo Ortega.",
+    "actorId": "EMP-006",
+    "at": "2026-07-30T14:00:00.000Z"
+  },
+  {
+    "id": "ACT-0087",
+    "entity": "client",
+    "entityId": "CLI-003",
+    "type": "MEETING",
+    "summary": "Quarterly business review with Nadia Hussain.",
+    "actorId": "EMP-007",
+    "at": "2026-07-29T12:00:00.000Z"
+  },
+  {
+    "id": "ACT-0025",
+    "entity": "lead",
+    "entityId": "LED-015",
+    "type": "CALL",
+    "summary": "Discovery call — college athleisure programme, 60,700 pcs indicative.",
+    "actorId": "EMP-007",
+    "at": "2026-07-28T09:00:00.000Z"
+  },
+  {
+    "id": "ACT-0027",
+    "entity": "lead",
+    "entityId": "LED-017",
+    "type": "EMAIL",
+    "summary": "Sent the capability deck to Erik Lund.",
+    "actorId": "EMP-009",
+    "at": "2026-07-26T12:00:00.000Z"
+  },
+  {
+    "id": "ACT-0003",
+    "entity": "lead",
+    "entityId": "LED-002",
+    "type": "EMAIL",
+    "summary": "Sent the capability deck to Owen Pryce.",
+    "actorId": "EMP-006",
+    "at": "2026-07-25T15:00:00.000Z"
+  },
+  {
+    "id": "ACT-0020",
+    "entity": "lead",
+    "entityId": "LED-012",
+    "type": "EMAIL",
+    "summary": "Sent the capability deck to Elin Svensson.",
+    "actorId": "EMP-010",
+    "at": "2026-07-13T13:00:00.000Z"
+  },
+  {
+    "id": "ACT-0001",
+    "entity": "lead",
+    "entityId": "LED-001",
+    "type": "EMAIL",
+    "summary": "Sent the capability deck to Tessa Hollins.",
+    "actorId": "EMP-005",
+    "at": "2026-07-13T10:00:00.000Z"
+  },
+  {
+    "id": "ACT-0084",
+    "entity": "client",
+    "entityId": "CLI-001",
+    "type": "MEETING",
+    "summary": "Quarterly business review with Ellie Brandt.",
+    "actorId": "EMP-005",
+    "at": "2026-07-07T14:00:00.000Z"
+  },
+  {
+    "id": "ACT-0004",
+    "entity": "lead",
+    "entityId": "LED-003",
+    "type": "EMAIL",
+    "summary": "Sent the capability deck to Giulia Ferri.",
+    "actorId": "EMP-007",
+    "at": "2026-06-28T17:00:00.000Z"
+  },
+  {
+    "id": "ACT-0026",
+    "entity": "lead",
+    "entityId": "LED-016",
+    "type": "EMAIL",
+    "summary": "Sent the capability deck to Ishita Malhotra.",
+    "actorId": "EMP-008",
+    "at": "2026-06-27T14:00:00.000Z"
+  },
+  {
+    "id": "ACT-0013",
+    "entity": "lead",
+    "entityId": "LED-008",
+    "type": "EMAIL",
+    "summary": "Sent the capability deck to Yusuf Rahman.",
+    "actorId": "EMP-006",
+    "at": "2026-06-26T17:00:00.000Z"
+  },
+  {
+    "id": "ACT-0016",
+    "entity": "lead",
+    "entityId": "LED-010",
+    "type": "EMAIL",
+    "summary": "Sent the capability deck to Lena Brandt.",
+    "actorId": "EMP-008",
+    "at": "2026-06-26T14:00:00.000Z"
+  },
+  {
+    "id": "ACT-0014",
+    "entity": "lead",
+    "entityId": "LED-009",
+    "type": "EMAIL",
+    "summary": "Sent the capability deck to Niamh Flynn.",
+    "actorId": "EMP-007",
+    "at": "2026-06-26T13:00:00.000Z"
+  },
+  {
+    "id": "ACT-0092",
+    "entity": "client",
+    "entityId": "CLI-006",
+    "type": "MEETING",
+    "summary": "Quarterly business review with Camille Rousseau.",
+    "actorId": "EMP-010",
+    "at": "2026-06-09T14:00:00.000Z"
+  },
+  {
+    "id": "ACT-0089",
+    "entity": "client",
+    "entityId": "CLI-004",
+    "type": "MEETING",
+    "summary": "Quarterly business review with Lucía Fernández.",
+    "actorId": "EMP-008",
+    "at": "2026-05-28T17:00:00.000Z"
+  },
+  {
+    "id": "ACT-0090",
+    "entity": "client",
+    "entityId": "CLI-005",
+    "type": "MEETING",
+    "summary": "Quarterly business review with Jonas Weber.",
+    "actorId": "EMP-009",
+    "at": "2026-05-25T09:00:00.000Z"
+  }
+]

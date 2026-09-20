@@ -1,0 +1,137 @@
+[
+  {
+    "id": "TRM-001",
+    "name": "Main label — woven",
+    "group": "Label",
+    "uom": "PCS",
+    "standardRate": 0.035,
+    "currency": "USD",
+    "active": true
+  },
+  {
+    "id": "TRM-002",
+    "name": "Care label — satin",
+    "group": "Label",
+    "uom": "PCS",
+    "standardRate": 0.022,
+    "currency": "USD",
+    "active": true
+  },
+  {
+    "id": "TRM-003",
+    "name": "Size label",
+    "group": "Label",
+    "uom": "PCS",
+    "standardRate": 0.014,
+    "currency": "USD",
+    "active": true
+  },
+  {
+    "id": "TRM-004",
+    "name": "Hangtag with string",
+    "group": "Packaging",
+    "uom": "PCS",
+    "standardRate": 0.09,
+    "currency": "USD",
+    "active": true
+  },
+  {
+    "id": "TRM-005",
+    "name": "Polybag — recycled LDPE",
+    "group": "Packaging",
+    "uom": "PCS",
+    "standardRate": 0.048,
+    "currency": "USD",
+    "active": true
+  },
+  {
+    "id": "TRM-006",
+    "name": "Carton 5-ply",
+    "group": "Packaging",
+    "uom": "PCS",
+    "standardRate": 0.62,
+    "currency": "USD",
+    "active": true
+  },
+  {
+    "id": "TRM-007",
+    "name": "Sewing thread — 40/2 spun",
+    "group": "Thread",
+    "uom": "CONE",
+    "standardRate": 1.35,
+    "currency": "USD",
+    "active": true
+  },
+  {
+    "id": "TRM-008",
+    "name": "Metal shank button 20L",
+    "group": "Button",
+    "uom": "GROSS",
+    "standardRate": 2.1,
+    "currency": "USD",
+    "active": true
+  },
+  {
+    "id": "TRM-009",
+    "name": "Corozo button 18L",
+    "group": "Button",
+    "uom": "GROSS",
+    "standardRate": 3.4,
+    "currency": "USD",
+    "active": true
+  },
+  {
+    "id": "TRM-010",
+    "name": "YKK zipper 5CN 16cm",
+    "group": "Zipper",
+    "uom": "PCS",
+    "standardRate": 0.31,
+    "currency": "USD",
+    "active": true
+  },
+  {
+    "id": "TRM-011",
+    "name": "Drawcord flat 8mm",
+    "group": "Cord",
+    "uom": "MTR",
+    "standardRate": 0.07,
+    "currency": "USD",
+    "active": true
+  },
+  {
+    "id": "TRM-012",
+    "name": "Elastic waistband 40mm",
+    "group": "Elastic",
+    "uom": "MTR",
+    "standardRate": 0.16,
+    "currency": "USD",
+    "active": true
+  },
+  {
+    "id": "TRM-013",
+    "name": "Heat transfer label",
+    "group": "Label",
+    "uom": "PCS",
+    "standardRate": 0.052,
+    "currency": "USD",
+    "active": true
+  },
+  {
+    "id": "TRM-014",
+    "name": "Rivet — antique brass",
+    "group": "Hardware",
+    "uom": "GROSS",
+    "standardRate": 1.8,
+    "currency": "USD",
+    "active": true
+  },
+  {
+    "id": "TRM-015",
+    "name": "Tissue paper sheet",
+    "group": "Packaging",
+    "uom": "PCS",
+    "standardRate": 0.018,
+    "currency": "USD",
+    "active": true
+  }
+]

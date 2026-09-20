@@ -1,0 +1,5815 @@
+[
+  {
+    "id": "ORD-001",
+    "poNumber": "PO-1001",
+    "clientPoNumber": "URL-2600",
+    "clientId": "CLI-003",
+    "clientName": "Urban Loom",
+    "styleNumber": "URL-2400",
+    "styleName": "Heavyweight pocket tee",
+    "categoryId": "CAT-001",
+    "fabricId": "FAB-001",
+    "sizeSetId": "SZS-001",
+    "colorIds": [
+      "COL-003",
+      "COL-005",
+      "COL-004"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-003",
+        "sizes": {
+          "XS": 240,
+          "S": 540,
+          "M": 840,
+          "L": 780,
+          "XL": 420,
+          "XXL": 180
+        },
+        "total": 3000
+      },
+      {
+        "colorId": "COL-005",
+        "sizes": {
+          "XS": 240,
+          "S": 540,
+          "M": 840,
+          "L": 780,
+          "XL": 420,
+          "XXL": 180
+        },
+        "total": 3000
+      },
+      {
+        "colorId": "COL-004",
+        "sizes": {
+          "XS": 240,
+          "S": 540,
+          "M": 840,
+          "L": 780,
+          "XL": 420,
+          "XXL": 180
+        },
+        "total": 3000
+      }
+    ],
+    "quantity": 9000,
+    "unit": "PCS",
+    "fobPrice": 26.48,
+    "currency": "USD",
+    "orderValue": 238320,
+    "status": "LEAD",
+    "statusIndex": 0,
+    "risk": "ON_TRACK",
+    "hasDesign": true,
+    "hasWash": false,
+    "incoterm": "CIF",
+    "paymentTermCode": "LC 60",
+    "destinationPortId": "PRT-009",
+    "merchandiserId": "EMP-007",
+    "factoryVendorId": null,
+    "enquiryDate": "2026-09-28",
+    "confirmedDate": null,
+    "exFactoryDate": "2027-01-16",
+    "revisedExFactoryDate": null,
+    "shipDate": null,
+    "deliveryDate": "2027-02-09",
+    "delayDays": 0,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-11-01",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-11-07",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-11-14",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-11-25",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-11-19",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-11-23",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-12-13",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-12-17",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-12-19",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-12-23",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2027-01-06",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2027-01-10",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2027-01-13",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2027-01-16",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      }
+    ],
+    "season": "SS27",
+    "createdAt": "2026-09-28T10:00:00.000Z",
+    "updatedAt": "2026-09-20T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-002",
+    "poNumber": "PO-1002",
+    "clientPoNumber": "MSR-2607",
+    "clientId": "CLI-006",
+    "clientName": "Maison Rue",
+    "styleNumber": "MSR-2411",
+    "styleName": "Organic crew tee",
+    "categoryId": "CAT-001",
+    "fabricId": "FAB-002",
+    "sizeSetId": "SZS-001",
+    "colorIds": [
+      "COL-006",
+      "COL-011",
+      "COL-008"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-006",
+        "sizes": {
+          "XS": 504,
+          "S": 1140,
+          "M": 1776,
+          "L": 1644,
+          "XL": 888,
+          "XXL": 384
+        },
+        "total": 6336
+      },
+      {
+        "colorId": "COL-011",
+        "sizes": {
+          "XS": 504,
+          "S": 1140,
+          "M": 1776,
+          "L": 1644,
+          "XL": 888,
+          "XXL": 384
+        },
+        "total": 6336
+      },
+      {
+        "colorId": "COL-008",
+        "sizes": {
+          "XS": 504,
+          "S": 1140,
+          "M": 1776,
+          "L": 1644,
+          "XL": 888,
+          "XXL": 384
+        },
+        "total": 6336
+      }
+    ],
+    "quantity": 19008,
+    "unit": "PCS",
+    "fobPrice": 17.27,
+    "currency": "USD",
+    "orderValue": 328268.16,
+    "status": "LEAD",
+    "statusIndex": 0,
+    "risk": "ON_TRACK",
+    "hasDesign": false,
+    "hasWash": false,
+    "incoterm": "FOB",
+    "paymentTermCode": "30/70",
+    "destinationPortId": "PRT-011",
+    "merchandiserId": "EMP-010",
+    "factoryVendorId": null,
+    "enquiryDate": "2026-10-18",
+    "confirmedDate": null,
+    "exFactoryDate": "2027-01-30",
+    "revisedExFactoryDate": null,
+    "shipDate": null,
+    "deliveryDate": "2027-02-22",
+    "delayDays": 0,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-11-15",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-11-21",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-11-28",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-12-09",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-12-03",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-12-07",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-12-27",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-12-31",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2027-01-02",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2027-01-06",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2027-01-20",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2027-01-24",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2027-01-27",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2027-01-30",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      }
+    ],
+    "season": "SS27",
+    "createdAt": "2026-10-18T10:00:00.000Z",
+    "updatedAt": "2026-09-20T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-003",
+    "poNumber": "PO-1003",
+    "clientPoNumber": "NWA-2614",
+    "clientId": "CLI-001",
+    "clientName": "Northwind Apparel",
+    "styleNumber": "NWA-2422",
+    "styleName": "Classic pique polo",
+    "categoryId": "CAT-001",
+    "fabricId": "FAB-003",
+    "sizeSetId": "SZS-002",
+    "colorIds": [
+      "COL-010",
+      "COL-006"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-010",
+        "sizes": {
+          "S": 636,
+          "M": 1176,
+          "L": 1260,
+          "XL": 816,
+          "XXL": 408,
+          "3XL": 228
+        },
+        "total": 4524
+      },
+      {
+        "colorId": "COL-006",
+        "sizes": {
+          "S": 636,
+          "M": 1176,
+          "L": 1260,
+          "XL": 816,
+          "XXL": 408,
+          "3XL": 228
+        },
+        "total": 4524
+      }
+    ],
+    "quantity": 9048,
+    "unit": "PCS",
+    "fobPrice": 22.44,
+    "currency": "USD",
+    "orderValue": 203037.12,
+    "status": "ENQUIRY",
+    "statusIndex": 1,
+    "risk": "ON_TRACK",
+    "hasDesign": true,
+    "hasWash": false,
+    "incoterm": "FOB",
+    "paymentTermCode": "TT 45",
+    "destinationPortId": "PRT-005",
+    "merchandiserId": "EMP-005",
+    "factoryVendorId": null,
+    "enquiryDate": "2026-09-23",
+    "confirmedDate": null,
+    "exFactoryDate": "2027-01-02",
+    "revisedExFactoryDate": null,
+    "shipDate": null,
+    "deliveryDate": "2027-02-03",
+    "delayDays": 0,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-10-18",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-10-24",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-10-31",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-11-11",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-11-05",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-11-09",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-11-29",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-12-03",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-12-05",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-12-09",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-12-23",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-12-27",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-12-30",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2027-01-02",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      }
+    ],
+    "season": "SS27",
+    "createdAt": "2026-09-23T10:00:00.000Z",
+    "updatedAt": "2026-09-20T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-004",
+    "poNumber": "PO-1004",
+    "clientPoNumber": "ATA-2621",
+    "clientId": "CLI-005",
+    "clientName": "Atlas Active",
+    "styleNumber": "ATA-2433",
+    "styleName": "Garment-dyed hoodie",
+    "categoryId": "CAT-003",
+    "fabricId": "FAB-005",
+    "sizeSetId": "SZS-002",
+    "colorIds": [
+      "COL-005",
+      "COL-001",
+      "COL-013"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-005",
+        "sizes": {
+          "S": 984,
+          "M": 1824,
+          "L": 1956,
+          "XL": 1260,
+          "XXL": 636,
+          "3XL": 348
+        },
+        "total": 7008
+      },
+      {
+        "colorId": "COL-001",
+        "sizes": {
+          "S": 984,
+          "M": 1824,
+          "L": 1956,
+          "XL": 1260,
+          "XXL": 636,
+          "3XL": 348
+        },
+        "total": 7008
+      },
+      {
+        "colorId": "COL-013",
+        "sizes": {
+          "S": 984,
+          "M": 1824,
+          "L": 1956,
+          "XL": 1260,
+          "XXL": 636,
+          "3XL": 348
+        },
+        "total": 7008
+      }
+    ],
+    "quantity": 21024,
+    "unit": "PCS",
+    "fobPrice": 6.98,
+    "currency": "USD",
+    "orderValue": 146747.52,
+    "status": "ENQUIRY",
+    "statusIndex": 1,
+    "risk": "ON_TRACK",
+    "hasDesign": true,
+    "hasWash": true,
+    "incoterm": "CIF",
+    "paymentTermCode": "TT 45",
+    "destinationPortId": "PRT-008",
+    "merchandiserId": "EMP-009",
+    "factoryVendorId": null,
+    "enquiryDate": "2026-09-04",
+    "confirmedDate": null,
+    "exFactoryDate": "2027-01-10",
+    "revisedExFactoryDate": null,
+    "shipDate": null,
+    "deliveryDate": "2027-02-02",
+    "delayDays": 0,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-10-26",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-11-01",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-11-08",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-11-19",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-11-13",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-11-17",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-12-07",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-12-11",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-12-13",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-12-17",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-12-31",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2027-01-04",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2027-01-07",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2027-01-10",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      }
+    ],
+    "season": "SS27",
+    "createdAt": "2026-09-04T10:00:00.000Z",
+    "updatedAt": "2026-09-20T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-005",
+    "poNumber": "PO-1005",
+    "clientPoNumber": "VRD-2628",
+    "clientId": "CLI-004",
+    "clientName": "Verde Kids",
+    "styleNumber": "VRD-2444",
+    "styleName": "French terry crewneck",
+    "categoryId": "CAT-003",
+    "fabricId": "FAB-004",
+    "sizeSetId": "SZS-001",
+    "colorIds": [
+      "COL-010",
+      "COL-007"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-010",
+        "sizes": {
+          "XS": 564,
+          "S": 1260,
+          "M": 1956,
+          "L": 1824,
+          "XL": 984,
+          "XXL": 420
+        },
+        "total": 7008
+      },
+      {
+        "colorId": "COL-007",
+        "sizes": {
+          "XS": 564,
+          "S": 1260,
+          "M": 1956,
+          "L": 1824,
+          "XL": 984,
+          "XXL": 420
+        },
+        "total": 7008
+      }
+    ],
+    "quantity": 14016,
+    "unit": "PCS",
+    "fobPrice": 11.76,
+    "currency": "USD",
+    "orderValue": 164828.16,
+    "status": "DESIGN",
+    "statusIndex": 2,
+    "risk": "ON_TRACK",
+    "hasDesign": false,
+    "hasWash": false,
+    "incoterm": "FOB",
+    "paymentTermCode": "TT 60",
+    "destinationPortId": "PRT-010",
+    "merchandiserId": "EMP-008",
+    "factoryVendorId": null,
+    "enquiryDate": "2026-08-30",
+    "confirmedDate": null,
+    "exFactoryDate": "2026-12-25",
+    "revisedExFactoryDate": null,
+    "shipDate": null,
+    "deliveryDate": "2027-01-21",
+    "delayDays": 0,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-10-10",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-10-16",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-10-23",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-11-03",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-28",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-11-01",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-11-21",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-11-25",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-11-27",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-12-01",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-12-15",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-12-19",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-12-22",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-12-25",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      }
+    ],
+    "season": "SS27",
+    "createdAt": "2026-08-30T10:00:00.000Z",
+    "updatedAt": "2026-09-20T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-006",
+    "poNumber": "PO-1006",
+    "clientPoNumber": "MSR-2635",
+    "clientId": "CLI-006",
+    "clientName": "Maison Rue",
+    "styleNumber": "MSR-2455",
+    "styleName": "Tapered jogger",
+    "categoryId": "CAT-002",
+    "fabricId": "FAB-004",
+    "sizeSetId": "SZS-001",
+    "colorIds": [
+      "COL-004",
+      "COL-002",
+      "COL-010",
+      "COL-011"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-004",
+        "sizes": {
+          "XS": 276,
+          "S": 636,
+          "M": 984,
+          "L": 912,
+          "XL": 492,
+          "XXL": 216
+        },
+        "total": 3516
+      },
+      {
+        "colorId": "COL-002",
+        "sizes": {
+          "XS": 276,
+          "S": 636,
+          "M": 984,
+          "L": 912,
+          "XL": 492,
+          "XXL": 216
+        },
+        "total": 3516
+      },
+      {
+        "colorId": "COL-010",
+        "sizes": {
+          "XS": 276,
+          "S": 636,
+          "M": 984,
+          "L": 912,
+          "XL": 492,
+          "XXL": 216
+        },
+        "total": 3516
+      },
+      {
+        "colorId": "COL-011",
+        "sizes": {
+          "XS": 276,
+          "S": 636,
+          "M": 984,
+          "L": 912,
+          "XL": 492,
+          "XXL": 216
+        },
+        "total": 3516
+      }
+    ],
+    "quantity": 14064,
+    "unit": "PCS",
+    "fobPrice": 25.57,
+    "currency": "USD",
+    "orderValue": 359616.48,
+    "status": "DESIGN",
+    "statusIndex": 2,
+    "risk": "AT_RISK",
+    "hasDesign": true,
+    "hasWash": false,
+    "incoterm": "FOB",
+    "paymentTermCode": "30/70",
+    "destinationPortId": "PRT-011",
+    "merchandiserId": "EMP-010",
+    "factoryVendorId": null,
+    "enquiryDate": "2026-08-23",
+    "confirmedDate": null,
+    "exFactoryDate": "2026-12-17",
+    "revisedExFactoryDate": "2026-12-21",
+    "shipDate": null,
+    "deliveryDate": "2027-01-12",
+    "delayDays": 4,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-10-02",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-10-08",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-10-15",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-10-26",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-20",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-24",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-11-13",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-11-17",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-11-19",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-11-23",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-12-07",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-12-11",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-12-14",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-12-17",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      }
+    ],
+    "season": "SS27",
+    "createdAt": "2026-08-23T10:00:00.000Z",
+    "updatedAt": "2026-09-20T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-007",
+    "poNumber": "PO-1007",
+    "clientPoNumber": "BHC-2642",
+    "clientId": "CLI-002",
+    "clientName": "Blue Harbor Co.",
+    "styleNumber": "BHC-2466",
+    "styleName": "Ribbed tank",
+    "categoryId": "CAT-001",
+    "fabricId": "FAB-006",
+    "sizeSetId": "SZS-003",
+    "colorIds": [
+      "COL-001",
+      "COL-012"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-001",
+        "sizes": {
+          "2": 276,
+          "4": 420,
+          "6": 576,
+          "8": 636,
+          "10": 516,
+          "12": 360,
+          "14": 240
+        },
+        "total": 3024
+      },
+      {
+        "colorId": "COL-012",
+        "sizes": {
+          "2": 276,
+          "4": 420,
+          "6": 576,
+          "8": 636,
+          "10": 516,
+          "12": 360,
+          "14": 240
+        },
+        "total": 3024
+      }
+    ],
+    "quantity": 6048,
+    "unit": "PCS",
+    "fobPrice": 16.01,
+    "currency": "USD",
+    "orderValue": 96828.48,
+    "status": "COSTING",
+    "statusIndex": 3,
+    "risk": "ON_TRACK",
+    "hasDesign": true,
+    "hasWash": false,
+    "incoterm": "FOB",
+    "paymentTermCode": "TT 30",
+    "destinationPortId": "PRT-006",
+    "merchandiserId": "EMP-006",
+    "factoryVendorId": null,
+    "enquiryDate": "2026-08-22",
+    "confirmedDate": null,
+    "exFactoryDate": "2026-12-21",
+    "revisedExFactoryDate": null,
+    "shipDate": null,
+    "deliveryDate": "2027-01-21",
+    "delayDays": 0,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-10-06",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-10-12",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-10-19",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-10-30",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-24",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-28",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-11-17",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-11-21",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-11-23",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-11-27",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-12-11",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-12-15",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-12-18",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-12-21",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      }
+    ],
+    "season": "SS27",
+    "createdAt": "2026-08-22T10:00:00.000Z",
+    "updatedAt": "2026-09-20T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-008",
+    "poNumber": "PO-1008",
+    "clientPoNumber": "URL-2649",
+    "clientId": "CLI-003",
+    "clientName": "Urban Loom",
+    "styleNumber": "URL-2477",
+    "styleName": "Oxford button-down",
+    "categoryId": "CAT-004",
+    "fabricId": "FAB-009",
+    "sizeSetId": "SZS-002",
+    "colorIds": [
+      "COL-003",
+      "COL-010",
+      "COL-012",
+      "COL-013"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-003",
+        "sizes": {
+          "S": 564,
+          "M": 1044,
+          "L": 1116,
+          "XL": 720,
+          "XXL": 360,
+          "3XL": 204
+        },
+        "total": 4008
+      },
+      {
+        "colorId": "COL-010",
+        "sizes": {
+          "S": 564,
+          "M": 1044,
+          "L": 1116,
+          "XL": 720,
+          "XXL": 360,
+          "3XL": 204
+        },
+        "total": 4008
+      },
+      {
+        "colorId": "COL-012",
+        "sizes": {
+          "S": 564,
+          "M": 1044,
+          "L": 1116,
+          "XL": 720,
+          "XXL": 360,
+          "3XL": 204
+        },
+        "total": 4008
+      },
+      {
+        "colorId": "COL-013",
+        "sizes": {
+          "S": 564,
+          "M": 1044,
+          "L": 1116,
+          "XL": 720,
+          "XXL": 360,
+          "3XL": 204
+        },
+        "total": 4008
+      }
+    ],
+    "quantity": 16032,
+    "unit": "PCS",
+    "fobPrice": 8.34,
+    "currency": "USD",
+    "orderValue": 133706.88,
+    "status": "COSTING",
+    "statusIndex": 3,
+    "risk": "ON_TRACK",
+    "hasDesign": false,
+    "hasWash": false,
+    "incoterm": "CIF",
+    "paymentTermCode": "LC 60",
+    "destinationPortId": "PRT-009",
+    "merchandiserId": "EMP-007",
+    "factoryVendorId": null,
+    "enquiryDate": "2026-09-15",
+    "confirmedDate": null,
+    "exFactoryDate": "2026-12-15",
+    "revisedExFactoryDate": null,
+    "shipDate": null,
+    "deliveryDate": "2027-01-09",
+    "delayDays": 0,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-09-30",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-10-06",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-10-13",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-10-24",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-18",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-22",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-11-11",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-11-15",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-11-17",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-11-21",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-12-05",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-12-09",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-12-12",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-12-15",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      }
+    ],
+    "season": "SS27",
+    "createdAt": "2026-09-15T10:00:00.000Z",
+    "updatedAt": "2026-09-20T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-009",
+    "poNumber": "PO-1009",
+    "clientPoNumber": "NWA-2656",
+    "clientId": "CLI-001",
+    "clientName": "Northwind Apparel",
+    "styleNumber": "NWA-2488",
+    "styleName": "Poplin camp shirt",
+    "categoryId": "CAT-004",
+    "fabricId": "FAB-008",
+    "sizeSetId": "SZS-001",
+    "colorIds": [
+      "COL-004",
+      "COL-014",
+      "COL-005"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-004",
+        "sizes": {
+          "XS": 696,
+          "S": 1560,
+          "M": 2424,
+          "L": 2256,
+          "XL": 1212,
+          "XXL": 516
+        },
+        "total": 8664
+      },
+      {
+        "colorId": "COL-014",
+        "sizes": {
+          "XS": 696,
+          "S": 1560,
+          "M": 2424,
+          "L": 2256,
+          "XL": 1212,
+          "XXL": 516
+        },
+        "total": 8664
+      },
+      {
+        "colorId": "COL-005",
+        "sizes": {
+          "XS": 696,
+          "S": 1560,
+          "M": 2424,
+          "L": 2256,
+          "XL": 1212,
+          "XXL": 516
+        },
+        "total": 8664
+      }
+    ],
+    "quantity": 25992,
+    "unit": "PCS",
+    "fobPrice": 12.23,
+    "currency": "USD",
+    "orderValue": 317882.16,
+    "status": "QUOTED",
+    "statusIndex": 4,
+    "risk": "ON_TRACK",
+    "hasDesign": true,
+    "hasWash": false,
+    "incoterm": "FOB",
+    "paymentTermCode": "TT 45",
+    "destinationPortId": "PRT-005",
+    "merchandiserId": "EMP-005",
+    "factoryVendorId": null,
+    "enquiryDate": "2026-09-04",
+    "confirmedDate": null,
+    "exFactoryDate": "2026-12-09",
+    "revisedExFactoryDate": null,
+    "shipDate": null,
+    "deliveryDate": "2027-01-10",
+    "delayDays": 0,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-09-24",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-09-30",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-10-07",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-10-18",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-12",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-16",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-11-05",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-11-09",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-11-11",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-11-15",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-11-29",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-12-03",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-12-06",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-12-09",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      }
+    ],
+    "season": "SS27",
+    "createdAt": "2026-09-04T10:00:00.000Z",
+    "updatedAt": "2026-09-20T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-010",
+    "poNumber": "PO-1010",
+    "clientPoNumber": "ATA-2663",
+    "clientId": "CLI-005",
+    "clientName": "Atlas Active",
+    "styleNumber": "ATA-2499",
+    "styleName": "Stretch twill chino",
+    "categoryId": "CAT-005",
+    "fabricId": "FAB-010",
+    "sizeSetId": "SZS-006",
+    "colorIds": [
+      "COL-007",
+      "COL-011",
+      "COL-003",
+      "COL-013"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-007",
+        "sizes": {
+          "28": 600,
+          "30": 1104,
+          "32": 1380,
+          "34": 1152,
+          "36": 768,
+          "38": 492
+        },
+        "total": 5496
+      },
+      {
+        "colorId": "COL-011",
+        "sizes": {
+          "28": 600,
+          "30": 1104,
+          "32": 1380,
+          "34": 1152,
+          "36": 768,
+          "38": 492
+        },
+        "total": 5496
+      },
+      {
+        "colorId": "COL-003",
+        "sizes": {
+          "28": 600,
+          "30": 1104,
+          "32": 1380,
+          "34": 1152,
+          "36": 768,
+          "38": 492
+        },
+        "total": 5496
+      },
+      {
+        "colorId": "COL-013",
+        "sizes": {
+          "28": 600,
+          "30": 1104,
+          "32": 1380,
+          "34": 1152,
+          "36": 768,
+          "38": 492
+        },
+        "total": 5496
+      }
+    ],
+    "quantity": 21984,
+    "unit": "PCS",
+    "fobPrice": 7.32,
+    "currency": "USD",
+    "orderValue": 160922.88,
+    "status": "QUOTED",
+    "statusIndex": 4,
+    "risk": "AT_RISK",
+    "hasDesign": true,
+    "hasWash": false,
+    "incoterm": "CIF",
+    "paymentTermCode": "TT 45",
+    "destinationPortId": "PRT-008",
+    "merchandiserId": "EMP-009",
+    "factoryVendorId": null,
+    "enquiryDate": "2026-08-02",
+    "confirmedDate": null,
+    "exFactoryDate": "2026-12-07",
+    "revisedExFactoryDate": "2026-12-09",
+    "shipDate": null,
+    "deliveryDate": "2026-12-28",
+    "delayDays": 2,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-09-22",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-09-28",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-10-05",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-10-16",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-10",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-14",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-11-03",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-11-07",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-11-09",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-11-13",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-11-27",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-12-01",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-12-04",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-12-07",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      }
+    ],
+    "season": "SS27",
+    "createdAt": "2026-08-02T10:00:00.000Z",
+    "updatedAt": "2026-09-20T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-011",
+    "poNumber": "PO-1011",
+    "clientPoNumber": "NWA-2670",
+    "clientId": "CLI-001",
+    "clientName": "Northwind Apparel",
+    "styleNumber": "NWA-2510",
+    "styleName": "Selvedge-look denim",
+    "categoryId": "CAT-005",
+    "fabricId": "FAB-011",
+    "sizeSetId": "SZS-006",
+    "colorIds": [
+      "COL-014",
+      "COL-003",
+      "COL-008",
+      "COL-010"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-014",
+        "sizes": {
+          "28": 252,
+          "30": 456,
+          "32": 564,
+          "34": 468,
+          "36": 312,
+          "38": 204
+        },
+        "total": 2256
+      },
+      {
+        "colorId": "COL-003",
+        "sizes": {
+          "28": 252,
+          "30": 456,
+          "32": 564,
+          "34": 468,
+          "36": 312,
+          "38": 204
+        },
+        "total": 2256
+      },
+      {
+        "colorId": "COL-008",
+        "sizes": {
+          "28": 252,
+          "30": 456,
+          "32": 564,
+          "34": 468,
+          "36": 312,
+          "38": 204
+        },
+        "total": 2256
+      },
+      {
+        "colorId": "COL-010",
+        "sizes": {
+          "28": 252,
+          "30": 456,
+          "32": 564,
+          "34": 468,
+          "36": 312,
+          "38": 204
+        },
+        "total": 2256
+      }
+    ],
+    "quantity": 9024,
+    "unit": "PCS",
+    "fobPrice": 6.25,
+    "currency": "USD",
+    "orderValue": 56400,
+    "status": "CONFIRMED",
+    "statusIndex": 5,
+    "risk": "ON_TRACK",
+    "hasDesign": false,
+    "hasWash": true,
+    "incoterm": "FOB",
+    "paymentTermCode": "TT 45",
+    "destinationPortId": "PRT-005",
+    "merchandiserId": "EMP-005",
+    "factoryVendorId": "VEN-016",
+    "enquiryDate": "2026-08-06",
+    "confirmedDate": "2026-09-01",
+    "exFactoryDate": "2026-12-03",
+    "revisedExFactoryDate": null,
+    "shipDate": null,
+    "deliveryDate": "2026-12-31",
+    "delayDays": 0,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-09-18",
+        "actualDate": "2026-09-18",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-09-24",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-10-01",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-10-12",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-06",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-10",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-30",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-11-03",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-11-05",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-11-09",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-11-23",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-11-27",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-11-30",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-12-03",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      }
+    ],
+    "season": "SS27",
+    "createdAt": "2026-08-06T10:00:00.000Z",
+    "updatedAt": "2026-09-20T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-012",
+    "poNumber": "PO-1012",
+    "clientPoNumber": "VRD-2677",
+    "clientId": "CLI-004",
+    "clientName": "Verde Kids",
+    "styleNumber": "VRD-2521",
+    "styleName": "Canvas chore jacket",
+    "categoryId": "CAT-007",
+    "fabricId": "FAB-012",
+    "sizeSetId": "SZS-002",
+    "colorIds": [
+      "COL-008",
+      "COL-001",
+      "COL-002",
+      "COL-006"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-008",
+        "sizes": {
+          "S": 564,
+          "M": 1044,
+          "L": 1116,
+          "XL": 720,
+          "XXL": 360,
+          "3XL": 204
+        },
+        "total": 4008
+      },
+      {
+        "colorId": "COL-001",
+        "sizes": {
+          "S": 564,
+          "M": 1044,
+          "L": 1116,
+          "XL": 720,
+          "XXL": 360,
+          "3XL": 204
+        },
+        "total": 4008
+      },
+      {
+        "colorId": "COL-002",
+        "sizes": {
+          "S": 564,
+          "M": 1044,
+          "L": 1116,
+          "XL": 720,
+          "XXL": 360,
+          "3XL": 204
+        },
+        "total": 4008
+      },
+      {
+        "colorId": "COL-006",
+        "sizes": {
+          "S": 564,
+          "M": 1044,
+          "L": 1116,
+          "XL": 720,
+          "XXL": 360,
+          "3XL": 204
+        },
+        "total": 4008
+      }
+    ],
+    "quantity": 16032,
+    "unit": "PCS",
+    "fobPrice": 15.89,
+    "currency": "USD",
+    "orderValue": 254748.48,
+    "status": "CONFIRMED",
+    "statusIndex": 5,
+    "risk": "ON_TRACK",
+    "hasDesign": true,
+    "hasWash": true,
+    "incoterm": "FOB",
+    "paymentTermCode": "TT 60",
+    "destinationPortId": "PRT-010",
+    "merchandiserId": "EMP-008",
+    "factoryVendorId": "VEN-017",
+    "enquiryDate": "2026-08-19",
+    "confirmedDate": "2026-09-11",
+    "exFactoryDate": "2026-11-29",
+    "revisedExFactoryDate": null,
+    "shipDate": null,
+    "deliveryDate": "2026-12-19",
+    "delayDays": 0,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-09-14",
+        "actualDate": "2026-09-14",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-09-20",
+        "actualDate": "2026-09-20",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-09-27",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-10-08",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-02",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-06",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-26",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-30",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-11-01",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-11-05",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-11-19",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-11-23",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-11-26",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-11-29",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      }
+    ],
+    "season": "SS27",
+    "createdAt": "2026-08-19T10:00:00.000Z",
+    "updatedAt": "2026-09-20T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-013",
+    "poNumber": "PO-1013",
+    "clientPoNumber": "BHC-2684",
+    "clientId": "CLI-002",
+    "clientName": "Blue Harbor Co.",
+    "styleNumber": "BHC-2532",
+    "styleName": "Viscose midi dress",
+    "categoryId": "CAT-006",
+    "fabricId": "FAB-013",
+    "sizeSetId": "SZS-003",
+    "colorIds": [
+      "COL-006",
+      "COL-012"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-006",
+        "sizes": {
+          "2": 408,
+          "4": 636,
+          "6": 852,
+          "8": 948,
+          "10": 768,
+          "12": 540,
+          "14": 360
+        },
+        "total": 4512
+      },
+      {
+        "colorId": "COL-012",
+        "sizes": {
+          "2": 408,
+          "4": 636,
+          "6": 852,
+          "8": 948,
+          "10": 768,
+          "12": 540,
+          "14": 360
+        },
+        "total": 4512
+      }
+    ],
+    "quantity": 9024,
+    "unit": "PCS",
+    "fobPrice": 6.36,
+    "currency": "USD",
+    "orderValue": 57392.64,
+    "status": "SAMPLING",
+    "statusIndex": 6,
+    "risk": "ON_TRACK",
+    "hasDesign": true,
+    "hasWash": false,
+    "incoterm": "FOB",
+    "paymentTermCode": "TT 30",
+    "destinationPortId": "PRT-006",
+    "merchandiserId": "EMP-006",
+    "factoryVendorId": "VEN-018",
+    "enquiryDate": "2026-08-05",
+    "confirmedDate": "2026-08-29",
+    "exFactoryDate": "2026-11-23",
+    "revisedExFactoryDate": null,
+    "shipDate": null,
+    "deliveryDate": "2026-12-25",
+    "delayDays": 0,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-09-08",
+        "actualDate": "2026-09-08",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-09-14",
+        "actualDate": "2026-09-14",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-09-21",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-10-02",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-09-26",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-09-30",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-20",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-24",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-10-26",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-10-30",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-11-13",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-11-17",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-11-20",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-11-23",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      }
+    ],
+    "season": "SS27",
+    "createdAt": "2026-08-05T10:00:00.000Z",
+    "updatedAt": "2026-09-20T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-014",
+    "poNumber": "PO-1014",
+    "clientPoNumber": "MSR-2691",
+    "clientId": "CLI-006",
+    "clientName": "Maison Rue",
+    "styleNumber": "MSR-2543",
+    "styleName": "Linen blend shirtdress",
+    "categoryId": "CAT-006",
+    "fabricId": "FAB-014",
+    "sizeSetId": "SZS-003",
+    "colorIds": [
+      "COL-014",
+      "COL-004"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-014",
+        "sizes": {
+          "2": 996,
+          "4": 1536,
+          "6": 2088,
+          "8": 2316,
+          "10": 1872,
+          "12": 1320,
+          "14": 876
+        },
+        "total": 11004
+      },
+      {
+        "colorId": "COL-004",
+        "sizes": {
+          "2": 996,
+          "4": 1536,
+          "6": 2088,
+          "8": 2316,
+          "10": 1872,
+          "12": 1320,
+          "14": 876
+        },
+        "total": 11004
+      }
+    ],
+    "quantity": 22008,
+    "unit": "PCS",
+    "fobPrice": 5.56,
+    "currency": "USD",
+    "orderValue": 122364.48,
+    "status": "SAMPLING",
+    "statusIndex": 6,
+    "risk": "DELAYED",
+    "hasDesign": false,
+    "hasWash": false,
+    "incoterm": "FOB",
+    "paymentTermCode": "30/70",
+    "destinationPortId": "PRT-011",
+    "merchandiserId": "EMP-010",
+    "factoryVendorId": "VEN-019",
+    "enquiryDate": "2026-07-27",
+    "confirmedDate": "2026-08-17",
+    "exFactoryDate": "2026-11-17",
+    "revisedExFactoryDate": "2026-12-01",
+    "shipDate": null,
+    "deliveryDate": "2026-12-12",
+    "delayDays": 14,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-09-02",
+        "actualDate": "2026-09-09",
+        "delayDays": 7,
+        "status": "LATE"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-09-08",
+        "actualDate": "2026-09-15",
+        "delayDays": 7,
+        "status": "LATE"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-09-15",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-09-26",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-09-20",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-09-24",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-14",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-18",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-10-20",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-10-24",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-11-07",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-11-11",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-11-14",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-11-17",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      }
+    ],
+    "season": "SS27",
+    "createdAt": "2026-07-27T10:00:00.000Z",
+    "updatedAt": "2026-09-20T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-015",
+    "poNumber": "PO-1015",
+    "clientPoNumber": "NWA-2698",
+    "clientId": "CLI-001",
+    "clientName": "Northwind Apparel",
+    "styleNumber": "NWA-2554",
+    "styleName": "Performance training tee",
+    "categoryId": "CAT-008",
+    "fabricId": "FAB-015",
+    "sizeSetId": "SZS-001",
+    "colorIds": [
+      "COL-012",
+      "COL-001"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-012",
+        "sizes": {
+          "XS": 840,
+          "S": 1896,
+          "M": 2940,
+          "L": 2736,
+          "XL": 1476,
+          "XXL": 636
+        },
+        "total": 10524
+      },
+      {
+        "colorId": "COL-001",
+        "sizes": {
+          "XS": 840,
+          "S": 1896,
+          "M": 2940,
+          "L": 2736,
+          "XL": 1476,
+          "XXL": 636
+        },
+        "total": 10524
+      }
+    ],
+    "quantity": 21048,
+    "unit": "PCS",
+    "fobPrice": 19.47,
+    "currency": "USD",
+    "orderValue": 409804.56,
+    "status": "SOURCING",
+    "statusIndex": 7,
+    "risk": "DELAYED",
+    "hasDesign": true,
+    "hasWash": false,
+    "incoterm": "FOB",
+    "paymentTermCode": "TT 45",
+    "destinationPortId": "PRT-005",
+    "merchandiserId": "EMP-005",
+    "factoryVendorId": "VEN-020",
+    "enquiryDate": "2026-08-10",
+    "confirmedDate": "2026-08-25",
+    "exFactoryDate": "2026-11-11",
+    "revisedExFactoryDate": "2026-11-23",
+    "shipDate": null,
+    "deliveryDate": "2026-12-07",
+    "delayDays": 12,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-08-27",
+        "actualDate": "2026-09-02",
+        "delayDays": 6,
+        "status": "LATE"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-09-02",
+        "actualDate": "2026-09-08",
+        "delayDays": 6,
+        "status": "LATE"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-09-09",
+        "actualDate": "2026-09-15",
+        "delayDays": 6,
+        "status": "LATE"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-09-20",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-09-14",
+        "actualDate": "2026-09-20",
+        "delayDays": 6,
+        "status": "LATE"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-09-18",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-08",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-12",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-10-14",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-10-18",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-11-01",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-11-05",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-11-08",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-11-11",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      }
+    ],
+    "season": "SS27",
+    "createdAt": "2026-08-10T10:00:00.000Z",
+    "updatedAt": "2026-09-20T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-016",
+    "poNumber": "PO-1016",
+    "clientPoNumber": "URL-2705",
+    "clientId": "CLI-003",
+    "clientName": "Urban Loom",
+    "styleNumber": "URL-2565",
+    "styleName": "High-rise legging",
+    "categoryId": "CAT-008",
+    "fabricId": "FAB-016",
+    "sizeSetId": "SZS-003",
+    "colorIds": [
+      "COL-010",
+      "COL-002",
+      "COL-001",
+      "COL-005"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-010",
+        "sizes": {
+          "2": 384,
+          "4": 600,
+          "6": 804,
+          "8": 888,
+          "10": 720,
+          "12": 516,
+          "14": 336
+        },
+        "total": 4248
+      },
+      {
+        "colorId": "COL-002",
+        "sizes": {
+          "2": 384,
+          "4": 600,
+          "6": 804,
+          "8": 888,
+          "10": 720,
+          "12": 516,
+          "14": 336
+        },
+        "total": 4248
+      },
+      {
+        "colorId": "COL-001",
+        "sizes": {
+          "2": 384,
+          "4": 600,
+          "6": 804,
+          "8": 888,
+          "10": 720,
+          "12": 516,
+          "14": 336
+        },
+        "total": 4248
+      },
+      {
+        "colorId": "COL-005",
+        "sizes": {
+          "2": 384,
+          "4": 600,
+          "6": 804,
+          "8": 888,
+          "10": 720,
+          "12": 516,
+          "14": 336
+        },
+        "total": 4248
+      }
+    ],
+    "quantity": 16992,
+    "unit": "PCS",
+    "fobPrice": 16.06,
+    "currency": "USD",
+    "orderValue": 272891.52,
+    "status": "SOURCING",
+    "statusIndex": 7,
+    "risk": "DELAYED",
+    "hasDesign": true,
+    "hasWash": false,
+    "incoterm": "CIF",
+    "paymentTermCode": "LC 60",
+    "destinationPortId": "PRT-009",
+    "merchandiserId": "EMP-007",
+    "factoryVendorId": "VEN-021",
+    "enquiryDate": "2026-08-04",
+    "confirmedDate": "2026-08-20",
+    "exFactoryDate": "2026-11-05",
+    "revisedExFactoryDate": "2026-11-14",
+    "shipDate": null,
+    "deliveryDate": "2026-12-01",
+    "delayDays": 9,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-08-21",
+        "actualDate": "2026-08-26",
+        "delayDays": 5,
+        "status": "LATE"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-08-27",
+        "actualDate": "2026-09-01",
+        "delayDays": 5,
+        "status": "LATE"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-09-03",
+        "actualDate": "2026-09-08",
+        "delayDays": 5,
+        "status": "LATE"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-09-14",
+        "actualDate": "2026-09-19",
+        "delayDays": 5,
+        "status": "LATE"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-09-08",
+        "actualDate": "2026-09-13",
+        "delayDays": 5,
+        "status": "LATE"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-09-12",
+        "actualDate": "2026-09-17",
+        "delayDays": 5,
+        "status": "LATE"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-02",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-10-06",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-10-08",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-10-12",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-10-26",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-10-30",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-11-02",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-11-05",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "PENDING"
+      }
+    ],
+    "season": "SS27",
+    "createdAt": "2026-08-04T10:00:00.000Z",
+    "updatedAt": "2026-09-20T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-017",
+    "poNumber": "PO-1017",
+    "clientPoNumber": "NWA-2712",
+    "clientId": "CLI-001",
+    "clientName": "Northwind Apparel",
+    "styleNumber": "NWA-2576",
+    "styleName": "Kids organic tee",
+    "categoryId": "CAT-009",
+    "fabricId": "FAB-002",
+    "sizeSetId": "SZS-004",
+    "colorIds": [
+      "COL-006",
+      "COL-011"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-006",
+        "sizes": {
+          "2Y": 1680,
+          "3Y": 2160,
+          "4Y": 2400,
+          "5Y": 2400,
+          "6Y": 1920,
+          "8Y": 1440
+        },
+        "total": 12000
+      },
+      {
+        "colorId": "COL-011",
+        "sizes": {
+          "2Y": 1680,
+          "3Y": 2160,
+          "4Y": 2400,
+          "5Y": 2400,
+          "6Y": 1920,
+          "8Y": 1440
+        },
+        "total": 12000
+      }
+    ],
+    "quantity": 24000,
+    "unit": "PCS",
+    "fobPrice": 22.88,
+    "currency": "USD",
+    "orderValue": 549120,
+    "status": "PRODUCTION",
+    "statusIndex": 8,
+    "risk": "ON_TRACK",
+    "hasDesign": false,
+    "hasWash": false,
+    "incoterm": "FOB",
+    "paymentTermCode": "TT 45",
+    "destinationPortId": "PRT-005",
+    "merchandiserId": "EMP-005",
+    "factoryVendorId": "VEN-014",
+    "enquiryDate": "2026-07-06",
+    "confirmedDate": "2026-08-10",
+    "exFactoryDate": "2026-10-24",
+    "revisedExFactoryDate": null,
+    "shipDate": null,
+    "deliveryDate": "2026-11-20",
+    "delayDays": 0,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-08-09",
+        "actualDate": "2026-08-09",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-08-15",
+        "actualDate": "2026-08-15",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-08-22",
+        "actualDate": "2026-08-22",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-09-02",
+        "actualDate": "2026-09-02",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-08-27",
+        "actualDate": "2026-08-27",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-08-31",
+        "actualDate": "2026-08-31",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-09-20",
+        "actualDate": "2026-09-20",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-09-24",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-09-26",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-09-30",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-10-14",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-10-18",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-10-21",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-10-24",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      }
+    ],
+    "season": "AW26",
+    "createdAt": "2026-07-06T10:00:00.000Z",
+    "updatedAt": "2026-09-20T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-018",
+    "poNumber": "PO-1018",
+    "clientPoNumber": "BHC-2719",
+    "clientId": "CLI-002",
+    "clientName": "Blue Harbor Co.",
+    "styleNumber": "BHC-2587",
+    "styleName": "Kids fleece hoodie",
+    "categoryId": "CAT-009",
+    "fabricId": "FAB-005",
+    "sizeSetId": "SZS-005",
+    "colorIds": [
+      "COL-006",
+      "COL-009",
+      "COL-014"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-006",
+        "sizes": {
+          "8Y": 468,
+          "10Y": 456,
+          "12Y": 420,
+          "14Y": 336
+        },
+        "total": 1680
+      },
+      {
+        "colorId": "COL-009",
+        "sizes": {
+          "8Y": 468,
+          "10Y": 456,
+          "12Y": 420,
+          "14Y": 336
+        },
+        "total": 1680
+      },
+      {
+        "colorId": "COL-014",
+        "sizes": {
+          "8Y": 468,
+          "10Y": 456,
+          "12Y": 420,
+          "14Y": 336
+        },
+        "total": 1680
+      }
+    ],
+    "quantity": 5040,
+    "unit": "PCS",
+    "fobPrice": 24.54,
+    "currency": "USD",
+    "orderValue": 123681.6,
+    "status": "PRODUCTION",
+    "statusIndex": 8,
+    "risk": "AT_RISK",
+    "hasDesign": true,
+    "hasWash": true,
+    "incoterm": "FOB",
+    "paymentTermCode": "TT 30",
+    "destinationPortId": "PRT-006",
+    "merchandiserId": "EMP-006",
+    "factoryVendorId": "VEN-015",
+    "enquiryDate": "2026-07-10",
+    "confirmedDate": "2026-08-04",
+    "exFactoryDate": "2026-10-18",
+    "revisedExFactoryDate": "2026-10-21",
+    "shipDate": null,
+    "deliveryDate": "2026-11-16",
+    "delayDays": 3,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-08-03",
+        "actualDate": "2026-08-05",
+        "delayDays": 2,
+        "status": "LATE"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-08-09",
+        "actualDate": "2026-08-11",
+        "delayDays": 2,
+        "status": "LATE"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-08-16",
+        "actualDate": "2026-08-18",
+        "delayDays": 2,
+        "status": "LATE"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-08-27",
+        "actualDate": "2026-08-29",
+        "delayDays": 2,
+        "status": "LATE"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-08-21",
+        "actualDate": "2026-08-23",
+        "delayDays": 2,
+        "status": "LATE"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-08-25",
+        "actualDate": "2026-08-27",
+        "delayDays": 2,
+        "status": "LATE"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-09-14",
+        "actualDate": "2026-09-16",
+        "delayDays": 2,
+        "status": "LATE"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-09-18",
+        "actualDate": "2026-09-20",
+        "delayDays": 2,
+        "status": "LATE"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-09-20",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-09-24",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-10-08",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-10-12",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-10-15",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-10-18",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      }
+    ],
+    "season": "AW26",
+    "createdAt": "2026-07-10T10:00:00.000Z",
+    "updatedAt": "2026-09-20T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-019",
+    "poNumber": "PO-1019",
+    "clientPoNumber": "VRD-2726",
+    "clientId": "CLI-004",
+    "clientName": "Verde Kids",
+    "styleNumber": "VRD-2598",
+    "styleName": "Interlock long sleeve",
+    "categoryId": "CAT-001",
+    "fabricId": "FAB-007",
+    "sizeSetId": "SZS-001",
+    "colorIds": [
+      "COL-014",
+      "COL-005",
+      "COL-007"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-014",
+        "sizes": {
+          "XS": 432,
+          "S": 960,
+          "M": 1488,
+          "L": 1392,
+          "XL": 744,
+          "XXL": 324
+        },
+        "total": 5340
+      },
+      {
+        "colorId": "COL-005",
+        "sizes": {
+          "XS": 432,
+          "S": 960,
+          "M": 1488,
+          "L": 1392,
+          "XL": 744,
+          "XXL": 324
+        },
+        "total": 5340
+      },
+      {
+        "colorId": "COL-007",
+        "sizes": {
+          "XS": 432,
+          "S": 960,
+          "M": 1488,
+          "L": 1392,
+          "XL": 744,
+          "XXL": 324
+        },
+        "total": 5340
+      }
+    ],
+    "quantity": 16020,
+    "unit": "PCS",
+    "fobPrice": 10.2,
+    "currency": "USD",
+    "orderValue": 163404,
+    "status": "PRODUCTION",
+    "statusIndex": 8,
+    "risk": "DELAYED",
+    "hasDesign": true,
+    "hasWash": false,
+    "incoterm": "FOB",
+    "paymentTermCode": "TT 60",
+    "destinationPortId": "PRT-010",
+    "merchandiserId": "EMP-008",
+    "factoryVendorId": "VEN-016",
+    "enquiryDate": "2026-06-06",
+    "confirmedDate": "2026-07-09",
+    "exFactoryDate": "2026-10-12",
+    "revisedExFactoryDate": "2026-10-20",
+    "shipDate": null,
+    "deliveryDate": "2026-11-08",
+    "delayDays": 8,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-07-28",
+        "actualDate": "2026-08-01",
+        "delayDays": 4,
+        "status": "LATE"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-08-03",
+        "actualDate": "2026-08-07",
+        "delayDays": 4,
+        "status": "LATE"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-08-10",
+        "actualDate": "2026-08-14",
+        "delayDays": 4,
+        "status": "LATE"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-08-21",
+        "actualDate": "2026-08-25",
+        "delayDays": 4,
+        "status": "LATE"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-08-15",
+        "actualDate": "2026-08-19",
+        "delayDays": 4,
+        "status": "LATE"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-08-19",
+        "actualDate": "2026-08-23",
+        "delayDays": 4,
+        "status": "LATE"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-09-08",
+        "actualDate": "2026-09-12",
+        "delayDays": 4,
+        "status": "LATE"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-09-12",
+        "actualDate": "2026-09-16",
+        "delayDays": 4,
+        "status": "LATE"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-09-14",
+        "actualDate": "2026-09-18",
+        "delayDays": 4,
+        "status": "LATE"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-09-18",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-10-02",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-10-06",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-10-09",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-10-12",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      }
+    ],
+    "season": "AW26",
+    "createdAt": "2026-06-06T10:00:00.000Z",
+    "updatedAt": "2026-09-20T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-020",
+    "poNumber": "PO-1020",
+    "clientPoNumber": "ATA-2733",
+    "clientId": "CLI-005",
+    "clientName": "Atlas Active",
+    "styleNumber": "ATA-2609",
+    "styleName": "Overshirt in twill",
+    "categoryId": "CAT-007",
+    "fabricId": "FAB-010",
+    "sizeSetId": "SZS-002",
+    "colorIds": [
+      "COL-009",
+      "COL-007",
+      "COL-012"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-009",
+        "sizes": {
+          "S": 744,
+          "M": 1392,
+          "L": 1488,
+          "XL": 960,
+          "XXL": 480,
+          "3XL": 264
+        },
+        "total": 5328
+      },
+      {
+        "colorId": "COL-007",
+        "sizes": {
+          "S": 744,
+          "M": 1392,
+          "L": 1488,
+          "XL": 960,
+          "XXL": 480,
+          "3XL": 264
+        },
+        "total": 5328
+      },
+      {
+        "colorId": "COL-012",
+        "sizes": {
+          "S": 744,
+          "M": 1392,
+          "L": 1488,
+          "XL": 960,
+          "XXL": 480,
+          "3XL": 264
+        },
+        "total": 5328
+      }
+    ],
+    "quantity": 15984,
+    "unit": "PCS",
+    "fobPrice": 23.77,
+    "currency": "USD",
+    "orderValue": 379939.68,
+    "status": "PRODUCTION",
+    "statusIndex": 8,
+    "risk": "DELAYED",
+    "hasDesign": false,
+    "hasWash": false,
+    "incoterm": "CIF",
+    "paymentTermCode": "TT 45",
+    "destinationPortId": "PRT-008",
+    "merchandiserId": "EMP-009",
+    "factoryVendorId": "VEN-017",
+    "enquiryDate": "2026-06-22",
+    "confirmedDate": "2026-07-07",
+    "exFactoryDate": "2026-10-08",
+    "revisedExFactoryDate": "2026-10-21",
+    "shipDate": null,
+    "deliveryDate": "2026-11-04",
+    "delayDays": 13,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-07-24",
+        "actualDate": "2026-07-31",
+        "delayDays": 7,
+        "status": "LATE"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-07-30",
+        "actualDate": "2026-08-06",
+        "delayDays": 7,
+        "status": "LATE"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-08-06",
+        "actualDate": "2026-08-13",
+        "delayDays": 7,
+        "status": "LATE"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-08-17",
+        "actualDate": "2026-08-24",
+        "delayDays": 7,
+        "status": "LATE"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-08-11",
+        "actualDate": "2026-08-18",
+        "delayDays": 7,
+        "status": "LATE"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-08-15",
+        "actualDate": "2026-08-22",
+        "delayDays": 7,
+        "status": "LATE"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-09-04",
+        "actualDate": "2026-09-11",
+        "delayDays": 7,
+        "status": "LATE"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-09-08",
+        "actualDate": "2026-09-15",
+        "delayDays": 7,
+        "status": "LATE"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-09-10",
+        "actualDate": "2026-09-17",
+        "delayDays": 7,
+        "status": "LATE"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-09-14",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-09-28",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-10-02",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-10-05",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-10-08",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      }
+    ],
+    "season": "AW26",
+    "createdAt": "2026-06-22T10:00:00.000Z",
+    "updatedAt": "2026-09-20T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-021",
+    "poNumber": "PO-1021",
+    "clientPoNumber": "NWA-2740",
+    "clientId": "CLI-001",
+    "clientName": "Northwind Apparel",
+    "styleNumber": "NWA-2620",
+    "styleName": "Heavyweight pocket tee",
+    "categoryId": "CAT-001",
+    "fabricId": "FAB-001",
+    "sizeSetId": "SZS-001",
+    "colorIds": [
+      "COL-004",
+      "COL-010",
+      "COL-011"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-004",
+        "sizes": {
+          "XS": 432,
+          "S": 960,
+          "M": 1488,
+          "L": 1392,
+          "XL": 744,
+          "XXL": 324
+        },
+        "total": 5340
+      },
+      {
+        "colorId": "COL-010",
+        "sizes": {
+          "XS": 432,
+          "S": 960,
+          "M": 1488,
+          "L": 1392,
+          "XL": 744,
+          "XXL": 324
+        },
+        "total": 5340
+      },
+      {
+        "colorId": "COL-011",
+        "sizes": {
+          "XS": 432,
+          "S": 960,
+          "M": 1488,
+          "L": 1392,
+          "XL": 744,
+          "XXL": 324
+        },
+        "total": 5340
+      }
+    ],
+    "quantity": 16020,
+    "unit": "PCS",
+    "fobPrice": 16.05,
+    "currency": "USD",
+    "orderValue": 257121,
+    "status": "QC",
+    "statusIndex": 9,
+    "risk": "ON_TRACK",
+    "hasDesign": true,
+    "hasWash": false,
+    "incoterm": "FOB",
+    "paymentTermCode": "TT 45",
+    "destinationPortId": "PRT-005",
+    "merchandiserId": "EMP-005",
+    "factoryVendorId": "VEN-018",
+    "enquiryDate": "2026-05-25",
+    "confirmedDate": "2026-07-03",
+    "exFactoryDate": "2026-10-02",
+    "revisedExFactoryDate": null,
+    "shipDate": null,
+    "deliveryDate": "2026-11-01",
+    "delayDays": 0,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-07-18",
+        "actualDate": "2026-07-18",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-07-24",
+        "actualDate": "2026-07-24",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-07-31",
+        "actualDate": "2026-07-31",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-08-11",
+        "actualDate": "2026-08-11",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-08-05",
+        "actualDate": "2026-08-05",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-08-09",
+        "actualDate": "2026-08-09",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-08-29",
+        "actualDate": "2026-08-29",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-09-02",
+        "actualDate": "2026-09-02",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-09-04",
+        "actualDate": "2026-09-04",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-09-08",
+        "actualDate": "2026-09-08",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-09-22",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-09-26",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-09-29",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-10-02",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      }
+    ],
+    "season": "AW26",
+    "createdAt": "2026-05-25T10:00:00.000Z",
+    "updatedAt": "2026-09-20T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-022",
+    "poNumber": "PO-1022",
+    "clientPoNumber": "URL-2747",
+    "clientId": "CLI-003",
+    "clientName": "Urban Loom",
+    "styleNumber": "URL-2631",
+    "styleName": "Organic crew tee",
+    "categoryId": "CAT-001",
+    "fabricId": "FAB-002",
+    "sizeSetId": "SZS-001",
+    "colorIds": [
+      "COL-001",
+      "COL-011"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-001",
+        "sizes": {
+          "XS": 396,
+          "S": 900,
+          "M": 1404,
+          "L": 1296,
+          "XL": 696,
+          "XXL": 300
+        },
+        "total": 4992
+      },
+      {
+        "colorId": "COL-011",
+        "sizes": {
+          "XS": 396,
+          "S": 900,
+          "M": 1404,
+          "L": 1296,
+          "XL": 696,
+          "XXL": 300
+        },
+        "total": 4992
+      }
+    ],
+    "quantity": 9984,
+    "unit": "PCS",
+    "fobPrice": 10.83,
+    "currency": "USD",
+    "orderValue": 108126.72,
+    "status": "QC",
+    "statusIndex": 9,
+    "risk": "DELAYED",
+    "hasDesign": true,
+    "hasWash": false,
+    "incoterm": "CIF",
+    "paymentTermCode": "LC 60",
+    "destinationPortId": "PRT-009",
+    "merchandiserId": "EMP-007",
+    "factoryVendorId": "VEN-019",
+    "enquiryDate": "2026-06-08",
+    "confirmedDate": "2026-07-07",
+    "exFactoryDate": "2026-09-28",
+    "revisedExFactoryDate": "2026-10-12",
+    "shipDate": null,
+    "deliveryDate": "2026-10-19",
+    "delayDays": 14,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-07-14",
+        "actualDate": "2026-07-21",
+        "delayDays": 7,
+        "status": "LATE"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-07-20",
+        "actualDate": "2026-07-27",
+        "delayDays": 7,
+        "status": "LATE"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-07-27",
+        "actualDate": "2026-08-03",
+        "delayDays": 7,
+        "status": "LATE"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-08-07",
+        "actualDate": "2026-08-14",
+        "delayDays": 7,
+        "status": "LATE"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-08-01",
+        "actualDate": "2026-08-08",
+        "delayDays": 7,
+        "status": "LATE"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-08-05",
+        "actualDate": "2026-08-12",
+        "delayDays": 7,
+        "status": "LATE"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-08-25",
+        "actualDate": "2026-09-01",
+        "delayDays": 7,
+        "status": "LATE"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-08-29",
+        "actualDate": "2026-09-05",
+        "delayDays": 7,
+        "status": "LATE"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-08-31",
+        "actualDate": "2026-09-07",
+        "delayDays": 7,
+        "status": "LATE"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-09-04",
+        "actualDate": "2026-09-18",
+        "delayDays": 14,
+        "status": "LATE"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-09-18",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-09-22",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-09-25",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-09-28",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      }
+    ],
+    "season": "AW26",
+    "createdAt": "2026-06-08T10:00:00.000Z",
+    "updatedAt": "2026-09-20T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-023",
+    "poNumber": "PO-1023",
+    "clientPoNumber": "BHC-2754",
+    "clientId": "CLI-002",
+    "clientName": "Blue Harbor Co.",
+    "styleNumber": "BHC-2642",
+    "styleName": "Classic pique polo",
+    "categoryId": "CAT-001",
+    "fabricId": "FAB-003",
+    "sizeSetId": "SZS-002",
+    "colorIds": [
+      "COL-009",
+      "COL-008",
+      "COL-001"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-009",
+        "sizes": {
+          "S": 192,
+          "M": 348,
+          "L": 372,
+          "XL": 240,
+          "XXL": 120,
+          "3XL": 72
+        },
+        "total": 1344
+      },
+      {
+        "colorId": "COL-008",
+        "sizes": {
+          "S": 192,
+          "M": 348,
+          "L": 372,
+          "XL": 240,
+          "XXL": 120,
+          "3XL": 72
+        },
+        "total": 1344
+      },
+      {
+        "colorId": "COL-001",
+        "sizes": {
+          "S": 192,
+          "M": 348,
+          "L": 372,
+          "XL": 240,
+          "XXL": 120,
+          "3XL": 72
+        },
+        "total": 1344
+      }
+    ],
+    "quantity": 4032,
+    "unit": "PCS",
+    "fobPrice": 23.11,
+    "currency": "USD",
+    "orderValue": 93179.52,
+    "status": "READY_TO_SHIP",
+    "statusIndex": 10,
+    "risk": "ON_TRACK",
+    "hasDesign": false,
+    "hasWash": false,
+    "incoterm": "FOB",
+    "paymentTermCode": "TT 30",
+    "destinationPortId": "PRT-006",
+    "merchandiserId": "EMP-006",
+    "factoryVendorId": "VEN-020",
+    "enquiryDate": "2026-06-05",
+    "confirmedDate": "2026-06-24",
+    "exFactoryDate": "2026-09-24",
+    "revisedExFactoryDate": null,
+    "shipDate": null,
+    "deliveryDate": "2026-10-25",
+    "delayDays": 0,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-07-10",
+        "actualDate": "2026-07-10",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-07-16",
+        "actualDate": "2026-07-16",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-07-23",
+        "actualDate": "2026-07-23",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-08-03",
+        "actualDate": "2026-08-03",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-07-28",
+        "actualDate": "2026-07-28",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-08-01",
+        "actualDate": "2026-08-01",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-08-21",
+        "actualDate": "2026-08-21",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-08-25",
+        "actualDate": "2026-08-25",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-08-27",
+        "actualDate": "2026-08-27",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-08-31",
+        "actualDate": "2026-08-31",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-09-14",
+        "actualDate": "2026-09-14",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-09-18",
+        "actualDate": "2026-09-18",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-09-21",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-09-24",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      }
+    ],
+    "season": "AW26",
+    "createdAt": "2026-06-05T10:00:00.000Z",
+    "updatedAt": "2026-09-20T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-024",
+    "poNumber": "PO-1024",
+    "clientPoNumber": "MSR-2761",
+    "clientId": "CLI-006",
+    "clientName": "Maison Rue",
+    "styleNumber": "MSR-2653",
+    "styleName": "Garment-dyed hoodie",
+    "categoryId": "CAT-003",
+    "fabricId": "FAB-005",
+    "sizeSetId": "SZS-002",
+    "colorIds": [
+      "COL-001",
+      "COL-011",
+      "COL-008",
+      "COL-007"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-001",
+        "sizes": {
+          "S": 600,
+          "M": 1104,
+          "L": 1188,
+          "XL": 768,
+          "XXL": 384,
+          "3XL": 216
+        },
+        "total": 4260
+      },
+      {
+        "colorId": "COL-011",
+        "sizes": {
+          "S": 600,
+          "M": 1104,
+          "L": 1188,
+          "XL": 768,
+          "XXL": 384,
+          "3XL": 216
+        },
+        "total": 4260
+      },
+      {
+        "colorId": "COL-008",
+        "sizes": {
+          "S": 600,
+          "M": 1104,
+          "L": 1188,
+          "XL": 768,
+          "XXL": 384,
+          "3XL": 216
+        },
+        "total": 4260
+      },
+      {
+        "colorId": "COL-007",
+        "sizes": {
+          "S": 600,
+          "M": 1104,
+          "L": 1188,
+          "XL": 768,
+          "XXL": 384,
+          "3XL": 216
+        },
+        "total": 4260
+      }
+    ],
+    "quantity": 17040,
+    "unit": "PCS",
+    "fobPrice": 26.19,
+    "currency": "USD",
+    "orderValue": 446277.6,
+    "status": "READY_TO_SHIP",
+    "statusIndex": 10,
+    "risk": "DELAYED",
+    "hasDesign": true,
+    "hasWash": true,
+    "incoterm": "FOB",
+    "paymentTermCode": "30/70",
+    "destinationPortId": "PRT-011",
+    "merchandiserId": "EMP-010",
+    "factoryVendorId": "VEN-021",
+    "enquiryDate": "2026-06-01",
+    "confirmedDate": "2026-06-19",
+    "exFactoryDate": "2026-09-22",
+    "revisedExFactoryDate": "2026-10-02",
+    "shipDate": null,
+    "deliveryDate": "2026-10-18",
+    "delayDays": 10,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-07-08",
+        "actualDate": "2026-07-13",
+        "delayDays": 5,
+        "status": "LATE"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-07-14",
+        "actualDate": "2026-07-19",
+        "delayDays": 5,
+        "status": "LATE"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-07-21",
+        "actualDate": "2026-07-26",
+        "delayDays": 5,
+        "status": "LATE"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-08-01",
+        "actualDate": "2026-08-06",
+        "delayDays": 5,
+        "status": "LATE"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-07-26",
+        "actualDate": "2026-07-31",
+        "delayDays": 5,
+        "status": "LATE"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-07-30",
+        "actualDate": "2026-08-04",
+        "delayDays": 5,
+        "status": "LATE"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-08-19",
+        "actualDate": "2026-08-24",
+        "delayDays": 5,
+        "status": "LATE"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-08-23",
+        "actualDate": "2026-08-28",
+        "delayDays": 5,
+        "status": "LATE"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-08-25",
+        "actualDate": "2026-08-30",
+        "delayDays": 5,
+        "status": "LATE"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-08-29",
+        "actualDate": "2026-09-08",
+        "delayDays": 10,
+        "status": "LATE"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-09-12",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-09-16",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-09-19",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-09-22",
+        "actualDate": null,
+        "delayDays": 0,
+        "status": "IN_PROGRESS"
+      }
+    ],
+    "season": "AW26",
+    "createdAt": "2026-06-01T10:00:00.000Z",
+    "updatedAt": "2026-09-20T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-025",
+    "poNumber": "PO-1025",
+    "clientPoNumber": "NWA-2768",
+    "clientId": "CLI-001",
+    "clientName": "Northwind Apparel",
+    "styleNumber": "NWA-2664",
+    "styleName": "French terry crewneck",
+    "categoryId": "CAT-003",
+    "fabricId": "FAB-004",
+    "sizeSetId": "SZS-001",
+    "colorIds": [
+      "COL-009",
+      "COL-012",
+      "COL-008"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-009",
+        "sizes": {
+          "XS": 696,
+          "S": 1560,
+          "M": 2424,
+          "L": 2256,
+          "XL": 1212,
+          "XXL": 516
+        },
+        "total": 8664
+      },
+      {
+        "colorId": "COL-012",
+        "sizes": {
+          "XS": 696,
+          "S": 1560,
+          "M": 2424,
+          "L": 2256,
+          "XL": 1212,
+          "XXL": 516
+        },
+        "total": 8664
+      },
+      {
+        "colorId": "COL-008",
+        "sizes": {
+          "XS": 696,
+          "S": 1560,
+          "M": 2424,
+          "L": 2256,
+          "XL": 1212,
+          "XXL": 516
+        },
+        "total": 8664
+      }
+    ],
+    "quantity": 25992,
+    "unit": "PCS",
+    "fobPrice": 13.81,
+    "currency": "USD",
+    "orderValue": 358949.52,
+    "status": "SHIPPED",
+    "statusIndex": 11,
+    "risk": "ON_TRACK",
+    "hasDesign": true,
+    "hasWash": false,
+    "incoterm": "FOB",
+    "paymentTermCode": "TT 45",
+    "destinationPortId": "PRT-005",
+    "merchandiserId": "EMP-005",
+    "factoryVendorId": "VEN-014",
+    "enquiryDate": "2026-05-16",
+    "confirmedDate": "2026-06-19",
+    "exFactoryDate": "2026-09-11",
+    "revisedExFactoryDate": null,
+    "shipDate": "2026-09-15",
+    "deliveryDate": "2026-10-15",
+    "delayDays": 0,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-06-27",
+        "actualDate": "2026-06-27",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-07-03",
+        "actualDate": "2026-07-03",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-07-10",
+        "actualDate": "2026-07-10",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-07-21",
+        "actualDate": "2026-07-21",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-07-15",
+        "actualDate": "2026-07-15",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-07-19",
+        "actualDate": "2026-07-19",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-08-08",
+        "actualDate": "2026-08-08",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-08-12",
+        "actualDate": "2026-08-12",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-08-14",
+        "actualDate": "2026-08-14",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-08-18",
+        "actualDate": "2026-08-18",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-09-01",
+        "actualDate": "2026-09-01",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-09-05",
+        "actualDate": "2026-09-05",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-09-08",
+        "actualDate": "2026-09-08",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-09-11",
+        "actualDate": "2026-09-11",
+        "delayDays": 0,
+        "status": "DONE"
+      }
+    ],
+    "season": "AW26",
+    "createdAt": "2026-05-16T10:00:00.000Z",
+    "updatedAt": "2026-09-11T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-026",
+    "poNumber": "PO-1026",
+    "clientPoNumber": "ATA-2775",
+    "clientId": "CLI-005",
+    "clientName": "Atlas Active",
+    "styleNumber": "ATA-2675",
+    "styleName": "Tapered jogger",
+    "categoryId": "CAT-002",
+    "fabricId": "FAB-004",
+    "sizeSetId": "SZS-001",
+    "colorIds": [
+      "COL-005",
+      "COL-007",
+      "COL-002",
+      "COL-009"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-005",
+        "sizes": {
+          "XS": 204,
+          "S": 456,
+          "M": 696,
+          "L": 648,
+          "XL": 348,
+          "XXL": 156
+        },
+        "total": 2508
+      },
+      {
+        "colorId": "COL-007",
+        "sizes": {
+          "XS": 204,
+          "S": 456,
+          "M": 696,
+          "L": 648,
+          "XL": 348,
+          "XXL": 156
+        },
+        "total": 2508
+      },
+      {
+        "colorId": "COL-002",
+        "sizes": {
+          "XS": 204,
+          "S": 456,
+          "M": 696,
+          "L": 648,
+          "XL": 348,
+          "XXL": 156
+        },
+        "total": 2508
+      },
+      {
+        "colorId": "COL-009",
+        "sizes": {
+          "XS": 204,
+          "S": 456,
+          "M": 696,
+          "L": 648,
+          "XL": 348,
+          "XXL": 156
+        },
+        "total": 2508
+      }
+    ],
+    "quantity": 10032,
+    "unit": "PCS",
+    "fobPrice": 11.32,
+    "currency": "USD",
+    "orderValue": 113562.24,
+    "status": "SHIPPED",
+    "statusIndex": 11,
+    "risk": "DELAYED",
+    "hasDesign": false,
+    "hasWash": false,
+    "incoterm": "CIF",
+    "paymentTermCode": "TT 45",
+    "destinationPortId": "PRT-008",
+    "merchandiserId": "EMP-009",
+    "factoryVendorId": "VEN-015",
+    "enquiryDate": "2026-05-06",
+    "confirmedDate": "2026-06-03",
+    "exFactoryDate": "2026-09-04",
+    "revisedExFactoryDate": "2026-09-11",
+    "shipDate": "2026-09-15",
+    "deliveryDate": "2026-10-12",
+    "delayDays": 7,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-06-20",
+        "actualDate": "2026-06-24",
+        "delayDays": 4,
+        "status": "LATE"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-06-26",
+        "actualDate": "2026-06-30",
+        "delayDays": 4,
+        "status": "LATE"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-07-03",
+        "actualDate": "2026-07-07",
+        "delayDays": 4,
+        "status": "LATE"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-07-14",
+        "actualDate": "2026-07-18",
+        "delayDays": 4,
+        "status": "LATE"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-07-08",
+        "actualDate": "2026-07-12",
+        "delayDays": 4,
+        "status": "LATE"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-07-12",
+        "actualDate": "2026-07-16",
+        "delayDays": 4,
+        "status": "LATE"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-08-01",
+        "actualDate": "2026-08-05",
+        "delayDays": 4,
+        "status": "LATE"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-08-05",
+        "actualDate": "2026-08-09",
+        "delayDays": 4,
+        "status": "LATE"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-08-07",
+        "actualDate": "2026-08-11",
+        "delayDays": 4,
+        "status": "LATE"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-08-11",
+        "actualDate": "2026-08-18",
+        "delayDays": 7,
+        "status": "LATE"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-08-25",
+        "actualDate": "2026-09-01",
+        "delayDays": 7,
+        "status": "LATE"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-08-29",
+        "actualDate": "2026-09-05",
+        "delayDays": 7,
+        "status": "LATE"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-09-01",
+        "actualDate": "2026-09-08",
+        "delayDays": 7,
+        "status": "LATE"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-09-04",
+        "actualDate": "2026-09-11",
+        "delayDays": 7,
+        "status": "LATE"
+      }
+    ],
+    "season": "AW26",
+    "createdAt": "2026-05-06T10:00:00.000Z",
+    "updatedAt": "2026-09-04T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-027",
+    "poNumber": "PO-1027",
+    "clientPoNumber": "VRD-2782",
+    "clientId": "CLI-004",
+    "clientName": "Verde Kids",
+    "styleNumber": "VRD-2686",
+    "styleName": "Ribbed tank",
+    "categoryId": "CAT-001",
+    "fabricId": "FAB-006",
+    "sizeSetId": "SZS-003",
+    "colorIds": [
+      "COL-006",
+      "COL-009"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-006",
+        "sizes": {
+          "2": 540,
+          "4": 840,
+          "6": 1140,
+          "8": 1260,
+          "10": 1020,
+          "12": 720,
+          "14": 480
+        },
+        "total": 6000
+      },
+      {
+        "colorId": "COL-009",
+        "sizes": {
+          "2": 540,
+          "4": 840,
+          "6": 1140,
+          "8": 1260,
+          "10": 1020,
+          "12": 720,
+          "14": 480
+        },
+        "total": 6000
+      }
+    ],
+    "quantity": 12000,
+    "unit": "PCS",
+    "fobPrice": 6.93,
+    "currency": "USD",
+    "orderValue": 83160,
+    "status": "DELIVERED",
+    "statusIndex": 12,
+    "risk": "ON_TRACK",
+    "hasDesign": true,
+    "hasWash": false,
+    "incoterm": "FOB",
+    "paymentTermCode": "TT 60",
+    "destinationPortId": "PRT-010",
+    "merchandiserId": "EMP-008",
+    "factoryVendorId": "VEN-016",
+    "enquiryDate": "2026-04-14",
+    "confirmedDate": "2026-05-14",
+    "exFactoryDate": "2026-08-17",
+    "revisedExFactoryDate": null,
+    "shipDate": "2026-08-20",
+    "deliveryDate": "2026-09-09",
+    "delayDays": 0,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-06-02",
+        "actualDate": "2026-06-02",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-06-08",
+        "actualDate": "2026-06-08",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-06-15",
+        "actualDate": "2026-06-15",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-06-26",
+        "actualDate": "2026-06-26",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-06-20",
+        "actualDate": "2026-06-20",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-06-24",
+        "actualDate": "2026-06-24",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-07-14",
+        "actualDate": "2026-07-14",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-07-18",
+        "actualDate": "2026-07-18",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-07-20",
+        "actualDate": "2026-07-20",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-07-24",
+        "actualDate": "2026-07-24",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-08-07",
+        "actualDate": "2026-08-07",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-08-11",
+        "actualDate": "2026-08-11",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-08-14",
+        "actualDate": "2026-08-14",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-08-17",
+        "actualDate": "2026-08-17",
+        "delayDays": 0,
+        "status": "DONE"
+      }
+    ],
+    "season": "SS26",
+    "createdAt": "2026-04-14T10:00:00.000Z",
+    "updatedAt": "2026-08-17T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-028",
+    "poNumber": "PO-1028",
+    "clientPoNumber": "BHC-2789",
+    "clientId": "CLI-002",
+    "clientName": "Blue Harbor Co.",
+    "styleNumber": "BHC-2697",
+    "styleName": "Oxford button-down",
+    "categoryId": "CAT-004",
+    "fabricId": "FAB-009",
+    "sizeSetId": "SZS-002",
+    "colorIds": [
+      "COL-002",
+      "COL-009",
+      "COL-003",
+      "COL-004"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-002",
+        "sizes": {
+          "S": 144,
+          "M": 264,
+          "L": 276,
+          "XL": 180,
+          "XXL": 96,
+          "3XL": 48
+        },
+        "total": 1008
+      },
+      {
+        "colorId": "COL-009",
+        "sizes": {
+          "S": 144,
+          "M": 264,
+          "L": 276,
+          "XL": 180,
+          "XXL": 96,
+          "3XL": 48
+        },
+        "total": 1008
+      },
+      {
+        "colorId": "COL-003",
+        "sizes": {
+          "S": 144,
+          "M": 264,
+          "L": 276,
+          "XL": 180,
+          "XXL": 96,
+          "3XL": 48
+        },
+        "total": 1008
+      },
+      {
+        "colorId": "COL-004",
+        "sizes": {
+          "S": 144,
+          "M": 264,
+          "L": 276,
+          "XL": 180,
+          "XXL": 96,
+          "3XL": 48
+        },
+        "total": 1008
+      }
+    ],
+    "quantity": 4032,
+    "unit": "PCS",
+    "fobPrice": 20.78,
+    "currency": "USD",
+    "orderValue": 83784.96,
+    "status": "DELIVERED",
+    "statusIndex": 12,
+    "risk": "ON_TRACK",
+    "hasDesign": true,
+    "hasWash": false,
+    "incoterm": "FOB",
+    "paymentTermCode": "TT 30",
+    "destinationPortId": "PRT-006",
+    "merchandiserId": "EMP-006",
+    "factoryVendorId": "VEN-017",
+    "enquiryDate": "2026-04-25",
+    "confirmedDate": "2026-05-12",
+    "exFactoryDate": "2026-08-03",
+    "revisedExFactoryDate": null,
+    "shipDate": "2026-08-08",
+    "deliveryDate": "2026-09-07",
+    "delayDays": 0,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-05-19",
+        "actualDate": "2026-05-19",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-05-25",
+        "actualDate": "2026-05-25",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-06-01",
+        "actualDate": "2026-06-01",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-06-12",
+        "actualDate": "2026-06-12",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-06-06",
+        "actualDate": "2026-06-06",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-06-10",
+        "actualDate": "2026-06-10",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-06-30",
+        "actualDate": "2026-06-30",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-07-04",
+        "actualDate": "2026-07-04",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-07-06",
+        "actualDate": "2026-07-06",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-07-10",
+        "actualDate": "2026-07-10",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-07-24",
+        "actualDate": "2026-07-24",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-07-28",
+        "actualDate": "2026-07-28",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-07-31",
+        "actualDate": "2026-07-31",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-08-03",
+        "actualDate": "2026-08-03",
+        "delayDays": 0,
+        "status": "DONE"
+      }
+    ],
+    "season": "SS26",
+    "createdAt": "2026-04-25T10:00:00.000Z",
+    "updatedAt": "2026-08-03T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-029",
+    "poNumber": "PO-1029",
+    "clientPoNumber": "NWA-2796",
+    "clientId": "CLI-001",
+    "clientName": "Northwind Apparel",
+    "styleNumber": "NWA-2708",
+    "styleName": "Poplin camp shirt",
+    "categoryId": "CAT-004",
+    "fabricId": "FAB-008",
+    "sizeSetId": "SZS-001",
+    "colorIds": [
+      "COL-011",
+      "COL-014"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-011",
+        "sizes": {
+          "XS": 924,
+          "S": 2076,
+          "M": 3216,
+          "L": 2988,
+          "XL": 1608,
+          "XXL": 696
+        },
+        "total": 11508
+      },
+      {
+        "colorId": "COL-014",
+        "sizes": {
+          "XS": 924,
+          "S": 2076,
+          "M": 3216,
+          "L": 2988,
+          "XL": 1608,
+          "XXL": 696
+        },
+        "total": 11508
+      }
+    ],
+    "quantity": 23016,
+    "unit": "PCS",
+    "fobPrice": 15.63,
+    "currency": "USD",
+    "orderValue": 359740.08,
+    "status": "PAYMENT_RECEIVED",
+    "statusIndex": 13,
+    "risk": "ON_TRACK",
+    "hasDesign": false,
+    "hasWash": false,
+    "incoterm": "FOB",
+    "paymentTermCode": "TT 45",
+    "destinationPortId": "PRT-005",
+    "merchandiserId": "EMP-005",
+    "factoryVendorId": "VEN-018",
+    "enquiryDate": "2026-04-03",
+    "confirmedDate": "2026-05-01",
+    "exFactoryDate": "2026-07-16",
+    "revisedExFactoryDate": null,
+    "shipDate": "2026-07-21",
+    "deliveryDate": "2026-08-20",
+    "delayDays": 0,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-05-01",
+        "actualDate": "2026-05-01",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-05-07",
+        "actualDate": "2026-05-07",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-05-14",
+        "actualDate": "2026-05-14",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-05-25",
+        "actualDate": "2026-05-25",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-05-19",
+        "actualDate": "2026-05-19",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-05-23",
+        "actualDate": "2026-05-23",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-06-12",
+        "actualDate": "2026-06-12",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-06-16",
+        "actualDate": "2026-06-16",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-06-18",
+        "actualDate": "2026-06-18",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-06-22",
+        "actualDate": "2026-06-22",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-07-06",
+        "actualDate": "2026-07-06",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-07-10",
+        "actualDate": "2026-07-10",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-07-13",
+        "actualDate": "2026-07-13",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-07-16",
+        "actualDate": "2026-07-16",
+        "delayDays": 0,
+        "status": "DONE"
+      }
+    ],
+    "season": "SS26",
+    "createdAt": "2026-04-03T10:00:00.000Z",
+    "updatedAt": "2026-07-16T16:00:00.000Z"
+  },
+  {
+    "id": "ORD-030",
+    "poNumber": "PO-1030",
+    "clientPoNumber": "URL-2803",
+    "clientId": "CLI-003",
+    "clientName": "Urban Loom",
+    "styleNumber": "URL-2719",
+    "styleName": "Stretch twill chino",
+    "categoryId": "CAT-005",
+    "fabricId": "FAB-010",
+    "sizeSetId": "SZS-006",
+    "colorIds": [
+      "COL-011",
+      "COL-009",
+      "COL-004"
+    ],
+    "sizeMatrix": [
+      {
+        "colorId": "COL-011",
+        "sizes": {
+          "28": 144,
+          "30": 264,
+          "32": 336,
+          "34": 276,
+          "36": 192,
+          "38": 120
+        },
+        "total": 1332
+      },
+      {
+        "colorId": "COL-009",
+        "sizes": {
+          "28": 144,
+          "30": 264,
+          "32": 336,
+          "34": 276,
+          "36": 192,
+          "38": 120
+        },
+        "total": 1332
+      },
+      {
+        "colorId": "COL-004",
+        "sizes": {
+          "28": 144,
+          "30": 264,
+          "32": 336,
+          "34": 276,
+          "36": 192,
+          "38": 120
+        },
+        "total": 1332
+      }
+    ],
+    "quantity": 3996,
+    "unit": "PCS",
+    "fobPrice": 21.41,
+    "currency": "USD",
+    "orderValue": 85554.36,
+    "status": "CLOSED",
+    "statusIndex": 14,
+    "risk": "ON_TRACK",
+    "hasDesign": true,
+    "hasWash": false,
+    "incoterm": "CIF",
+    "paymentTermCode": "LC 60",
+    "destinationPortId": "PRT-009",
+    "merchandiserId": "EMP-007",
+    "factoryVendorId": "VEN-019",
+    "enquiryDate": "2026-02-09",
+    "confirmedDate": "2026-03-20",
+    "exFactoryDate": "2026-06-20",
+    "revisedExFactoryDate": null,
+    "shipDate": "2026-06-23",
+    "deliveryDate": "2026-07-16",
+    "delayDays": 0,
+    "milestones": [
+      {
+        "name": "PO received",
+        "owner": "Merchandising",
+        "plannedDate": "2026-04-05",
+        "actualDate": "2026-04-05",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Tech pack released",
+        "owner": "Design",
+        "plannedDate": "2026-04-11",
+        "actualDate": "2026-04-11",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Lab dip approved",
+        "owner": "Design",
+        "plannedDate": "2026-04-18",
+        "actualDate": "2026-04-18",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "PP sample approved",
+        "owner": "Design",
+        "plannedDate": "2026-04-29",
+        "actualDate": "2026-04-29",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Fabric PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-04-23",
+        "actualDate": "2026-04-23",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Trims PO placed",
+        "owner": "Sourcing",
+        "plannedDate": "2026-04-27",
+        "actualDate": "2026-04-27",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Fabric in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-05-17",
+        "actualDate": "2026-05-17",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Trims in-house",
+        "owner": "Sourcing",
+        "plannedDate": "2026-05-21",
+        "actualDate": "2026-05-21",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Cutting start",
+        "owner": "Production",
+        "plannedDate": "2026-05-23",
+        "actualDate": "2026-05-23",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Sewing start",
+        "owner": "Production",
+        "plannedDate": "2026-05-27",
+        "actualDate": "2026-05-27",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Sewing end",
+        "owner": "Production",
+        "plannedDate": "2026-06-10",
+        "actualDate": "2026-06-10",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Finishing complete",
+        "owner": "Production",
+        "plannedDate": "2026-06-14",
+        "actualDate": "2026-06-14",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Final inspection",
+        "owner": "Quality",
+        "plannedDate": "2026-06-17",
+        "actualDate": "2026-06-17",
+        "delayDays": 0,
+        "status": "DONE"
+      },
+      {
+        "name": "Ex-factory",
+        "owner": "Logistics",
+        "plannedDate": "2026-06-20",
+        "actualDate": "2026-06-20",
+        "delayDays": 0,
+        "status": "DONE"
+      }
+    ],
+    "season": "SS26",
+    "createdAt": "2026-02-09T10:00:00.000Z",
+    "updatedAt": "2026-06-20T16:00:00.000Z"
+  }
+]

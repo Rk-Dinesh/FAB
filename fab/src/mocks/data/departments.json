@@ -1,0 +1,72 @@
+[
+  {
+    "id": "DEP-001",
+    "name": "Executive",
+    "headEmployeeId": "EMP-002",
+    "description": "Strategy, client relationships and governance",
+    "active": true
+  },
+  {
+    "id": "DEP-002",
+    "name": "Merchandising",
+    "headEmployeeId": "EMP-004",
+    "description": "Owns the order from enquiry to delivery",
+    "active": true
+  },
+  {
+    "id": "DEP-003",
+    "name": "Design",
+    "headEmployeeId": "EMP-012",
+    "description": "Concepts, tech packs and sample development",
+    "active": true
+  },
+  {
+    "id": "DEP-004",
+    "name": "Sourcing",
+    "headEmployeeId": "EMP-018",
+    "description": "Vendor development, RFQs and material buying",
+    "active": true
+  },
+  {
+    "id": "DEP-005",
+    "name": "Production",
+    "headEmployeeId": "EMP-024",
+    "description": "Factory allocation and stage tracking",
+    "active": true
+  },
+  {
+    "id": "DEP-006",
+    "name": "Quality",
+    "headEmployeeId": "EMP-031",
+    "description": "Inline and final AQL inspections",
+    "active": true
+  },
+  {
+    "id": "DEP-007",
+    "name": "Logistics",
+    "headEmployeeId": "EMP-036",
+    "description": "Export documentation and freight",
+    "active": true
+  },
+  {
+    "id": "DEP-008",
+    "name": "Finance",
+    "headEmployeeId": "EMP-039",
+    "description": "Receivables, payables and order P&L",
+    "active": true
+  },
+  {
+    "id": "DEP-009",
+    "name": "Human Resources",
+    "headEmployeeId": "EMP-042",
+    "description": "Hiring, payroll and employee relations",
+    "active": true
+  },
+  {
+    "id": "DEP-010",
+    "name": "Technology",
+    "headEmployeeId": "EMP-001",
+    "description": "Systems, data and internal tooling",
+    "active": true
+  }
+]
