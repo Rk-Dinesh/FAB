@@ -108,11 +108,31 @@ Legend: ✅ done · 🔄 in progress · ⬜ not started · ⚠️ issue
   96/96 routes render with content assertions, 9/9 RBAC, 30/30 service checks,
   18/18 interaction checks (masters CRUD + sample approval flow)
 
-## Phase 6: Orders + Order 360 ⬜
-- ⬜ Orders list with status filters
-- ⬜ Order creation wizard (client/style → size matrix → dates/T&A → pricing → review)
-- ⬜ Order 360: header, stepper, all 11 tabs, delay highlighting, risk badge
-- ⬜ Quality gate
+## Phase 6: Orders + Order 360 ✅
+- ✅ Orders list: KPI row (live orders, order book, at risk, delayed), a clickable
+  15-stage lifecycle funnel that filters the table, status / client / risk / date-range
+  filters, delayed rows tinted, revised ex-factory dates shown struck through
+- ✅ Order creation wizard, five steps with per-step validation:
+  client & style → colour × size matrix (live row/column/grand totals, add & remove
+  colours, size-set switch preserving entered quantities) → dates & T&A (generates the
+  standard 14-milestone calendar back from the ex-factory date) → pricing (live FOB
+  build-up) → review (advisory warnings on thin margin, short lead time, no factory)
+- ✅ Order 360 with all eleven tabs:
+  Overview (commercial terms, progress, needs-attention) · Style & size matrix
+  (colour × size grid with totals both ways plus a size curve) · T&A (planned vs
+  actual, variance in red, delivery-impact note) · Samples & approvals · Sourcing
+  (material position, POs, GRNs with shortfalls, RFQs) · Production (per-stage
+  progress bars, delay highlighting, factory allocation) · QC (AQL 2.5 accept/reject
+  numbers, defect log) · Shipment (booking + tracking timeline) · Finance (order P&L
+  with a cost build-up bar, receivables, vendor bills) · Documents · Activity (one
+  merged stream from activities, client updates, sample decisions, quotations,
+  shipment and invoices)
+- ✅ Header carries PO, client, style, qty, FOB, value, ex-factory, status, risk badge
+  and the lifecycle stepper
+- ✅ Quality gate: lint 0 errors, audit clean (140 files), seed clean, build clean,
+  96/96 routes render with content assertions, 9/9 RBAC, 30/30 service checks,
+  47/47 interaction checks (masters CRUD, sample approval, 11-tab Order 360 walk,
+  full wizard run ending in a created order)
 
 ## Phase 7: Sourcing, Production, Quality ⬜
 - ⬜ Vendors (rating), RFQ, quote comparison (best price), material PO, GRN

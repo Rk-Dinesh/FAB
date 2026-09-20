@@ -182,3 +182,29 @@ records are computed in the click handler that opens the drawer instead.
 `react-hooks/exhaustive-deps` warns that a logical expression feeding a `useMemo`
 dependency changes identity each render. Every list page now does
 `useMemo(() => data ?? [], [data])`, which is the fix the rule itself recommends.
+
+## Phase 6 — Orders + Order 360
+
+### D34. Order 360 loads once, through `getOrder360`
+One service call resolves the order plus every related collection (samples, POs,
+GRNs, stages, inspections, shipment, documents, invoices, activity). Tabs are pure
+presentation over that object, so switching tabs costs nothing and the tab content is
+always consistent with the header.
+
+### D35. Tabs render conditionally rather than staying mounted
+Only the active tab is in the tree. With eleven tabs this keeps the DOM small, and
+because the data is already loaded there is no refetch cost to switching.
+
+### D36. The wizard validates per step, and warns rather than blocks at review
+Each step has its own validator, so a user is never told about a problem three steps
+away. The review step separately surfaces advisory warnings — thin margin, short lead
+time, no factory allocated — which inform without preventing creation.
+
+### D37. The size-set switch preserves entered quantities
+Changing the size run in step 2 keeps any quantity whose size exists in the new run
+instead of clearing the grid, which is what happens when a merchandiser realises
+mid-entry that the buy is on the extended run.
+
+### D38. `npm run crud` now walks all eleven Order 360 tabs
+Each tab asserts its own distinctive content. A tab that silently renders an empty
+panel — the most likely regression on the app's most important screen — fails the gate.

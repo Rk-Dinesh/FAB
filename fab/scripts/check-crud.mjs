@@ -3,7 +3,8 @@
  *
  * Drives real screens in jsdom rather than calling services directly:
  *   1. Masters CRUD — open the drawer, hit a zod error, save, edit.
- *   2. Sample approval — reject without a comment, then approve with one.
+ *   2. Sample approval — reject without a comment, then with one.
+ *   3. Order 360 — walk all eleven tabs and assert each one renders its data.
  * RecordDrawer + FormFields + DataTable back most screens in the app, so these
  * paths cover a lot of shared surface. Run with `npm run crud`.
  */
@@ -199,6 +200,123 @@ try {
   check('the rejected sample left the pending queue', Boolean(sampleRef) && !textOf().includes(`Reject ${sampleRef}`))
 
   await act(async () => sampleRoot.unmount())
+  resetDemoData()
+
+  // ------------------------------------------------------------- order 360
+  console.log('')
+  const orderRouter = createMemoryRouter(routes, { initialEntries: ['/app/orders/ORD-019'] })
+  let orderRoot
+  await act(async () => {
+    orderRoot = createRoot(container)
+    orderRoot.render(
+      React.createElement(Providers, null, React.createElement(RouterProvider, { router: orderRouter })),
+    )
+  })
+  await settle(1400)
+
+  check('order 360 header renders', textOf().includes('PO-1019') && textOf().includes('Ex-factory'))
+  check('lifecycle stepper renders', textOf().includes('Production') && textOf().includes('Payment received'))
+
+  // Each tab must render its own content, not a blank panel.
+  const TAB_EXPECTATIONS = [
+    ['Overview', ['Commercial', 'Needs attention', 'Incoterm']],
+    ['Style & size matrix', ['Colour × size breakdown', 'Size curve']],
+    ['T&A', ['Time & action calendar', 'Milestone', 'Variance']],
+    ['Samples', ['Development stages', 'Proto']],
+    ['Sourcing', ['Material position', 'Committed']],
+    ['Production', ['Stage progress', 'Stitching']],
+    ['QC', ['Quality', 'inspection']],
+    ['Shipment', ['Shipment']],
+    ['Finance', ['Order P&L', 'Gross margin']],
+    ['Documents', ['Documents']],
+    ['Activity', ['Activity']],
+  ]
+
+  for (const [tabLabel, expectations] of TAB_EXPECTATIONS) {
+    const tabButton = [...body().querySelectorAll('[role="tab"]')].find((node) =>
+      (node.textContent ?? '').startsWith(tabLabel),
+    )
+    if (!tabButton) {
+      check(`tab "${tabLabel}" exists`, false)
+      continue
+    }
+    await click(tabButton)
+    await settle(700)
+    const text = textOf()
+    const missing = expectations.filter(
+      (expected) => !text.toLowerCase().includes(expected.toLowerCase()),
+    )
+    check(`tab "${tabLabel}" renders its content`, missing.length === 0, missing.join(', '))
+  }
+
+  await act(async () => orderRoot.unmount())
+
+  // ------------------------------------------------------------ order wizard
+  console.log('')
+  const wizardRouter = createMemoryRouter(routes, { initialEntries: ['/app/orders/new'] })
+  let wizardRoot
+  await act(async () => {
+    wizardRoot = createRoot(container)
+    wizardRoot.render(
+      React.createElement(Providers, null, React.createElement(RouterProvider, { router: wizardRouter })),
+    )
+  })
+  await settle(1200)
+
+  check('wizard starts on step 1', textOf().includes('Client & style'))
+
+  // Continuing with nothing filled in must surface validation, not advance.
+  await click(findByText('button', 'Continue'))
+  await settle(250)
+  check('wizard blocks an empty step 1', textOf().includes('Pick the client this order is for'))
+
+  const selectSetter = Object.getOwnPropertyDescriptor(
+    window.HTMLSelectElement.prototype,
+    'value',
+  ).set
+  const setSelect = async (label, value) => {
+    const node = labelled(label)
+    await act(async () => {
+      selectSetter.call(node, value)
+      node.dispatchEvent(new window.Event('change', { bubbles: true }))
+    })
+  }
+
+  await setSelect('Client', 'CLI-001')
+  await setInput(labelled('Style name'), 'Smoke test tee')
+  await setInput(labelled('Style number'), 'ST-0001')
+  await setSelect('Merchandiser', 'EMP-005')
+  await click(findByText('button', 'Continue'))
+  await settle(300)
+  check('wizard advances to the size matrix', textOf().includes('Add a colour'))
+
+  await click(findByText('button', 'Continue'))
+  await settle(250)
+  check('wizard requires at least one colour', textOf().includes('Add at least one colour'))
+
+  await setSelect('Add a colour', 'COL-004')
+  await settle(250)
+  const firstCell = body().querySelector('tbody input[type="number"]')
+  await setInput(firstCell, '1200')
+  await settle(200)
+  check('size matrix totals the grid', textOf().includes('1,200'))
+
+  await click(findByText('button', 'Continue'))
+  await settle(300)
+  check('wizard reaches dates', textOf().includes('Ex-factory date'))
+  await click(findByText('button', 'Continue'))
+  await settle(300)
+  check('wizard reaches pricing', textOf().includes('Margin %'))
+  await click(findByText('button', 'Continue'))
+  await settle(300)
+  check('wizard reaches review', textOf().includes('Lead time'))
+  check('review warns about the unallocated factory', textOf().includes('No factory allocated'))
+
+  await click(findByText('button', 'Create order'))
+  await settle(2600)
+  check('created order opens its 360 page', textOf().includes('Smoke test tee'))
+
+  await act(async () => wizardRoot.unmount())
   resetDemoData()
 } finally {
   await vite.close()

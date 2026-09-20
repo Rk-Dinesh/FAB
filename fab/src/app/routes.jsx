@@ -12,6 +12,9 @@ import { LoginPage } from '@/features/auth/pages/LoginPage'
 import { ForgotPasswordPage } from '@/features/auth/pages/ForgotPasswordPage'
 import { UiKitPage } from '@/features/ui-kit/pages/UiKitPage'
 import { MastersPage } from '@/features/masters/pages/MastersPage'
+import { OrdersPage } from '@/features/orders/pages/OrdersPage'
+import { OrderNewPage } from '@/features/orders/pages/OrderNewPage'
+import { Order360Page } from '@/features/orders/pages/Order360Page'
 import { LeadsPage } from '@/features/crm/pages/LeadsPage'
 import { ClientsPage } from '@/features/crm/pages/ClientsPage'
 import { EnquiriesPage } from '@/features/crm/pages/EnquiriesPage'
@@ -96,9 +99,9 @@ export const routes = [
             { path: 'costing/quotations', element: <QuotationsPage /> },
           ]),
           guarded('orders', [
-            { path: 'orders', ...soon('Orders', 'Every order across the lifecycle.', 'phase 6') },
-            { path: 'orders/new', ...soon('New order', 'Order creation wizard.', 'phase 6') },
-            { path: 'orders/:id', ...soon('Order 360', 'The full order record.', 'phase 6') },
+            { path: 'orders', element: <OrdersPage /> },
+            { path: 'orders/new', element: <OrderNewPage /> },
+            { path: 'orders/:id', element: <Order360Page /> },
           ]),
           guarded('sourcing', [
             { path: 'sourcing/vendors', ...soon('Vendors', 'Mills, trims, factories, washing.', 'phase 7') },
