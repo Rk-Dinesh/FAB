@@ -5,30 +5,11 @@
  * each one actually lands, so a permission-matrix edit can't quietly open or
  * close a module. Run with `npm run rbac`.
  */
-import { JSDOM } from 'jsdom'
-import { createServer } from 'vite'
+import { loadReact, setupDom, setupVite } from './test-env.mjs'
 
-const dom = new JSDOM('<!doctype html><html><body></body></html>', { url: 'http://localhost/' })
-const { window } = dom
-globalThis.window = window
-globalThis.document = window.document
-Object.defineProperty(globalThis, 'navigator', { value: window.navigator, configurable: true })
-globalThis.HTMLElement = window.HTMLElement
-globalThis.Element = window.Element
-globalThis.IS_REACT_ACT_ENVIRONMENT = true
-globalThis.requestAnimationFrame = (cb) => setTimeout(() => cb(Date.now()), 0)
-window.matchMedia = () => ({ matches: false, addEventListener() {}, removeEventListener() {} })
-class RO { observe() {} unobserve() {} disconnect() {} }
-globalThis.ResizeObserver = RO
-
-const vite = await createServer({
-  server: { middlewareMode: true, hmr: false }, appType: 'custom', logLevel: 'error',
-  ssr: { external: ['react', 'react-dom', 'react-router-dom', 'react-router'], noExternal: [/^(?!react)/] },
-})
-const React = (await import('react')).default
-const { act } = await import('react')
-const { createRoot } = await import('react-dom/client')
-const { createMemoryRouter, RouterProvider } = await import('react-router-dom')
+const { window, container } = setupDom()
+const vite = await setupVite()
+const { React, act, createRoot, createMemoryRouter, RouterProvider } = await loadReact()
 const { routes } = await vite.ssrLoadModule('/src/app/routes.jsx')
 const { useAuthStore } = await vite.ssrLoadModule('/src/store/authStore.js')
 const users = (await vite.ssrLoadModule('/src/mocks/data/users.json')).default
@@ -53,11 +34,11 @@ for (const testCase of cases) {
          : { user: null, role: null, token: null, impersonatedRole: null },
   )
   const router = createMemoryRouter(routes, { initialEntries: [testCase.path] })
-  const container = window.document.createElement('div')
-  window.document.body.appendChild(container)
+  const routeContainer = window.document.createElement('div')
+  window.document.body.appendChild(routeContainer)
   let root
   await act(async () => {
-    root = createRoot(container)
+    root = createRoot(routeContainer)
     root.render(React.createElement(RouterProvider, { router }))
   })
   const landed = router.state.location.pathname
@@ -65,7 +46,7 @@ for (const testCase of cases) {
   if (!ok) failed++
   console.log(`${ok ? '✓' : '✗'} ${String(testCase.role ?? 'anonymous').padEnd(14)} ${testCase.path.padEnd(26)} → ${landed}${ok ? '' : `  (expected ${testCase.expect})`}`)
   await act(async () => root.unmount())
-  container.remove()
+  routeContainer.remove()
 }
 await vite.close()
 console.log(failed === 0 ? '\nAll RBAC redirects correct.' : `\n${failed} failed`)

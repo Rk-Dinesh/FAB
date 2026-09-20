@@ -5,68 +5,10 @@
  * SSR module loader, and fails if any route throws or logs a console error.
  * Run with `npm run smoke` (optionally passing paths to check a subset).
  */
-import { JSDOM } from 'jsdom'
-import { createServer } from 'vite'
+import { loadReact, setupDom, setupVite } from './test-env.mjs'
 
-const dom = new JSDOM('<!doctype html><html><body><div id="root"></div></body></html>', {
-  url: 'http://localhost/',
-  pretendToBeVisual: true,
-})
-
-const { window } = dom
-globalThis.window = window
-globalThis.document = window.document
-Object.defineProperty(globalThis, 'navigator', {
-  value: window.navigator,
-  configurable: true,
-  writable: true,
-})
-globalThis.HTMLElement = window.HTMLElement
-globalThis.Element = window.Element
-globalThis.Node = window.Node
-globalThis.Event = window.Event
-globalThis.KeyboardEvent = window.KeyboardEvent
-globalThis.MouseEvent = window.MouseEvent
-globalThis.getComputedStyle = window.getComputedStyle.bind(window)
-globalThis.requestAnimationFrame = (callback) => setTimeout(() => callback(Date.now()), 0)
-globalThis.cancelAnimationFrame = (handle) => clearTimeout(handle)
-globalThis.IS_REACT_ACT_ENVIRONMENT = true
-
-window.matchMedia = (query) => ({
-  matches: false,
-  media: query,
-  onchange: null,
-  addEventListener() {},
-  removeEventListener() {},
-  addListener() {},
-  removeListener() {},
-  dispatchEvent: () => false,
-})
-
-class ResizeObserverStub {
-  observe() {}
-  unobserve() {}
-  disconnect() {}
-}
-globalThis.ResizeObserver = ResizeObserverStub
-window.ResizeObserver = ResizeObserverStub
-globalThis.IntersectionObserver = ResizeObserverStub
-window.scrollTo = () => {}
-
-// Recharts measures text; jsdom returns zeroes, which is fine for a render check.
-window.SVGElement.prototype.getBBox = () => ({ x: 0, y: 0, width: 200, height: 20 })
-window.HTMLElement.prototype.scrollIntoView = () => {}
-
-// React and the router are loaded natively and marked external, so the app
-// modules Vite transforms share the exact same instances.
-const EXTERNAL = ['react', 'react-dom', 'react-router-dom', 'react-router']
-
-const vite = await createServer({
-  server: { middlewareMode: true, hmr: false },
-  appType: 'custom',
-  logLevel: 'error',
-  ssr: { external: EXTERNAL, noExternal: [/^(?!react)/] },
-})
+const { window } = setupDom()
+const vite = await setupVite()
 
 /**
  * Substrings that must appear once a route has finished loading. Without these
@@ -94,6 +36,17 @@ const EXPECTATIONS = {
   '/app/masters/stages': ['Final inspection'],
   '/app/masters/qc-checklists': ['final inspection', 'points'],
   '/app/masters/categories': ['Knit tops'],
+  '/app/sourcing/vendors': ['Coimbatore Spinning Mills', 'Average on-time', 'Fabric mill'],
+  '/app/sourcing/rfq': ['RFQ-61', 'Awaiting quotes'],
+  '/app/sourcing/quote-comparison': ['Pick an RFQ'],
+  '/app/sourcing/material-po': ['MPO-71', 'Committed'],
+  '/app/sourcing/grn': ['GRN-81', '4-point'],
+  '/app/production/allocation': ['Factory load', 'Daily capacity'],
+  '/app/production/tracker': ['Stage tracker', 'Overall completion', 'Stitching'],
+  '/app/production/daily-output': ['Output against target', 'Efficiency'],
+  '/app/production/gantt': ['Production timeline', 'Today'],
+  '/app/quality/inspections': ['QC-91', 'Pass rate', 'Ac / Re'],
+  '/app/quality/defects': ['Top defect types', 'Units affected'],
   '/app/orders': ['PO-10', 'Order book', 'Orders by lifecycle stage'],
   '/app/orders/new': ['Client & style', 'Size matrix', 'Continue'],
   '/app/orders/ORD-019': ['PO-1019', 'Style & size matrix', 'T&A', 'Ex-factory'],
@@ -129,14 +82,7 @@ const record = (kind) => (...args) => {
 }
 
 try {
-  const [reactModule, clientModule, ReactRouter] = await Promise.all([
-    import('react'),
-    import('react-dom/client'),
-    import('react-router-dom'),
-  ])
-  const React = reactModule.default ?? reactModule
-  const act = reactModule.act ?? React.act
-  const { createRoot } = clientModule
+  const { React, act, createRoot, createMemoryRouter, RouterProvider } = await loadReact()
   const routesModule = await vite.ssrLoadModule('/src/app/routes.jsx')
   const { useAuthStore } = await vite.ssrLoadModule('/src/store/authStore.js')
   const usersModule = await vite.ssrLoadModule('/src/mocks/data/users.json')
@@ -154,7 +100,6 @@ try {
     })
   }
   const { Providers } = await vite.ssrLoadModule('/src/app/Providers.jsx')
-  const { createMemoryRouter, RouterProvider } = ReactRouter
 
   await checkConfig(vite)
 

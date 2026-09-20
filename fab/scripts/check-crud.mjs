@@ -8,42 +8,10 @@
  * RecordDrawer + FormFields + DataTable back most screens in the app, so these
  * paths cover a lot of shared surface. Run with `npm run crud`.
  */
-import { JSDOM } from 'jsdom'
-import { createServer } from 'vite'
+import { loadReact, setupDom, setupVite } from './test-env.mjs'
 
-const dom = new JSDOM('<!doctype html><html><body><div id="root"></div></body></html>', {
-  url: 'http://localhost/',
-  pretendToBeVisual: true,
-})
-const { window } = dom
-globalThis.window = window
-globalThis.document = window.document
-globalThis.localStorage = window.localStorage
-Object.defineProperty(globalThis, 'navigator', { value: window.navigator, configurable: true })
-for (const key of ['HTMLElement', 'Element', 'Node', 'Event', 'KeyboardEvent', 'MouseEvent', 'HTMLInputElement']) {
-  globalThis[key] = window[key]
-}
-globalThis.getComputedStyle = window.getComputedStyle.bind(window)
-globalThis.requestAnimationFrame = (callback) => setTimeout(() => callback(Date.now()), 0)
-globalThis.cancelAnimationFrame = (handle) => clearTimeout(handle)
-globalThis.IS_REACT_ACT_ENVIRONMENT = true
-window.matchMedia = () => ({ matches: false, addEventListener() {}, removeEventListener() {} })
-class Observer {
-  observe() {}
-  unobserve() {}
-  disconnect() {}
-}
-globalThis.ResizeObserver = Observer
-globalThis.IntersectionObserver = Observer
-window.scrollTo = () => {}
-window.HTMLElement.prototype.scrollIntoView = () => {}
-
-const vite = await createServer({
-  server: { middlewareMode: true, hmr: false },
-  appType: 'custom',
-  logLevel: 'error',
-  ssr: { external: ['react', 'react-dom', 'react-router-dom', 'react-router'], noExternal: [/^(?!react)/] },
-})
+const { window, container } = setupDom()
+const vite = await setupVite()
 
 const failures = []
 const check = (label, condition, detail = '') => {
@@ -56,10 +24,7 @@ const check = (label, condition, detail = '') => {
 }
 
 try {
-  const React = (await import('react')).default
-  const { act } = await import('react')
-  const { createRoot } = await import('react-dom/client')
-  const { createMemoryRouter, RouterProvider } = await import('react-router-dom')
+  const { React, act, createRoot, createMemoryRouter, RouterProvider } = await loadReact()
   const { routes } = await vite.ssrLoadModule('/src/app/routes.jsx')
   const { Providers } = await vite.ssrLoadModule('/src/app/Providers.jsx')
   const { useAuthStore } = await vite.ssrLoadModule('/src/store/authStore.js')
@@ -70,7 +35,6 @@ try {
   const admin = users.find((user) => user.role === 'SUPER_ADMIN')
   useAuthStore.setState({ user: admin, role: admin.role, token: 'tok', impersonatedRole: null })
 
-  const container = window.document.getElementById('root')
   const router = createMemoryRouter(routes, { initialEntries: ['/app/masters/colors'] })
   let root
   await act(async () => {

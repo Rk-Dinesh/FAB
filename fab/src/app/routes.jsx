@@ -12,6 +12,17 @@ import { LoginPage } from '@/features/auth/pages/LoginPage'
 import { ForgotPasswordPage } from '@/features/auth/pages/ForgotPasswordPage'
 import { UiKitPage } from '@/features/ui-kit/pages/UiKitPage'
 import { MastersPage } from '@/features/masters/pages/MastersPage'
+import { VendorsPage } from '@/features/sourcing/pages/VendorsPage'
+import { RfqPage } from '@/features/sourcing/pages/RfqPage'
+import { QuoteComparisonPage } from '@/features/sourcing/pages/QuoteComparisonPage'
+import { MaterialPoPage } from '@/features/sourcing/pages/MaterialPoPage'
+import { GrnPage } from '@/features/sourcing/pages/GrnPage'
+import { AllocationPage } from '@/features/production/pages/AllocationPage'
+import { StageTrackerPage } from '@/features/production/pages/StageTrackerPage'
+import { DailyOutputPage } from '@/features/production/pages/DailyOutputPage'
+import { GanttPage } from '@/features/production/pages/GanttPage'
+import { InspectionsPage } from '@/features/quality/pages/InspectionsPage'
+import { DefectsPage } from '@/features/quality/pages/DefectsPage'
 import { OrdersPage } from '@/features/orders/pages/OrdersPage'
 import { OrderNewPage } from '@/features/orders/pages/OrderNewPage'
 import { Order360Page } from '@/features/orders/pages/Order360Page'
@@ -104,21 +115,24 @@ export const routes = [
             { path: 'orders/:id', element: <Order360Page /> },
           ]),
           guarded('sourcing', [
-            { path: 'sourcing/vendors', ...soon('Vendors', 'Mills, trims, factories, washing.', 'phase 7') },
-            { path: 'sourcing/rfq', ...soon('RFQ', 'Requests for quotation.', 'phase 7') },
-            { path: 'sourcing/quote-comparison', ...soon('Quote comparison', 'Best price side by side.', 'phase 7') },
-            { path: 'sourcing/material-po', ...soon('Material PO', 'Purchase orders to vendors.', 'phase 7') },
-            { path: 'sourcing/grn', ...soon('GRN', 'Goods received notes.', 'phase 7') },
+            { path: 'sourcing', element: <Navigate to="/app/sourcing/vendors" replace /> },
+            { path: 'sourcing/vendors', element: <VendorsPage /> },
+            { path: 'sourcing/rfq', element: <RfqPage /> },
+            { path: 'sourcing/quote-comparison', element: <QuoteComparisonPage /> },
+            { path: 'sourcing/material-po', element: <MaterialPoPage /> },
+            { path: 'sourcing/grn', element: <GrnPage /> },
           ]),
           guarded('production', [
-            { path: 'production/allocation', ...soon('Allocation', 'Orders to factories.', 'phase 7') },
-            { path: 'production/tracker', ...soon('Stage tracker', 'Progress by production stage.', 'phase 7') },
-            { path: 'production/daily-output', ...soon('Daily output', 'Line output per day.', 'phase 7') },
-            { path: 'production/gantt', ...soon('Gantt', 'Stage timeline across orders.', 'phase 7') },
+            { path: 'production', element: <Navigate to="/app/production/tracker" replace /> },
+            { path: 'production/allocation', element: <AllocationPage /> },
+            { path: 'production/tracker', element: <StageTrackerPage /> },
+            { path: 'production/daily-output', element: <DailyOutputPage /> },
+            { path: 'production/gantt', element: <GanttPage /> },
           ]),
           guarded('quality', [
-            { path: 'quality/inspections', ...soon('Inspections', 'Inline and final AQL 2.5.', 'phase 7') },
-            { path: 'quality/defects', ...soon('Defect log', 'Defects by type and severity.', 'phase 7') },
+            { path: 'quality', element: <Navigate to="/app/quality/inspections" replace /> },
+            { path: 'quality/inspections', element: <InspectionsPage /> },
+            { path: 'quality/defects', element: <DefectsPage /> },
           ]),
           guarded('logistics', [
             { path: 'logistics/shipments', ...soon('Shipments', 'Planning and booking.', 'phase 8') },

@@ -134,11 +134,33 @@ Legend: ✅ done · 🔄 in progress · ⬜ not started · ⚠️ issue
   47/47 interaction checks (masters CRUD, sample approval, 11-tab Order 360 walk,
   full wizard run ending in a created order)
 
-## Phase 7: Sourcing, Production, Quality ⬜
-- ⬜ Vendors (rating), RFQ, quote comparison (best price), material PO, GRN
-- ⬜ Allocation, stage tracker, daily output, Gantt, delay alerts
-- ⬜ QC inspections (AQL 2.5 inline/final), defect log
-- ⬜ Quality gate
+## Phase 7: Sourcing, Production, Quality ✅
+- ✅ Vendors: rating, on-time %, defect rate, lead days and live-order load, with a
+  detail drawer showing performance bars, specialities and certifications
+- ✅ RFQ list with quote counts against invited vendors, linking straight to comparison
+- ✅ Quote comparison: vendor quotes side by side as cards, **best price** and
+  **fastest** badges, % delta against the best price, and an award action that flips
+  the selected quote and closes the RFQ
+- ✅ Material POs with a received-percentage bar and overdue highlighting
+- ✅ GRN: received vs ordered, shortfall column, 4-point inspection score against the
+  20-point limit
+- ✅ Factory allocation with a per-factory load chart (units, days of work, order count)
+  that turns amber/red as a unit gets over-committed
+- ✅ Stage tracker: every live order as a card with one progress tile per stage, delay
+  tinting, and an update-output drawer that rolls the quantity up and derives the
+  stage status
+- ✅ Daily output: Recharts composed chart (produced/rejected bars against a target
+  line), efficiency and reject-rate KPIs, filterable by factory, stage and date range
+- ✅ Production Gantt: all stages on one week-ruled timeline with a "today" marker,
+  per-bar tooltips and delay colouring
+- ✅ QC inspections: record a new inspection and the **AQL 2.5 table derives the sample
+  size and accept/reject numbers**, then decides pass/fail automatically
+- ✅ Defect log with a severity-tinted Pareto of the worst defect types
+- ✅ Test harness refactored into `scripts/test-env.mjs` — one jsdom environment with a
+  real element box and a reporting ResizeObserver, so charts render under test
+- ✅ Quality gate: lint 0 errors, audit clean (152 files), seed clean, build clean,
+  105/105 routes render with content assertions, 9/9 RBAC, 30/30 service checks,
+  47/47 interaction checks
 
 ## Phase 8: Logistics + Finance ⬜
 - ⬜ Shipments, documents (CI/PL/BL), tracking timeline

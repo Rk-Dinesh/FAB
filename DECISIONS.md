@@ -208,3 +208,39 @@ mid-entry that the buy is on the extended run.
 ### D38. `npm run crud` now walks all eleven Order 360 tabs
 Each tab asserts its own distinctive content. A tab that silently renders an empty
 panel — the most likely regression on the app's most important screen — fails the gate.
+
+## Phase 7 — Sourcing, Production, Quality
+
+### D39. Quote comparison marks the best price, but awarding is a decision
+`getQuoteComparison` flags `isBestPrice` and `isFastest` and computes the % delta
+against the cheapest quote, but the award is an explicit action. Sourcing regularly
+pays more for a shorter lead time, so the screen informs rather than decides — the
+seed's own award logic does the same, skipping quotes whose lead time would blow the
+ex-factory date.
+
+### D40. Stage output is entered as a running total
+The update drawer asks for the cumulative quantity done, not today's increment, which
+is how a floor coordinator reads it off the bundle tickets. The drawer shows the
+implied delta so a mistyped total is obvious, and the stage status derives from the
+quantity unless it is set explicitly.
+
+### D41. The AQL table lives in the service, and the form reads from it
+`aqlPlan(lotSize)` returns the sample size and accept/reject numbers straight from the
+AQL 2.5 general-inspection-level-II table. The inspection form cannot disagree with the
+standard because it never computes them itself.
+
+### D42. Chart colours come from CSS variables, not literals
+Recharts takes `fill`/`stroke` as strings, so every chart passes `var(--primary)`,
+`var(--danger)` and so on. The charts then follow the theme automatically and the token
+audit stays clean.
+
+### D43. One shared test environment, `scripts/test-env.mjs`
+The four gate scripts had drifted into four copies of the jsdom setup. They now share
+one, which also fixes charts under test: jsdom reports every element as 0×0, so the
+shared env installs a fixed element box and a ResizeObserver that actually reports a
+size.
+
+### D44. Vite's default SSR externalisation, restored
+The scripts had forced every non-React dependency to be inlined. That broke the moment
+Recharts pulled in a CommonJS dependency (`use-sync-external-store`). Only React and the
+router now need pinning; everything else is externalised as Vite intends.

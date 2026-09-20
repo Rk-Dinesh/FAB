@@ -5,21 +5,10 @@
  * helpers against the real seed data, so a refactor of the mock API can't
  * silently break the screens that depend on it. Run with `npm run services`.
  */
-import { JSDOM } from 'jsdom'
-import { createServer } from 'vite'
+import { loadReact, setupDom, setupVite } from './test-env.mjs'
 
-const dom = new JSDOM('<!doctype html><html><body></body></html>', { url: 'http://localhost/' })
-globalThis.window = dom.window
-globalThis.document = dom.window.document
-globalThis.localStorage = dom.window.localStorage
-Object.defineProperty(globalThis, 'navigator', { value: dom.window.navigator, configurable: true })
-
-const vite = await createServer({
-  server: { middlewareMode: true, hmr: false },
-  appType: 'custom',
-  logLevel: 'error',
-  ssr: { external: ['react', 'react-dom', 'react-router-dom', 'react-router'], noExternal: [/^(?!react)/] },
-})
+const { window, container } = setupDom()
+const vite = await setupVite()
 
 const failures = []
 /** @param {string} label @param {boolean} condition @param {string} [detail] */
