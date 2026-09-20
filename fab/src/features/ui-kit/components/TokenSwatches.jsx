@@ -15,7 +15,7 @@ const TOKENS = [
 /** Renders every semantic token so the dark-mode audit is a single glance. */
 export function TokenSwatches() {
   return (
-    <div className="grid w-full grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-6">
+    <div className="grid w-full min-w-0 grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-6">
       {TOKENS.map((token) => (
         <div key={token.name} className="min-w-0">
           <div className={`h-12 rounded-lg border border-border ${token.className}`} />

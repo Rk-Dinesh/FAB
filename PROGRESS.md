@@ -260,11 +260,43 @@ Legend: ✅ done · 🔄 in progress · ⬜ not started · ⚠️ issue
   10/10 role dashboards, 30/30 service checks, 61/61 interaction checks,
   59/59 routes accessibility + theme clean
 
+## Phase 12: Browser verification & fixes ✅
+Raised after the phase-11 sign-off: pages were breaking in the browser that every
+jsdom check passed.
+
+- ✅ **Root cause found: the React Compiler generates unsafe memo guards.** It hoists
+  property reads out of a closure into its guard *without* the optional chaining:
+  `useMemo(() => data?.leaves ?? [], [data])` compiles to `if ($[3] !== data.leaves)`,
+  which throws while `data` is undefined; a body function using `editing.id` compiles
+  to `if ($[6] !== editing.id || …)`, which throws while `editing` is null. It crashed
+  **design requests, cost sheets and leave**, and could have hit any component
+  dereferencing a nullable value. The Babel transform only runs in the client build,
+  which is exactly why every SSR/jsdom check passed. **The compiler is now off**, with
+  the evidence in `vite.config.js`
+- ✅ **`npm run browser` / `npm run browser:mobile`** — a real Chromium (Playwright)
+  drives all 72 routes at 1440×900 and 390×844, reporting uncaught errors, console
+  errors, failed requests, the error boundary, empty renders, horizontal overflow
+  (naming the offending element) and sidebar behaviour. Both are in the gate
+- ✅ **Three mobile overflow bugs fixed**, all invisible to jsdom: the UI-kit token grid
+  and identity row (grid/flex children default to `min-width: auto`, so the section
+  refused to shrink), and the attendance filters (two fixed-width selects side by side)
+- ✅ **Sidebar is now scrollable** — it was `lg:static` with no bounded height, so it grew
+  past the viewport and the page scrolled instead of the nav. Now
+  `lg:sticky lg:top-0 lg:h-screen` with `min-h-0` on the nav, so it scrolls internally
+- ✅ **Sidebar is now an accordion** — opening a module closes the previously open one.
+  The open group still follows the current route, and re-syncs when you navigate into
+  a different module
+- ✅ Quality gate is now **11 stages**: lint · token audit · seed · build · smoke · rbac ·
+  services · crud · a11y · browser (desktop) · browser (mobile)
+
 ## Known issues
 - ⚠️ `npm run lint` reports one **warning** (0 errors): `react-hooks/incompatible-library`
-  on `useReactTable` in DataTable.jsx. React Compiler declines to memoize a component
-  that uses TanStack Table's API. TanStack Table v8 is mandated by CLAUDE.md and
-  silencing the rule would mean disabling it, so the warning is accepted and documented.
+  on `useReactTable` in DataTable.jsx. It is now moot — the React Compiler is disabled
+  (see phase 12) — but the rule still fires. TanStack Table v8 is mandated by CLAUDE.md
+  and silencing the rule would mean disabling it, so the warning is accepted.
+- ⚠️ The React Compiler is **off** because it generates null-unsafe memo guards. If a
+  future React version fixes this, re-enable it in `vite.config.js` and run
+  `npm run browser` to confirm.
 - ✅ ~~The production bundle is a single large chunk~~ — resolved in phase 11. The entry
   chunk is now 354 kB (110 kB gzipped); pages are code-split per module and the seeded
   database is its own chunk that the marketing site never loads.

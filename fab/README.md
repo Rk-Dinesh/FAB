@@ -34,6 +34,8 @@ npm run dev      # http://localhost:5173
 | `npm run services`    | 30 assertions over the service layer and its domain maths                   |
 | `npm run crud`        | Drives the real UI: masters CRUD, sample approval, Order 360, wizard, ⌘K    |
 | `npm run a11y`        | Renders every route in dark mode and audits accessibility + theme tokens    |
+| `npm run browser`     | Drives all 72 routes in a real Chromium at 1440×900                         |
+| `npm run browser:mobile` | The same pass at 390×844, checking for horizontal overflow               |
 
 ---
 
@@ -202,3 +204,7 @@ behaviour.
 - **Components stay small.** Anything approaching 200 lines is split.
 - **Code splitting** is per module: the marketing site never downloads the ERP, and
   the seeded database is its own chunk loaded only when an app screen needs it.
+- **The React Compiler is off.** It generates null-unsafe memoisation guards that
+  crash on render; `vite.config.js` has the detail. `npm run browser` exists because
+  jsdom could not see those crashes — the Babel transform only runs in the client
+  build, and jsdom has no layout engine.

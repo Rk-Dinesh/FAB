@@ -91,12 +91,12 @@ export function AttendancePage() {
         description="Daily attendance across the team, month by month."
         breadcrumbs={[{ label: 'HR' }, { label: 'Attendance' }]}
         actions={
-          <div className="flex gap-2">
+          <div className="flex w-full flex-wrap gap-2 sm:w-auto">
             <Select
               value={month}
               onChange={(event) => setMonth(event.target.value)}
               options={MONTH_OPTIONS}
-              containerClassName="w-44"
+              containerClassName="w-full sm:w-44"
               aria-label="Month"
             />
             <Select
@@ -107,7 +107,7 @@ export function AttendancePage() {
                 value: employee.id,
                 label: employee.name,
               }))}
-              containerClassName="w-52"
+              containerClassName="w-full sm:w-52"
               aria-label="Employee"
             />
           </div>

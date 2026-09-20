@@ -346,3 +346,48 @@ what it cannot see: an inline `style` that resolves to a literal colour. Colour 
 The only chunk over 500 kB is the seeded database. It is code-split away from the
 public site and gzips to 95 kB, so the default warning is noise here. The limit is
 raised to 1000 with a comment stating exactly that, rather than silently.
+
+## Phase 12 — Browser verification
+
+### D63. The React Compiler is disabled, on correctness grounds
+It hoists property reads from a closure into its memoisation guard without preserving
+null-safety. Two shapes, both of which the app uses widely:
+
+```js
+useMemo(() => data?.leaves ?? [], [data])
+  → if ($[3] !== data.leaves) { … }          // throws while data is undefined
+
+const save = async () => { …editing.id… }
+  → if ($[6] !== editing.id || …) { … }      // throws while editing is null
+```
+
+That crashed three pages outright and made every component-body function touching a
+nullable value a latent render crash. Auto-memoisation buys nothing at this app's
+scale, so the optimisation loses to correctness. `vite.config.js` carries the evidence
+so nobody re-enables it without understanding why it was off.
+
+### D64. jsdom was not enough, so the gate now runs a real browser
+Every jsdom check passed while three pages were broken, because the Babel transform
+only runs in the client build and jsdom has no layout engine. `npm run browser` drives
+Chromium over all 72 routes at desktop and phone width and reports uncaught errors,
+console errors, failed requests, empty renders, horizontal overflow — naming the
+offending element — and sidebar behaviour. It immediately found three mobile overflow
+bugs the static audit could not see.
+
+### D65. The sidebar needed a bounded height, not just `overflow-y-auto`
+`flex-1 overflow-y-auto` on the nav does nothing while the `<aside>` itself is
+unbounded: it simply grew past the viewport and the page scrolled. `lg:sticky lg:top-0
+lg:h-screen` on the aside plus `min-h-0` on the nav is what actually makes it scroll
+internally. (`min-h-0` matters because a flex child's default `min-height: auto`
+refuses to shrink below its content.)
+
+### D66. The sidebar is an accordion, with the route still leading
+One group open at a time. The open group defaults to whichever holds the current
+route; once the user picks one, their choice wins until they navigate into a different
+module. Storing the override alongside the active group it was made against keeps that
+re-sync free of an effect.
+
+### D67. `min-width: auto` is why flex and grid children overflow
+Three mobile overflows had the same cause: a grid/flex child will not shrink below its
+content's intrinsic width unless told to. `min-w-0` on the container and letting rows
+wrap fixed all three. Worth remembering — it is invisible to any non-layout test.

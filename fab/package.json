@@ -10,13 +10,15 @@
     "preview": "vite preview",
     "smoke": "node scripts/smoke.mjs",
     "audit": "node scripts/audit-tokens.mjs",
-    "gate": "npm run lint && npm run audit && npm run check-seed && npm run build && npm run smoke && npm run rbac && npm run services && npm run crud && npm run a11y",
+    "gate": "npm run lint && npm run audit && npm run check-seed && npm run build && npm run smoke && npm run rbac && npm run services && npm run crud && npm run a11y && npm run browser && npm run browser:mobile",
     "rbac": "node scripts/check-rbac.mjs",
     "seed": "node scripts/generate-seed.mjs",
     "check-seed": "node scripts/check-seed.mjs",
     "services": "node scripts/check-services.mjs",
     "crud": "node scripts/check-crud.mjs",
-    "a11y": "node scripts/check-a11y.mjs"
+    "a11y": "node scripts/check-a11y.mjs",
+    "browser": "node scripts/check-browser.mjs",
+    "browser:mobile": "node scripts/check-browser.mjs --mobile"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
@@ -51,6 +53,7 @@
     "eslint-plugin-react-refresh": "^0.5.6",
     "globals": "^17.12.0",
     "jsdom": "^29.1.1",
+    "playwright": "^1.63.0",
     "vite": "^8.3.0"
   }
 }

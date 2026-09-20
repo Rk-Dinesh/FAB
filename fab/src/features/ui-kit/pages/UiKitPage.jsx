@@ -151,7 +151,7 @@ export function UiKitPage() {
             <Badge tone="info">Sampling</Badge>
             <Badge tone="outline">Draft</Badge>
           </div>
-          <div className="flex w-full items-center gap-3">
+          <div className="flex w-full flex-wrap items-center gap-3">
             <Avatar name="Priya Raman" size="xs" />
             <Avatar name="Daniel Osei" size="sm" status="online" />
             <Avatar name="Mei Ling Chan" size="md" />

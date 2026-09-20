@@ -23,23 +23,20 @@ export function Sidebar({ open, onClose, filter }) {
     [groups, location.pathname],
   )
 
-  // The group holding the current route is open by default; these two sets
-  // record what the user explicitly opened or closed, so no effect is needed.
-  const [opened, setOpened] = useState([])
-  const [closed, setClosed] = useState([])
+  // Accordion: exactly one group is open at a time. By default that's the group
+  // holding the current route; once the user picks one, their choice wins until
+  // they navigate into a different module. Tracking the active group alongside
+  // the override keeps that re-sync effect-free.
+  const [override, setOverride] = useState(null)
 
-  const isExpanded = (label) =>
-    opened.includes(label) || (label === activeGroup && !closed.includes(label))
+  const expandedLabel =
+    override && override.forActiveGroup === activeGroup ? override.label : activeGroup
 
-  const toggle = (label) => {
-    if (isExpanded(label)) {
-      setOpened((current) => current.filter((item) => item !== label))
-      setClosed((current) => (current.includes(label) ? current : [...current, label]))
-    } else {
-      setClosed((current) => current.filter((item) => item !== label))
-      setOpened((current) => (current.includes(label) ? current : [...current, label]))
-    }
-  }
+  const toggle = (label) =>
+    setOverride({
+      label: expandedLabel === label ? null : label,
+      forActiveGroup: activeGroup,
+    })
 
   return (
     <>
@@ -50,10 +47,16 @@ export function Sidebar({ open, onClose, filter }) {
           aria-hidden="true"
         />
       )}
+      {/*
+        `lg:sticky lg:h-screen` rather than `lg:static`: the sidebar needs a
+        bounded height for the nav below to scroll inside it. Without it the
+        aside grows past the viewport and the whole page scrolls instead.
+      */}
       <aside
         className={cn(
           'fixed inset-y-0 left-0 z-40 flex w-64 shrink-0 flex-col border-r border-border bg-surface',
-          'transition-transform duration-200 lg:static lg:translate-x-0',
+          'transition-transform duration-200',
+          'lg:sticky lg:top-0 lg:h-screen lg:translate-x-0',
           open ? 'translate-x-0' : '-translate-x-full',
         )}
         aria-label="Main navigation"
@@ -71,13 +74,13 @@ export function Sidebar({ open, onClose, filter }) {
           </Button>
         </div>
 
-        <nav className="flex-1 space-y-0.5 overflow-y-auto px-2 py-3">
+        <nav className="min-h-0 flex-1 space-y-0.5 overflow-y-auto overscroll-contain px-2 py-3">
           {groups.map((group) =>
             group.children ? (
               <SidebarGroup
                 key={group.label}
                 group={group}
-                expanded={isExpanded(group.label)}
+                expanded={expandedLabel === group.label}
                 onToggle={() => toggle(group.label)}
                 onNavigate={onClose}
               />
