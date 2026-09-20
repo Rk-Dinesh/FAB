@@ -151,3 +151,34 @@ path guards a lot of shared surface.
 TanStack Table v8; the only ways to clear it are dropping the library or disabling the
 rule, and the instruction is not to disable rules. It is a compiler optimisation
 notice, not a correctness problem, so it stands alongside 0 errors.
+
+## Phase 5 — CRM, Design, Costing
+
+### D28. Kanban drop targets resolve through both columns and cards
+`onDragEnd` accepts an `over.id` that is either a stage id (empty column) or another
+lead's id (dropped onto a card), and resolves both to a target stage. Without this,
+dropping onto a populated column does nothing.
+
+### D29. Rejecting a sample requires a comment; approving does not
+The rejection comment is what the factory actually works from, so the modal blocks a
+rejection under ten characters and offers four preset reasons. Approval comments stay
+optional.
+
+### D30. The FOB editor is two-way
+Editing the margin recalculates the price, and editing the price back-solves the
+margin through `marginFromPrice`. Merchants negotiate on price, not margin, so the
+sheet has to work from either end.
+
+### D31. Reset-on-prop-change uses render-time state adjustment, not an effect
+`SampleDecisionModal` and `CostSheetEditor` compare a request key during render and
+reset their local state when it changes. The lint config forbids synchronous setState
+in an effect, and this is React's documented alternative.
+
+### D32. Clock reads never happen during render
+`react-hooks` flags `Date.now()` in a render path as impure. Default dates for new
+records are computed in the click handler that opens the drawer instead.
+
+### D33. `data ?? []` is memoised at every call site
+`react-hooks/exhaustive-deps` warns that a logical expression feeding a `useMemo`
+dependency changes identity each render. Every list page now does
+`useMemo(() => data ?? [], [data])`, which is the fix the rule itself recommends.

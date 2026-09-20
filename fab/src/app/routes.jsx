@@ -12,6 +12,14 @@ import { LoginPage } from '@/features/auth/pages/LoginPage'
 import { ForgotPasswordPage } from '@/features/auth/pages/ForgotPasswordPage'
 import { UiKitPage } from '@/features/ui-kit/pages/UiKitPage'
 import { MastersPage } from '@/features/masters/pages/MastersPage'
+import { LeadsPage } from '@/features/crm/pages/LeadsPage'
+import { ClientsPage } from '@/features/crm/pages/ClientsPage'
+import { EnquiriesPage } from '@/features/crm/pages/EnquiriesPage'
+import { DesignRequestsPage } from '@/features/design/pages/DesignRequestsPage'
+import { TechPacksPage } from '@/features/design/pages/TechPacksPage'
+import { SamplesPage } from '@/features/design/pages/SamplesPage'
+import { CostSheetsPage } from '@/features/costing/pages/CostSheetsPage'
+import { QuotationsPage } from '@/features/costing/pages/QuotationsPage'
 import { UsersPage } from '@/features/admin/pages/UsersPage'
 import { RolesPage } from '@/features/admin/pages/RolesPage'
 import { AuditLogPage } from '@/features/admin/pages/AuditLogPage'
@@ -71,18 +79,21 @@ export const routes = [
           { path: 'ui-kit', element: <UiKitPage /> },
           guarded('dashboard', [{ path: 'dashboard', element: <DashboardPage /> }]),
           guarded('crm', [
-            { path: 'crm/leads', ...soon('Leads', 'Pipeline kanban and list.', 'phase 5') },
-            { path: 'crm/clients', ...soon('Clients', 'Brand accounts.', 'phase 5') },
-            { path: 'crm/enquiries', ...soon('Enquiries', 'Incoming brand enquiries.', 'phase 5') },
+            { path: 'crm', element: <Navigate to="/app/crm/leads" replace /> },
+            { path: 'crm/leads', element: <LeadsPage /> },
+            { path: 'crm/clients', element: <ClientsPage /> },
+            { path: 'crm/enquiries', element: <EnquiriesPage /> },
           ]),
           guarded('design', [
-            { path: 'design/requests', ...soon('Design requests', 'Briefs from merchandising.', 'phase 5') },
-            { path: 'design/tech-packs', ...soon('Tech packs', 'Construction and spec sheets.', 'phase 5') },
-            { path: 'design/samples', ...soon('Samples', 'Proto, fit, size set and PP.', 'phase 5') },
+            { path: 'design', element: <Navigate to="/app/design/requests" replace /> },
+            { path: 'design/requests', element: <DesignRequestsPage /> },
+            { path: 'design/tech-packs', element: <TechPacksPage /> },
+            { path: 'design/samples', element: <SamplesPage /> },
           ]),
           guarded('costing', [
-            { path: 'costing/cost-sheets', ...soon('Cost sheets', 'FOB build-up and margin.', 'phase 5') },
-            { path: 'costing/quotations', ...soon('Quotations', 'Versions sent to clients.', 'phase 5') },
+            { path: 'costing', element: <Navigate to="/app/costing/cost-sheets" replace /> },
+            { path: 'costing/cost-sheets', element: <CostSheetsPage /> },
+            { path: 'costing/quotations', element: <QuotationsPage /> },
           ]),
           guarded('orders', [
             { path: 'orders', ...soon('Orders', 'Every order across the lifecycle.', 'phase 6') },

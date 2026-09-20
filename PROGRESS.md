@@ -87,12 +87,26 @@ Legend: ✅ done · 🔄 in progress · ⬜ not started · ⚠️ issue
   96/96 routes render *with their seeded content asserted*, 9/9 RBAC redirects,
   30/30 service checks, 11/11 CRUD interaction checks
 
-## Phase 5: CRM, Design, Costing ⬜
-- ⬜ Leads: kanban (dnd-kit) + list, convert to enquiry
-- ⬜ Clients, enquiries, activity log
-- ⬜ Design requests, tech packs, samples + approve/reject with comments
-- ⬜ Cost sheets (live FOB + margin), versions, quotations
-- ⬜ Quality gate
+## Phase 5: CRM, Design, Costing ✅
+- ✅ Leads: dnd-kit kanban across the six pipeline stages (drag to change stage,
+  drag overlay, per-column count and value) plus a full list view, with pipeline /
+  weighted-pipeline / win-rate KPIs and a "Convert to enquiry" action that moves the
+  lead to WON and opens a linked enquiry
+- ✅ Clients: account list with live order book, outstanding balance and rating, plus a
+  360 drawer (terms, orders, activity timeline)
+- ✅ Enquiries: filterable list linked back to the order it became
+- ✅ Activity log: `getActivityFor(entity, id)` feeding the shared `Timeline`
+- ✅ Design requests: raise/assign/prioritise briefs, overdue highlighting
+- ✅ Tech packs: version, POM and BOM counts, release action bumping the version
+- ✅ Samples: proto / fit / size set / PP with an approve-or-reject-with-comments
+  modal — rejection requires an explanation, and preset reasons speed it up
+- ✅ Cost sheets: live FOB build-up (fabric, trims, CM, wash, overhead, freight →
+  margin → FOB), two-way margin ⇄ price editing, versioning on save
+- ✅ Quotations: versions with supersede/accept states and a version-history timeline
+- ✅ Shared `KpiCard`/`KpiGrid` and `Timeline` added for use across the remaining phases
+- ✅ Quality gate: lint 0 errors, audit clean (121 files), seed clean, build clean,
+  96/96 routes render with content assertions, 9/9 RBAC, 30/30 service checks,
+  18/18 interaction checks (masters CRUD + sample approval flow)
 
 ## Phase 6: Orders + Order 360 ⬜
 - ⬜ Orders list with status filters

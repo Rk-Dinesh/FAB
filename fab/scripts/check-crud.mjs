@@ -1,10 +1,11 @@
 /**
- * CRUD interaction check.
+ * Interaction checks.
  *
- * Drives the real masters screen in jsdom — open the drawer, submit an invalid
- * value, see the zod error, fix it, save, and confirm the row appears in the
- * DataTable. RecordDrawer + FormFields + DataTable back most screens in the app,
- * so this one path covers a lot. Run with `npm run crud`.
+ * Drives real screens in jsdom rather than calling services directly:
+ *   1. Masters CRUD — open the drawer, hit a zod error, save, edit.
+ *   2. Sample approval — reject without a comment, then approve with one.
+ * RecordDrawer + FormFields + DataTable back most screens in the app, so these
+ * paths cover a lot of shared surface. Run with `npm run crud`.
  */
 import { JSDOM } from 'jsdom'
 import { createServer } from 'vite'
@@ -149,8 +150,56 @@ try {
   await settle(2600)
   check('edit persists to the list', textOf().includes('Signal Teal Deep'))
 
-  resetDemoData()
+  // ---------------------------------------------------------------- samples
+  console.log('')
   await act(async () => root.unmount())
+  resetDemoData()
+
+  const sampleRouter = createMemoryRouter(routes, { initialEntries: ['/app/design/samples'] })
+  let sampleRoot
+  await act(async () => {
+    sampleRoot = createRoot(container)
+    sampleRoot.render(
+      React.createElement(Providers, null, React.createElement(RouterProvider, { router: sampleRouter })),
+    )
+  })
+  await settle(1200)
+
+  check('samples list renders', textOf().includes('Awaiting decision'))
+
+  const rejectButton = [...body().querySelectorAll('button')].find((node) =>
+    (node.getAttribute('aria-label') ?? '').startsWith('Reject '),
+  )
+  check('pending samples expose approve/reject', Boolean(rejectButton))
+  const sampleRef = rejectButton?.getAttribute('aria-label')?.replace('Reject ', '')
+
+  await click(rejectButton)
+  await settle(250)
+  check('rejection modal opens', textOf().includes('Reject this sample'))
+
+  // A rejection with no explanation must not go through.
+  await click(findByText('button', 'Reject sample'))
+  await settle(250)
+  check('rejection requires a comment', textOf().includes('at least a sentence'))
+
+  const commentBox = body().querySelector('[role="dialog"] textarea')
+  const textareaSetter = Object.getOwnPropertyDescriptor(
+    window.HTMLTextAreaElement.prototype,
+    'value',
+  ).set
+  await act(async () => {
+    textareaSetter.call(commentBox, 'Armhole is 1.2 cm over tolerance — correct the pattern and resubmit.')
+    commentBox.dispatchEvent(new window.Event('input', { bubbles: true }))
+  })
+  await click(findByText('button', 'Reject sample'))
+  await settle(2200)
+  check('rejection closes the modal', !body().querySelector('[role="dialog"]'))
+  check('rejection is recorded on the row', textOf().includes('over tolerance'))
+  check('a toast confirms the rejection', textOf().includes('Sample rejected'))
+  check('the rejected sample left the pending queue', Boolean(sampleRef) && !textOf().includes(`Reject ${sampleRef}`))
+
+  await act(async () => sampleRoot.unmount())
+  resetDemoData()
 } finally {
   await vite.close()
 }
